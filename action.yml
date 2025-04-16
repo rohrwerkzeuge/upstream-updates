@@ -1,23 +1,26 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
+name: 'Update with Upstream'
+description: 'Update repo with upstream'
+author: 'Mark E. Anderson'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
-  icon: heart
-  color: red
+  icon: 'git-merge'
+  color: 'purple'
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: Your input description here
+  repo:
+    description: 'Repository Name'
+    required: false
+  repo-file:
+    description: 'Repository List JSON file'
+    required: false
+  op-token:
+    description: '1Password Service Account Token'
     required: true
-    default: '1000'
-
-# Define your outputs here.
-outputs:
-  time:
-    description: Your output description here
+  branch:
+    description: 'Branch to update'
+    default: 'main'
 
 runs:
   using: node20
