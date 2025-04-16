@@ -59,7 +59,7 @@ function getAugmentedNamespace(n) {
 	return a;
 }
 
-var core = {};
+var core$2 = {};
 
 var command = {};
 
@@ -8784,12 +8784,12 @@ function requireLlhttp_simdWasm () {
 	return llhttp_simdWasm;
 }
 
-var client;
-var hasRequiredClient;
+var client$1;
+var hasRequiredClient$1;
 
-function requireClient () {
-	if (hasRequiredClient) return client;
-	hasRequiredClient = 1;
+function requireClient$1 () {
+	if (hasRequiredClient$1) return client$1;
+	hasRequiredClient$1 = 1;
 
 	/* global WebAssembly */
 
@@ -11067,8 +11067,8 @@ function requireClient () {
 	  }
 	}
 
-	client = Client;
-	return client;
+	client$1 = Client;
+	return client$1;
 }
 
 /* eslint-disable */
@@ -11455,7 +11455,7 @@ function requirePool () {
 	  kAddClient,
 	  kGetDispatcher
 	} = requirePoolBase();
-	const Client = requireClient();
+	const Client = requireClient$1();
 	const {
 	  InvalidArgumentError
 	} = requireErrors();
@@ -11808,7 +11808,7 @@ function requireAgent () {
 	const { kClients, kRunning, kClose, kDestroy, kDispatch, kInterceptors } = requireSymbols$4();
 	const DispatcherBase = requireDispatcherBase();
 	const Pool = requirePool();
-	const Client = requireClient();
+	const Client = requireClient$1();
 	const util = requireUtil$6();
 	const createRedirectInterceptor = requireRedirectInterceptor();
 	const { WeakRef, FinalizationRegistry } = requireDispatcherWeakref()();
@@ -13952,7 +13952,7 @@ function requireMockClient () {
 	hasRequiredMockClient = 1;
 
 	const { promisify } = require$$0$2;
-	const Client = requireClient();
+	const Client = requireClient$1();
 	const { buildMockDispatch } = requireMockUtils();
 	const {
 	  kDispatches,
@@ -24208,7 +24208,7 @@ function requireUndici () {
 	if (hasRequiredUndici) return undici;
 	hasRequiredUndici = 1;
 
-	const Client = requireClient();
+	const Client = requireClient$1();
 	const Dispatcher = requireDispatcher();
 	const errors = requireErrors();
 	const Pool = requirePool();
@@ -25143,7 +25143,7 @@ function requireOidcUtils () {
 	oidcUtils.OidcClient = void 0;
 	const http_client_1 = requireLib();
 	const auth_1 = requireAuth();
-	const core_1 = requireCore();
+	const core_1 = requireCore$2();
 	class OidcClient {
 	    static createHttpClient(allowRetry = true, maxRetry = 10) {
 	        const requestOptions = {
@@ -26920,13 +26920,13 @@ function requirePlatform () {
 	return platform;
 }
 
-var hasRequiredCore;
+var hasRequiredCore$2;
 
-function requireCore () {
-	if (hasRequiredCore) return core;
-	hasRequiredCore = 1;
+function requireCore$2 () {
+	if (hasRequiredCore$2) return core$2;
+	hasRequiredCore$2 = 1;
 	(function (exports) {
-		var __createBinding = (core && core.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+		var __createBinding = (core$2 && core$2.__createBinding) || (Object.create ? (function(o, m, k, k2) {
 		    if (k2 === undefined) k2 = k;
 		    var desc = Object.getOwnPropertyDescriptor(m, k);
 		    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
@@ -26937,19 +26937,19 @@ function requireCore () {
 		    if (k2 === undefined) k2 = k;
 		    o[k2] = m[k];
 		}));
-		var __setModuleDefault = (core && core.__setModuleDefault) || (Object.create ? (function(o, v) {
+		var __setModuleDefault = (core$2 && core$2.__setModuleDefault) || (Object.create ? (function(o, v) {
 		    Object.defineProperty(o, "default", { enumerable: true, value: v });
 		}) : function(o, v) {
 		    o["default"] = v;
 		});
-		var __importStar = (core && core.__importStar) || function (mod) {
+		var __importStar = (core$2 && core$2.__importStar) || function (mod) {
 		    if (mod && mod.__esModule) return mod;
 		    var result = {};
 		    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
 		    __setModuleDefault(result, mod);
 		    return result;
 		};
-		var __awaiter = (core && core.__awaiter) || function (thisArg, _arguments, P, generator) {
+		var __awaiter = (core$2 && core$2.__awaiter) || function (thisArg, _arguments, P, generator) {
 		    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
 		    return new (P || (P = Promise))(function (resolve, reject) {
 		        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -27269,11 +27269,1563 @@ function requireCore () {
 		 */
 		exports.platform = __importStar(requirePlatform());
 		
-	} (core));
-	return core;
+	} (core$2));
+	return core$2;
 }
 
-var coreExports = requireCore();
+var coreExports = requireCore$2();
+
+var dist = {};
+
+var secrets$1 = {};
+
+var sdk = {};
+
+var core$1 = {};
+
+function commonjsRequire(path) {
+	throw new Error('Could not dynamically require "' + path + '". Please configure the dynamicRequireTargets or/and ignoreDynamicRequires option of @rollup/plugin-commonjs appropriately for this require call to work.');
+}
+
+var core = {exports: {}};
+
+core.exports;
+
+var hasRequiredCore$1;
+
+function requireCore$1 () {
+	if (hasRequiredCore$1) return core.exports;
+	hasRequiredCore$1 = 1;
+	(function (module) {
+		let imports = {};
+		imports['__wbindgen_placeholder__'] = module.exports;
+		let wasm;
+		const { TextDecoder, TextEncoder } = require$$0$2;
+
+		let cachedTextDecoder = new TextDecoder('utf-8', { ignoreBOM: true, fatal: true });
+
+		cachedTextDecoder.decode();
+
+		let cachedUint8ArrayMemory0 = null;
+
+		function getUint8ArrayMemory0() {
+		    if (cachedUint8ArrayMemory0 === null || cachedUint8ArrayMemory0.byteLength === 0) {
+		        cachedUint8ArrayMemory0 = new Uint8Array(wasm.memory.buffer);
+		    }
+		    return cachedUint8ArrayMemory0;
+		}
+
+		function getStringFromWasm0(ptr, len) {
+		    ptr = ptr >>> 0;
+		    return cachedTextDecoder.decode(getUint8ArrayMemory0().subarray(ptr, ptr + len));
+		}
+
+		const heap = new Array(128).fill(undefined);
+
+		heap.push(undefined, null, true, false);
+
+		let heap_next = heap.length;
+
+		function addHeapObject(obj) {
+		    if (heap_next === heap.length) heap.push(heap.length + 1);
+		    const idx = heap_next;
+		    heap_next = heap[idx];
+
+		    heap[idx] = obj;
+		    return idx;
+		}
+
+		function getObject(idx) { return heap[idx]; }
+
+		function dropObject(idx) {
+		    if (idx < 132) return;
+		    heap[idx] = heap_next;
+		    heap_next = idx;
+		}
+
+		function takeObject(idx) {
+		    const ret = getObject(idx);
+		    dropObject(idx);
+		    return ret;
+		}
+
+		let WASM_VECTOR_LEN = 0;
+
+		let cachedTextEncoder = new TextEncoder('utf-8');
+
+		const encodeString = (typeof cachedTextEncoder.encodeInto === 'function'
+		    ? function (arg, view) {
+		    return cachedTextEncoder.encodeInto(arg, view);
+		}
+		    : function (arg, view) {
+		    const buf = cachedTextEncoder.encode(arg);
+		    view.set(buf);
+		    return {
+		        read: arg.length,
+		        written: buf.length
+		    };
+		});
+
+		function passStringToWasm0(arg, malloc, realloc) {
+
+		    if (realloc === undefined) {
+		        const buf = cachedTextEncoder.encode(arg);
+		        const ptr = malloc(buf.length, 1) >>> 0;
+		        getUint8ArrayMemory0().subarray(ptr, ptr + buf.length).set(buf);
+		        WASM_VECTOR_LEN = buf.length;
+		        return ptr;
+		    }
+
+		    let len = arg.length;
+		    let ptr = malloc(len, 1) >>> 0;
+
+		    const mem = getUint8ArrayMemory0();
+
+		    let offset = 0;
+
+		    for (; offset < len; offset++) {
+		        const code = arg.charCodeAt(offset);
+		        if (code > 0x7F) break;
+		        mem[ptr + offset] = code;
+		    }
+
+		    if (offset !== len) {
+		        if (offset !== 0) {
+		            arg = arg.slice(offset);
+		        }
+		        ptr = realloc(ptr, len, len = offset + arg.length * 3, 1) >>> 0;
+		        const view = getUint8ArrayMemory0().subarray(ptr + offset, ptr + len);
+		        const ret = encodeString(arg, view);
+
+		        offset += ret.written;
+		        ptr = realloc(ptr, len, offset, 1) >>> 0;
+		    }
+
+		    WASM_VECTOR_LEN = offset;
+		    return ptr;
+		}
+
+		function isLikeNone(x) {
+		    return x === undefined || x === null;
+		}
+
+		let cachedDataViewMemory0 = null;
+
+		function getDataViewMemory0() {
+		    if (cachedDataViewMemory0 === null || cachedDataViewMemory0.buffer.detached === true || (cachedDataViewMemory0.buffer.detached === undefined && cachedDataViewMemory0.buffer !== wasm.memory.buffer)) {
+		        cachedDataViewMemory0 = new DataView(wasm.memory.buffer);
+		    }
+		    return cachedDataViewMemory0;
+		}
+
+		function debugString(val) {
+		    // primitive types
+		    const type = typeof val;
+		    if (type == 'number' || type == 'boolean' || val == null) {
+		        return  `${val}`;
+		    }
+		    if (type == 'string') {
+		        return `"${val}"`;
+		    }
+		    if (type == 'symbol') {
+		        const description = val.description;
+		        if (description == null) {
+		            return 'Symbol';
+		        } else {
+		            return `Symbol(${description})`;
+		        }
+		    }
+		    if (type == 'function') {
+		        const name = val.name;
+		        if (typeof name == 'string' && name.length > 0) {
+		            return `Function(${name})`;
+		        } else {
+		            return 'Function';
+		        }
+		    }
+		    // objects
+		    if (Array.isArray(val)) {
+		        const length = val.length;
+		        let debug = '[';
+		        if (length > 0) {
+		            debug += debugString(val[0]);
+		        }
+		        for(let i = 1; i < length; i++) {
+		            debug += ', ' + debugString(val[i]);
+		        }
+		        debug += ']';
+		        return debug;
+		    }
+		    // Test for built-in
+		    const builtInMatches = /\[object ([^\]]+)\]/.exec(toString.call(val));
+		    let className;
+		    if (builtInMatches.length > 1) {
+		        className = builtInMatches[1];
+		    } else {
+		        // Failed to match the standard '[object ClassName]'
+		        return toString.call(val);
+		    }
+		    if (className == 'Object') {
+		        // we're a user defined class or Object
+		        // JSON.stringify avoids problems with cycles, and is generally much
+		        // easier than looping through ownProperties of `val`.
+		        try {
+		            return 'Object(' + JSON.stringify(val) + ')';
+		        } catch (_) {
+		            return 'Object';
+		        }
+		    }
+		    // errors
+		    if (val instanceof Error) {
+		        return `${val.name}: ${val.message}\n${val.stack}`;
+		    }
+		    // TODO we could test for more things here, like `Set`s and `Map`s.
+		    return className;
+		}
+
+		const CLOSURE_DTORS = (typeof FinalizationRegistry === 'undefined')
+		    ? { register: () => {}, unregister: () => {} }
+		    : new FinalizationRegistry(state => {
+		    wasm.__wbindgen_export_2.get(state.dtor)(state.a, state.b);
+		});
+
+		function makeMutClosure(arg0, arg1, dtor, f) {
+		    const state = { a: arg0, b: arg1, cnt: 1, dtor };
+		    const real = (...args) => {
+		        // First up with a closure we increment the internal reference
+		        // count. This ensures that the Rust closure environment won't
+		        // be deallocated while we're invoking it.
+		        state.cnt++;
+		        const a = state.a;
+		        state.a = 0;
+		        try {
+		            return f(a, state.b, ...args);
+		        } finally {
+		            if (--state.cnt === 0) {
+		                wasm.__wbindgen_export_2.get(state.dtor)(a, state.b);
+		                CLOSURE_DTORS.unregister(state);
+		            } else {
+		                state.a = a;
+		            }
+		        }
+		    };
+		    real.original = state;
+		    CLOSURE_DTORS.register(real, state, state);
+		    return real;
+		}
+		function __wbg_adapter_28(arg0, arg1, arg2) {
+		    wasm._dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h83ad6090fb23bf18(arg0, arg1, addHeapObject(arg2));
+		}
+
+		/**
+		* Initializes an SDK client with a given configuration.
+		* @param {string} config
+		* @returns {Promise<string>}
+		*/
+		module.exports.init_client = function(config) {
+		    const ptr0 = passStringToWasm0(config, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+		    const len0 = WASM_VECTOR_LEN;
+		    const ret = wasm.init_client(ptr0, len0);
+		    return takeObject(ret);
+		};
+
+		/**
+		* Handles all asynchronous invocations to the SDK core received from the SDK.
+		* @param {string} parameters
+		* @returns {Promise<string>}
+		*/
+		module.exports.invoke = function(parameters) {
+		    const ptr0 = passStringToWasm0(parameters, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+		    const len0 = WASM_VECTOR_LEN;
+		    const ret = wasm.invoke(ptr0, len0);
+		    return takeObject(ret);
+		};
+
+		/**
+		* Handles all synchronous invocations to the SDK core received from the SDK.
+		* @param {string} parameters
+		* @returns {string}
+		*/
+		module.exports.invoke_sync = function(parameters) {
+		    let deferred3_0;
+		    let deferred3_1;
+		    try {
+		        const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+		        const ptr0 = passStringToWasm0(parameters, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+		        const len0 = WASM_VECTOR_LEN;
+		        wasm.invoke_sync(retptr, ptr0, len0);
+		        var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+		        var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+		        var r2 = getDataViewMemory0().getInt32(retptr + 4 * 2, true);
+		        var r3 = getDataViewMemory0().getInt32(retptr + 4 * 3, true);
+		        var ptr2 = r0;
+		        var len2 = r1;
+		        if (r3) {
+		            ptr2 = 0; len2 = 0;
+		            throw takeObject(r2);
+		        }
+		        deferred3_0 = ptr2;
+		        deferred3_1 = len2;
+		        return getStringFromWasm0(ptr2, len2);
+		    } finally {
+		        wasm.__wbindgen_add_to_stack_pointer(16);
+		        wasm.__wbindgen_free(deferred3_0, deferred3_1, 1);
+		    }
+		};
+
+		/**
+		* Drops a client, releasing the memory allocated for it.
+		* @param {string} client_id
+		*/
+		module.exports.release_client = function(client_id) {
+		    try {
+		        const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+		        const ptr0 = passStringToWasm0(client_id, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+		        const len0 = WASM_VECTOR_LEN;
+		        wasm.release_client(retptr, ptr0, len0);
+		        var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
+		        var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
+		        if (r1) {
+		            throw takeObject(r0);
+		        }
+		    } finally {
+		        wasm.__wbindgen_add_to_stack_pointer(16);
+		    }
+		};
+
+		function handleError(f, args) {
+		    try {
+		        return f.apply(this, args);
+		    } catch (e) {
+		        wasm.__wbindgen_exn_store(addHeapObject(e));
+		    }
+		}
+		function __wbg_adapter_143(arg0, arg1, arg2, arg3) {
+		    wasm.wasm_bindgen__convert__closures__invoke2_mut__h2d41f9b13f5efe25(arg0, arg1, addHeapObject(arg2), addHeapObject(arg3));
+		}
+
+		module.exports.__wbindgen_string_new = function(arg0, arg1) {
+		    const ret = getStringFromWasm0(arg0, arg1);
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbindgen_object_drop_ref = function(arg0) {
+		    takeObject(arg0);
+		};
+
+		module.exports.__wbg_static_accessor_performance_da77b3a901a72934 = function() {
+		    const ret = performance;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbindgen_number_new = function(arg0) {
+		    const ret = arg0;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbindgen_is_string = function(arg0) {
+		    const ret = typeof(getObject(arg0)) === 'string';
+		    return ret;
+		};
+
+		module.exports.__wbg_window_03f73939e5033e84 = function() { return handleError(function () {
+		    const ret = window.window;
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_self_8605703933a3b0d0 = function() { return handleError(function () {
+		    const ret = self.self;
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbindgen_cb_drop = function(arg0) {
+		    const obj = takeObject(arg0).original;
+		    if (obj.cnt-- == 1) {
+		        obj.a = 0;
+		        return true;
+		    }
+		    const ret = false;
+		    return ret;
+		};
+
+		module.exports.__wbindgen_string_get = function(arg0, arg1) {
+		    const obj = getObject(arg1);
+		    const ret = typeof(obj) === 'string' ? obj : undefined;
+		    var ptr1 = isLikeNone(ret) ? 0 : passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+		    var len1 = WASM_VECTOR_LEN;
+		    getDataViewMemory0().setInt32(arg0 + 4 * 1, len1, true);
+		    getDataViewMemory0().setInt32(arg0 + 4 * 0, ptr1, true);
+		};
+
+		module.exports.__wbindgen_object_clone_ref = function(arg0) {
+		    const ret = getObject(arg0);
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_fetch_bc7c8e27076a5c84 = function(arg0) {
+		    const ret = fetch(getObject(arg0));
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_queueMicrotask_48421b3cc9052b68 = function(arg0) {
+		    const ret = getObject(arg0).queueMicrotask;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbindgen_is_function = function(arg0) {
+		    const ret = typeof(getObject(arg0)) === 'function';
+		    return ret;
+		};
+
+		module.exports.__wbg_queueMicrotask_12a30234db4045d3 = function(arg0) {
+		    queueMicrotask(getObject(arg0));
+		};
+
+		module.exports.__wbg_crypto_1d1f22824a6a080c = function(arg0) {
+		    const ret = getObject(arg0).crypto;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbindgen_is_object = function(arg0) {
+		    const val = getObject(arg0);
+		    const ret = typeof(val) === 'object' && val !== null;
+		    return ret;
+		};
+
+		module.exports.__wbg_process_4a72847cc503995b = function(arg0) {
+		    const ret = getObject(arg0).process;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_versions_f686565e586dd935 = function(arg0) {
+		    const ret = getObject(arg0).versions;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_node_104a2ff8d6ea03a2 = function(arg0) {
+		    const ret = getObject(arg0).node;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_require_cca90b1a94a0255b = function() { return handleError(function () {
+		    const ret = commonjsRequire;
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_msCrypto_eb05e62b530a1508 = function(arg0) {
+		    const ret = getObject(arg0).msCrypto;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_randomFillSync_5c9c955aa56b6049 = function() { return handleError(function (arg0, arg1) {
+		    getObject(arg0).randomFillSync(takeObject(arg1));
+		}, arguments) };
+
+		module.exports.__wbg_getRandomValues_3aa56aa6edec874c = function() { return handleError(function (arg0, arg1) {
+		    getObject(arg0).getRandomValues(getObject(arg1));
+		}, arguments) };
+
+		module.exports.__wbg_instanceof_Window_5012736c80a01584 = function(arg0) {
+		    let result;
+		    try {
+		        result = getObject(arg0) instanceof Window;
+		    } catch (_) {
+		        result = false;
+		    }
+		    const ret = result;
+		    return ret;
+		};
+
+		module.exports.__wbg_navigator_6210380287bf8581 = function(arg0) {
+		    const ret = getObject(arg0).navigator;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_instanceof_WorkerGlobalScope_e34c8a505711a78e = function(arg0) {
+		    let result;
+		    try {
+		        result = getObject(arg0) instanceof WorkerGlobalScope;
+		    } catch (_) {
+		        result = false;
+		    }
+		    const ret = result;
+		    return ret;
+		};
+
+		module.exports.__wbg_navigator_db73b5b11a0c5c93 = function(arg0) {
+		    const ret = getObject(arg0).navigator;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_fetch_ba7fe179e527d942 = function(arg0, arg1) {
+		    const ret = getObject(arg0).fetch(getObject(arg1));
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_languages_cf5fde80a9127128 = function(arg0) {
+		    const ret = getObject(arg0).languages;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_signal_41e46ccad44bb5e2 = function(arg0) {
+		    const ret = getObject(arg0).signal;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_new_ebf2727385ee825c = function() { return handleError(function () {
+		    const ret = new AbortController();
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_abort_8659d889a7877ae3 = function(arg0) {
+		    getObject(arg0).abort();
+		};
+
+		module.exports.__wbg_newwithstrandinit_a31c69e4cc337183 = function() { return handleError(function (arg0, arg1, arg2) {
+		    const ret = new Request(getStringFromWasm0(arg0, arg1), getObject(arg2));
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_now_a69647afb1f66247 = function(arg0) {
+		    const ret = getObject(arg0).now();
+		    return ret;
+		};
+
+		module.exports.__wbg_new_e27c93803e1acc42 = function() { return handleError(function () {
+		    const ret = new Headers();
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_append_f3a4426bb50622c5 = function() { return handleError(function (arg0, arg1, arg2, arg3, arg4) {
+		    getObject(arg0).append(getStringFromWasm0(arg1, arg2), getStringFromWasm0(arg3, arg4));
+		}, arguments) };
+
+		module.exports.__wbg_languages_6cbccc1b795c6675 = function(arg0) {
+		    const ret = getObject(arg0).languages;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_setbody_734cb3d7ee8e6e96 = function(arg0, arg1) {
+		    getObject(arg0).body = getObject(arg1);
+		};
+
+		module.exports.__wbg_setcredentials_2b67800db3f7b621 = function(arg0, arg1) {
+		    getObject(arg0).credentials = ["omit","same-origin","include",][arg1];
+		};
+
+		module.exports.__wbg_setheaders_be10a5ab566fd06f = function(arg0, arg1) {
+		    getObject(arg0).headers = getObject(arg1);
+		};
+
+		module.exports.__wbg_setmethod_dc68a742c2db5c6a = function(arg0, arg1, arg2) {
+		    getObject(arg0).method = getStringFromWasm0(arg1, arg2);
+		};
+
+		module.exports.__wbg_setmode_a781aae2bd3df202 = function(arg0, arg1) {
+		    getObject(arg0).mode = ["same-origin","no-cors","cors","navigate",][arg1];
+		};
+
+		module.exports.__wbg_setsignal_91c4e8ebd04eb935 = function(arg0, arg1) {
+		    getObject(arg0).signal = getObject(arg1);
+		};
+
+		module.exports.__wbg_instanceof_Response_e91b7eb7c611a9ae = function(arg0) {
+		    let result;
+		    try {
+		        result = getObject(arg0) instanceof Response;
+		    } catch (_) {
+		        result = false;
+		    }
+		    const ret = result;
+		    return ret;
+		};
+
+		module.exports.__wbg_url_1bf85c8abeb8c92d = function(arg0, arg1) {
+		    const ret = getObject(arg1).url;
+		    const ptr1 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+		    const len1 = WASM_VECTOR_LEN;
+		    getDataViewMemory0().setInt32(arg0 + 4 * 1, len1, true);
+		    getDataViewMemory0().setInt32(arg0 + 4 * 0, ptr1, true);
+		};
+
+		module.exports.__wbg_status_ae8de515694c5c7c = function(arg0) {
+		    const ret = getObject(arg0).status;
+		    return ret;
+		};
+
+		module.exports.__wbg_headers_5e283e8345689121 = function(arg0) {
+		    const ret = getObject(arg0).headers;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_arrayBuffer_a5fbad63cc7e663b = function() { return handleError(function (arg0) {
+		    const ret = getObject(arg0).arrayBuffer();
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_newnoargs_76313bd6ff35d0f2 = function(arg0, arg1) {
+		    const ret = new Function(getStringFromWasm0(arg0, arg1));
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_next_de3e9db4440638b2 = function(arg0) {
+		    const ret = getObject(arg0).next;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_next_f9cb570345655b9a = function() { return handleError(function (arg0) {
+		    const ret = getObject(arg0).next();
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_done_bfda7aa8f252b39f = function(arg0) {
+		    const ret = getObject(arg0).done;
+		    return ret;
+		};
+
+		module.exports.__wbg_value_6d39332ab4788d86 = function(arg0) {
+		    const ret = getObject(arg0).value;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_iterator_888179a48810a9fe = function() {
+		    const ret = Symbol.iterator;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_get_224d16597dbbfd96 = function() { return handleError(function (arg0, arg1) {
+		    const ret = Reflect.get(getObject(arg0), getObject(arg1));
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_call_1084a111329e68ce = function() { return handleError(function (arg0, arg1) {
+		    const ret = getObject(arg0).call(getObject(arg1));
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_new_525245e2b9901204 = function() {
+		    const ret = new Object();
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_self_3093d5d1f7bcb682 = function() { return handleError(function () {
+		    const ret = self.self;
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_window_3bcfc4d31bc012f8 = function() { return handleError(function () {
+		    const ret = window.window;
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_globalThis_86b222e13bdf32ed = function() { return handleError(function () {
+		    const ret = globalThis.globalThis;
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_global_e5a3fe56f8be9485 = function() { return handleError(function () {
+		    const ret = commonjsGlobal.global;
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbindgen_is_undefined = function(arg0) {
+		    const ret = getObject(arg0) === undefined;
+		    return ret;
+		};
+
+		module.exports.__wbg_values_a182ed198dd79e93 = function(arg0) {
+		    const ret = getObject(arg0).values();
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_call_89af060b4e1523f2 = function() { return handleError(function (arg0, arg1, arg2) {
+		    const ret = getObject(arg0).call(getObject(arg1), getObject(arg2));
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_getFullYear_9649dddf8a157b21 = function(arg0) {
+		    const ret = getObject(arg0).getFullYear();
+		    return ret;
+		};
+
+		module.exports.__wbg_getTimezoneOffset_c9929a3cc94500fe = function(arg0) {
+		    const ret = getObject(arg0).getTimezoneOffset();
+		    return ret;
+		};
+
+		module.exports.__wbg_new_7982fb43cfca37ae = function(arg0) {
+		    const ret = new Date(getObject(arg0));
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_new0_65387337a95cf44d = function() {
+		    const ret = new Date();
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_now_b7a162010a9e75b4 = function() {
+		    const ret = Date.now();
+		    return ret;
+		};
+
+		module.exports.__wbg_toLocaleDateString_31d606f5f7f4c460 = function(arg0, arg1, arg2, arg3) {
+		    const ret = getObject(arg0).toLocaleDateString(getStringFromWasm0(arg1, arg2), getObject(arg3));
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_new_b85e72ed1bfd57f9 = function(arg0, arg1) {
+		    try {
+		        var state0 = {a: arg0, b: arg1};
+		        var cb0 = (arg0, arg1) => {
+		            const a = state0.a;
+		            state0.a = 0;
+		            try {
+		                return __wbg_adapter_143(a, state0.b, arg0, arg1);
+		            } finally {
+		                state0.a = a;
+		            }
+		        };
+		        const ret = new Promise(cb0);
+		        return addHeapObject(ret);
+		    } finally {
+		        state0.a = state0.b = 0;
+		    }
+		};
+
+		module.exports.__wbg_resolve_570458cb99d56a43 = function(arg0) {
+		    const ret = Promise.resolve(getObject(arg0));
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_then_95e6edc0f89b73b1 = function(arg0, arg1) {
+		    const ret = getObject(arg0).then(getObject(arg1));
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_then_876bb3c633745cc6 = function(arg0, arg1, arg2) {
+		    const ret = getObject(arg0).then(getObject(arg1), getObject(arg2));
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_buffer_b7b08af79b0b0974 = function(arg0) {
+		    const ret = getObject(arg0).buffer;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_newwithbyteoffsetandlength_8a2cb9ca96b27ec9 = function(arg0, arg1, arg2) {
+		    const ret = new Uint8Array(getObject(arg0), arg1 >>> 0, arg2 >>> 0);
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_new_ea1883e1e5e86686 = function(arg0) {
+		    const ret = new Uint8Array(getObject(arg0));
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_set_d1e79e2388520f18 = function(arg0, arg1, arg2) {
+		    getObject(arg0).set(getObject(arg1), arg2 >>> 0);
+		};
+
+		module.exports.__wbg_length_8339fcf5d8ecd12e = function(arg0) {
+		    const ret = getObject(arg0).length;
+		    return ret;
+		};
+
+		module.exports.__wbg_newwithlength_ec548f448387c968 = function(arg0) {
+		    const ret = new Uint8Array(arg0 >>> 0);
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_subarray_7c2e3576afe181d1 = function(arg0, arg1, arg2) {
+		    const ret = getObject(arg0).subarray(arg1 >>> 0, arg2 >>> 0);
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbg_parse_52202f117ec9ecfa = function() { return handleError(function (arg0, arg1) {
+		    const ret = JSON.parse(getStringFromWasm0(arg0, arg1));
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_stringify_bbf45426c92a6bf5 = function() { return handleError(function (arg0) {
+		    const ret = JSON.stringify(getObject(arg0));
+		    return addHeapObject(ret);
+		}, arguments) };
+
+		module.exports.__wbg_has_4bfbc01db38743f7 = function() { return handleError(function (arg0, arg1) {
+		    const ret = Reflect.has(getObject(arg0), getObject(arg1));
+		    return ret;
+		}, arguments) };
+
+		module.exports.__wbindgen_debug_string = function(arg0, arg1) {
+		    const ret = debugString(getObject(arg1));
+		    const ptr1 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+		    const len1 = WASM_VECTOR_LEN;
+		    getDataViewMemory0().setInt32(arg0 + 4 * 1, len1, true);
+		    getDataViewMemory0().setInt32(arg0 + 4 * 0, ptr1, true);
+		};
+
+		module.exports.__wbindgen_throw = function(arg0, arg1) {
+		    throw new Error(getStringFromWasm0(arg0, arg1));
+		};
+
+		module.exports.__wbindgen_memory = function() {
+		    const ret = wasm.memory;
+		    return addHeapObject(ret);
+		};
+
+		module.exports.__wbindgen_closure_wrapper5855 = function(arg0, arg1, arg2) {
+		    const ret = makeMutClosure(arg0, arg1, 1732, __wbg_adapter_28);
+		    return addHeapObject(ret);
+		};
+
+		const path = require$$1$5.join(__dirname, 'core_bg.wasm');
+		const bytes = require$$1.readFileSync(path);
+
+		const wasmModule = new WebAssembly.Module(bytes);
+		const wasmInstance = new WebAssembly.Instance(wasmModule, imports);
+		wasm = wasmInstance.exports;
+		module.exports.__wasm = wasm; 
+	} (core));
+	return core.exports;
+}
+
+var hasRequiredCore;
+
+function requireCore () {
+	if (hasRequiredCore) return core$1;
+	hasRequiredCore = 1;
+	var __awaiter = (core$1 && core$1.__awaiter) || function (thisArg, _arguments, P, generator) {
+	    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+	    return new (P || (P = Promise))(function (resolve, reject) {
+	        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+	        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+	        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+	        step((generator = generator.apply(thisArg, _arguments || [])).next());
+	    });
+	};
+	Object.defineProperty(core$1, "__esModule", { value: true });
+	core$1.SharedCore = void 0;
+	const sdk_core_1 = requireCore$1();
+	/**
+	 *  An implementation of the `Core` interface that shares resources across all clients.
+	 */
+	class SharedCore {
+	    invoke_sync(config) {
+	        const serializedConfig = JSON.stringify(config);
+	        return (0, sdk_core_1.invoke_sync)(serializedConfig);
+	    }
+	    initClient(config) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const serializedConfig = JSON.stringify(config);
+	            return (0, sdk_core_1.init_client)(serializedConfig);
+	        });
+	    }
+	    invoke(config) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const serializedConfig = JSON.stringify(config);
+	            return (0, sdk_core_1.invoke)(serializedConfig);
+	        });
+	    }
+	    releaseClient(clientId) {
+	        const serializedId = JSON.stringify(clientId);
+	        (0, sdk_core_1.release_client)(serializedId);
+	    }
+	}
+	core$1.SharedCore = SharedCore;
+	return core$1;
+}
+
+var client_builder = {};
+
+var configuration = {};
+
+var version = {};
+
+var hasRequiredVersion;
+
+function requireVersion () {
+	if (hasRequiredVersion) return version;
+	hasRequiredVersion = 1;
+	Object.defineProperty(version, "__esModule", { value: true });
+	version.SDK_BUILD_NUMBER = version.SDK_VERSION = void 0;
+	version.SDK_VERSION = "0.1.5";
+	version.SDK_BUILD_NUMBER = "0010501";
+	return version;
+}
+
+var hasRequiredConfiguration;
+
+function requireConfiguration () {
+	if (hasRequiredConfiguration) return configuration;
+	hasRequiredConfiguration = 1;
+	(function (exports) {
+		var __importDefault = (configuration && configuration.__importDefault) || function (mod) {
+		    return (mod && mod.__esModule) ? mod : { "default": mod };
+		};
+		Object.defineProperty(exports, "__esModule", { value: true });
+		exports.getOsName = exports.clientAuthConfig = exports.VERSION = exports.LANGUAGE = void 0;
+		const os_1 = __importDefault(require$$0);
+		const version_js_1 = requireVersion();
+		exports.LANGUAGE = "JS";
+		exports.VERSION = version_js_1.SDK_BUILD_NUMBER;
+		/**
+		 * Creates a default client configuration.
+		 * @returns The client configuration to instantiate the client with.
+		 */
+		const clientAuthConfig = (userConfig) => {
+		    // TODO: Add logic for computing the correct sanitized version value for each platform
+		    const defaultOsVersion = "0.0.0";
+		    return {
+		        serviceAccountToken: userConfig.auth,
+		        programmingLanguage: exports.LANGUAGE,
+		        sdkVersion: exports.VERSION,
+		        integrationName: userConfig.integrationName,
+		        integrationVersion: userConfig.integrationVersion,
+		        requestLibraryName: "Fetch API",
+		        requestLibraryVersion: "Fetch API",
+		        os: (0, exports.getOsName)(),
+		        osVersion: defaultOsVersion,
+		        architecture: os_1.default.arch(),
+		    };
+		};
+		exports.clientAuthConfig = clientAuthConfig;
+		const getOsName = () => {
+		    // Only supported on Node.js
+		    const os_name = os_1.default.type().toLowerCase();
+		    if (os_name === "windows_nt") {
+		        return "windows";
+		    }
+		    return os_name;
+		};
+		exports.getOsName = getOsName; 
+	} (configuration));
+	return configuration;
+}
+
+var client = {};
+
+var secrets = {};
+
+var hasRequiredSecrets$1;
+
+function requireSecrets$1 () {
+	if (hasRequiredSecrets$1) return secrets;
+	hasRequiredSecrets$1 = 1;
+	// Code generated by op-codegen - DO NOT EDIT MANUALLY
+	var __awaiter = (secrets && secrets.__awaiter) || function (thisArg, _arguments, P, generator) {
+	    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+	    return new (P || (P = Promise))(function (resolve, reject) {
+	        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+	        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+	        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+	        step((generator = generator.apply(thisArg, _arguments || [])).next());
+	    });
+	};
+	var __classPrivateFieldSet = (secrets && secrets.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+	    if (kind === "m") throw new TypeError("Private method is not writable");
+	    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+	    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+	    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+	};
+	var __classPrivateFieldGet = (secrets && secrets.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+	    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+	    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+	    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+	};
+	var _Secrets_inner;
+	Object.defineProperty(secrets, "__esModule", { value: true });
+	secrets.Secrets = void 0;
+	const core_js_1 = requireCore();
+	class Secrets {
+	    constructor(inner) {
+	        _Secrets_inner.set(this, void 0);
+	        __classPrivateFieldSet(this, _Secrets_inner, inner, "f");
+	    }
+	    /**
+	     * Resolve returns the secret the provided secret reference points to.
+	     */
+	    resolve(secretReference) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Secrets_inner, "f").id,
+	                    parameters: {
+	                        name: "SecretsResolve",
+	                        parameters: {
+	                            secret_reference: secretReference,
+	                        },
+	                    },
+	                },
+	            };
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Secrets_inner, "f").core.invoke(invocationConfig));
+	        });
+	    }
+	    /**
+	     * Validate the secret reference to ensure there are no syntax errors.
+	     */
+	    static validateSecretReference(secretReference) {
+	        const sharedCore = new core_js_1.SharedCore();
+	        const invocationConfig = {
+	            invocation: {
+	                parameters: {
+	                    name: "ValidateSecretReference",
+	                    parameters: {
+	                        secret_reference: secretReference,
+	                    },
+	                },
+	            },
+	        };
+	        sharedCore.invoke_sync(invocationConfig);
+	    }
+	    static generatePassword(recipe) {
+	        const sharedCore = new core_js_1.SharedCore();
+	        const invocationConfig = {
+	            invocation: {
+	                parameters: {
+	                    name: "GeneratePassword",
+	                    parameters: {
+	                        recipe,
+	                    },
+	                },
+	            },
+	        };
+	        return JSON.parse(sharedCore.invoke_sync(invocationConfig));
+	    }
+	}
+	secrets.Secrets = Secrets;
+	_Secrets_inner = new WeakMap();
+	return secrets;
+}
+
+var items = {};
+
+var iterator$1 = {};
+
+var hasRequiredIterator;
+
+function requireIterator () {
+	if (hasRequiredIterator) return iterator$1;
+	hasRequiredIterator = 1;
+	var __await = (iterator$1 && iterator$1.__await) || function (v) { return this instanceof __await ? (this.v = v, this) : new __await(v); };
+	var __asyncGenerator = (iterator$1 && iterator$1.__asyncGenerator) || function (thisArg, _arguments, generator) {
+	    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+	    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+	    return i = Object.create((typeof AsyncIterator === "function" ? AsyncIterator : Object).prototype), verb("next"), verb("throw"), verb("return", awaitReturn), i[Symbol.asyncIterator] = function () { return this; }, i;
+	    function awaitReturn(f) { return function (v) { return Promise.resolve(v).then(f, reject); }; }
+	    function verb(n, f) { if (g[n]) { i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; if (f) i[n] = f(i[n]); } }
+	    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+	    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+	    function fulfill(value) { resume("next", value); }
+	    function reject(value) { resume("throw", value); }
+	    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+	};
+	Object.defineProperty(iterator$1, "__esModule", { value: true });
+	iterator$1.SdkIterable = void 0;
+	class SdkIterable {
+	    constructor(elements) {
+	        this.elements = elements;
+	    }
+	    [Symbol.asyncIterator]() {
+	        return this.asyncIterator();
+	    }
+	    asyncIterator() {
+	        return __asyncGenerator(this, arguments, function* asyncIterator_1() {
+	            for (const element of this.elements) {
+	                yield yield __await(yield __await(Promise.resolve(element)));
+	            }
+	        });
+	    }
+	}
+	iterator$1.SdkIterable = SdkIterable;
+	return iterator$1;
+}
+
+var hasRequiredItems;
+
+function requireItems () {
+	if (hasRequiredItems) return items;
+	hasRequiredItems = 1;
+	// Code generated by op-codegen - DO NOT EDIT MANUALLY
+	var __awaiter = (items && items.__awaiter) || function (thisArg, _arguments, P, generator) {
+	    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+	    return new (P || (P = Promise))(function (resolve, reject) {
+	        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+	        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+	        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+	        step((generator = generator.apply(thisArg, _arguments || [])).next());
+	    });
+	};
+	var __classPrivateFieldSet = (items && items.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+	    if (kind === "m") throw new TypeError("Private method is not writable");
+	    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+	    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+	    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+	};
+	var __classPrivateFieldGet = (items && items.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+	    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+	    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+	    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+	};
+	var _Items_inner;
+	Object.defineProperty(items, "__esModule", { value: true });
+	items.Items = void 0;
+	const iterator_js_1 = requireIterator();
+	class Items {
+	    constructor(inner) {
+	        _Items_inner.set(this, void 0);
+	        __classPrivateFieldSet(this, _Items_inner, inner, "f");
+	    }
+	    /**
+	     * Create a new item
+	     */
+	    create(params) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Items_inner, "f").id,
+	                    parameters: {
+	                        name: "ItemsCreate",
+	                        parameters: {
+	                            params,
+	                        },
+	                    },
+	                },
+	            };
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").core.invoke(invocationConfig));
+	        });
+	    }
+	    /**
+	     * Get an item by vault and item ID
+	     */
+	    get(vaultId, itemId) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Items_inner, "f").id,
+	                    parameters: {
+	                        name: "ItemsGet",
+	                        parameters: {
+	                            vault_id: vaultId,
+	                            item_id: itemId,
+	                        },
+	                    },
+	                },
+	            };
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").core.invoke(invocationConfig));
+	        });
+	    }
+	    /**
+	     * Update an existing item.
+	     */
+	    put(item) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Items_inner, "f").id,
+	                    parameters: {
+	                        name: "ItemsPut",
+	                        parameters: {
+	                            item,
+	                        },
+	                    },
+	                },
+	            };
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").core.invoke(invocationConfig));
+	        });
+	    }
+	    /**
+	     * Delete an item.
+	     */
+	    delete(vaultId, itemId) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Items_inner, "f").id,
+	                    parameters: {
+	                        name: "ItemsDelete",
+	                        parameters: {
+	                            vault_id: vaultId,
+	                            item_id: itemId,
+	                        },
+	                    },
+	                },
+	            };
+	            yield __classPrivateFieldGet(this, _Items_inner, "f").core.invoke(invocationConfig);
+	        });
+	    }
+	    /**
+	     * List all items
+	     */
+	    listAll(vaultId) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Items_inner, "f").id,
+	                    parameters: {
+	                        name: "ItemsListAll",
+	                        parameters: {
+	                            vault_id: vaultId,
+	                        },
+	                    },
+	                },
+	            };
+	            return new iterator_js_1.SdkIterable(JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").core.invoke(invocationConfig)));
+	        });
+	    }
+	}
+	items.Items = Items;
+	_Items_inner = new WeakMap();
+	return items;
+}
+
+var vaults = {};
+
+var hasRequiredVaults;
+
+function requireVaults () {
+	if (hasRequiredVaults) return vaults;
+	hasRequiredVaults = 1;
+	// Code generated by op-codegen - DO NOT EDIT MANUALLY
+	var __awaiter = (vaults && vaults.__awaiter) || function (thisArg, _arguments, P, generator) {
+	    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+	    return new (P || (P = Promise))(function (resolve, reject) {
+	        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+	        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+	        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+	        step((generator = generator.apply(thisArg, _arguments || [])).next());
+	    });
+	};
+	var __classPrivateFieldSet = (vaults && vaults.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+	    if (kind === "m") throw new TypeError("Private method is not writable");
+	    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+	    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+	    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+	};
+	var __classPrivateFieldGet = (vaults && vaults.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+	    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+	    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+	    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+	};
+	var _Vaults_inner;
+	Object.defineProperty(vaults, "__esModule", { value: true });
+	vaults.Vaults = void 0;
+	const iterator_js_1 = requireIterator();
+	class Vaults {
+	    constructor(inner) {
+	        _Vaults_inner.set(this, void 0);
+	        __classPrivateFieldSet(this, _Vaults_inner, inner, "f");
+	    }
+	    /**
+	     * List all vaults
+	     */
+	    listAll() {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Vaults_inner, "f").id,
+	                    parameters: {
+	                        name: "VaultsListAll",
+	                        parameters: {},
+	                    },
+	                },
+	            };
+	            return new iterator_js_1.SdkIterable(JSON.parse(yield __classPrivateFieldGet(this, _Vaults_inner, "f").core.invoke(invocationConfig)));
+	        });
+	    }
+	}
+	vaults.Vaults = Vaults;
+	_Vaults_inner = new WeakMap();
+	return vaults;
+}
+
+var hasRequiredClient;
+
+function requireClient () {
+	if (hasRequiredClient) return client;
+	hasRequiredClient = 1;
+	// Code generated by op-codegen - DO NOT EDIT MANUALLY
+	Object.defineProperty(client, "__esModule", { value: true });
+	client.Client = void 0;
+	const secrets_js_1 = requireSecrets$1();
+	const items_js_1 = requireItems();
+	const vaults_js_1 = requireVaults();
+	class Client {
+	    constructor(innerClient) {
+	        this.secrets = new secrets_js_1.Secrets(innerClient);
+	        this.items = new items_js_1.Items(innerClient);
+	        this.vaults = new vaults_js_1.Vaults(innerClient);
+	    }
+	}
+	client.Client = Client;
+	return client;
+}
+
+var hasRequiredClient_builder;
+
+function requireClient_builder () {
+	if (hasRequiredClient_builder) return client_builder;
+	hasRequiredClient_builder = 1;
+	var __awaiter = (client_builder && client_builder.__awaiter) || function (thisArg, _arguments, P, generator) {
+	    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+	    return new (P || (P = Promise))(function (resolve, reject) {
+	        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+	        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+	        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+	        step((generator = generator.apply(thisArg, _arguments || [])).next());
+	    });
+	};
+	Object.defineProperty(client_builder, "__esModule", { value: true });
+	client_builder.createClientWithCore = void 0;
+	const configuration_js_1 = requireConfiguration();
+	const client_js_1 = requireClient();
+	const finalizationRegistry = new FinalizationRegistry((heldClient) => {
+	    heldClient.core.releaseClient(heldClient.id);
+	});
+	/**
+	 * Creates a 1Password SDK client with a given core implementation.
+	 * @returns The authenticated 1Password SDK client.
+	 */
+	const createClientWithCore = (config, core) => __awaiter(void 0, void 0, void 0, function* () {
+	    const authConfig = (0, configuration_js_1.clientAuthConfig)(config);
+	    const clientId = yield core.initClient(authConfig);
+	    const inner = {
+	        id: parseInt(clientId, 10),
+	        core,
+	    };
+	    const client = new client_js_1.Client(inner);
+	    // Cleans up associated memory from core when client instance goes out of scope.
+	    finalizationRegistry.register(client, inner);
+	    return client;
+	});
+	client_builder.createClientWithCore = createClientWithCore;
+	return client_builder;
+}
+
+var types = {};
+
+var hasRequiredTypes;
+
+function requireTypes () {
+	if (hasRequiredTypes) return types;
+	hasRequiredTypes = 1;
+	/*
+	 Generated by typeshare 1.12.0
+	*/
+	Object.defineProperty(types, "__esModule", { value: true });
+	types.WordListType = types.SeparatorType = types.AutofillBehavior = types.ItemFieldType = types.ItemCategory = void 0;
+	var ItemCategory;
+	(function (ItemCategory) {
+	    ItemCategory["Login"] = "Login";
+	    ItemCategory["SecureNote"] = "SecureNote";
+	    ItemCategory["CreditCard"] = "CreditCard";
+	    ItemCategory["CryptoWallet"] = "CryptoWallet";
+	    ItemCategory["Identity"] = "Identity";
+	    ItemCategory["Password"] = "Password";
+	    ItemCategory["Document"] = "Document";
+	    ItemCategory["ApiCredentials"] = "ApiCredentials";
+	    ItemCategory["BankAccount"] = "BankAccount";
+	    ItemCategory["Database"] = "Database";
+	    ItemCategory["DriverLicense"] = "DriverLicense";
+	    ItemCategory["Email"] = "Email";
+	    ItemCategory["MedicalRecord"] = "MedicalRecord";
+	    ItemCategory["Membership"] = "Membership";
+	    ItemCategory["OutdoorLicense"] = "OutdoorLicense";
+	    ItemCategory["Passport"] = "Passport";
+	    ItemCategory["Rewards"] = "Rewards";
+	    ItemCategory["Router"] = "Router";
+	    ItemCategory["Server"] = "Server";
+	    ItemCategory["SshKey"] = "SshKey";
+	    ItemCategory["SocialSecurityNumber"] = "SocialSecurityNumber";
+	    ItemCategory["SoftwareLicense"] = "SoftwareLicense";
+	    ItemCategory["Person"] = "Person";
+	    ItemCategory["Unsupported"] = "Unsupported";
+	})(ItemCategory || (types.ItemCategory = ItemCategory = {}));
+	var ItemFieldType;
+	(function (ItemFieldType) {
+	    ItemFieldType["Text"] = "Text";
+	    ItemFieldType["Concealed"] = "Concealed";
+	    ItemFieldType["CreditCardType"] = "CreditCardType";
+	    ItemFieldType["CreditCardNumber"] = "CreditCardNumber";
+	    ItemFieldType["Phone"] = "Phone";
+	    ItemFieldType["Url"] = "Url";
+	    ItemFieldType["Totp"] = "Totp";
+	    ItemFieldType["Unsupported"] = "Unsupported";
+	})(ItemFieldType || (types.ItemFieldType = ItemFieldType = {}));
+	/**
+	 * Controls the auto-fill behavior of a website.
+	 *
+	 *
+	 * For more information, visit https://support.1password.com/autofill-behavior/
+	 */
+	var AutofillBehavior;
+	(function (AutofillBehavior) {
+	    /** Auto-fill any page that’s part of the website, including subdomains */
+	    AutofillBehavior["AnywhereOnWebsite"] = "AnywhereOnWebsite";
+	    /** Auto-fill only if the domain (hostname and port) is an exact match. */
+	    AutofillBehavior["ExactDomain"] = "ExactDomain";
+	    /** Never auto-fill on this website */
+	    AutofillBehavior["Never"] = "Never";
+	})(AutofillBehavior || (types.AutofillBehavior = AutofillBehavior = {}));
+	var SeparatorType;
+	(function (SeparatorType) {
+	    /**
+	     * Randomly selected digits.
+	     * E.g, "`correct4horse0battery1staple`"
+	     */
+	    SeparatorType["Digits"] = "digits";
+	    /**
+	     * Randomly selected digits and symbols.
+	     * This is useful to get word-based passwords to meet complexity requirements
+	     * E.g, "`correct4horse-battery1staple`"
+	     */
+	    SeparatorType["DigitsAndSymbols"] = "digitsAndSymbols";
+	    /**
+	     * Spaces, like the original Diceware.
+	     * Great for mobile keyboards, not so great when people can overhear you type the password.
+	     * E.g, "`correct horse battery staple`"
+	     */
+	    SeparatorType["Spaces"] = "spaces";
+	    /**
+	     * Hyphens "`-`".
+	     * E.g, "`correct-horse-battery-staple`"
+	     */
+	    SeparatorType["Hyphens"] = "hyphens";
+	    /**
+	     * "`_`".
+	     * E.g, "`correct_horse_battery_staple`"
+	     */
+	    SeparatorType["Underscores"] = "underscores";
+	    /**
+	     * Period (full stop) "`.`".
+	     * E.g, "`correct.horse.battery.staple`"
+	     */
+	    SeparatorType["Periods"] = "periods";
+	    /**
+	     * Comma "`,`".
+	     * E.g, "`correct,horse,battery,staple`"
+	     */
+	    SeparatorType["Commas"] = "commas";
+	})(SeparatorType || (types.SeparatorType = SeparatorType = {}));
+	var WordListType;
+	(function (WordListType) {
+	    /** Agile wordlist */
+	    WordListType["FullWords"] = "fullWords";
+	    /** English-like syllables */
+	    WordListType["Syllables"] = "syllables";
+	    /** Three (random) letter "words" */
+	    WordListType["ThreeLetters"] = "threeLetters";
+	})(WordListType || (types.WordListType = WordListType = {}));
+	return types;
+}
+
+var hasRequiredSdk;
+
+function requireSdk () {
+	if (hasRequiredSdk) return sdk;
+	hasRequiredSdk = 1;
+	(function (exports) {
+		var __createBinding = (sdk && sdk.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+		    if (k2 === undefined) k2 = k;
+		    var desc = Object.getOwnPropertyDescriptor(m, k);
+		    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+		      desc = { enumerable: true, get: function() { return m[k]; } };
+		    }
+		    Object.defineProperty(o, k2, desc);
+		}) : (function(o, m, k, k2) {
+		    if (k2 === undefined) k2 = k;
+		    o[k2] = m[k];
+		}));
+		var __exportStar = (sdk && sdk.__exportStar) || function(m, exports) {
+		    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+		};
+		var __awaiter = (sdk && sdk.__awaiter) || function (thisArg, _arguments, P, generator) {
+		    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+		    return new (P || (P = Promise))(function (resolve, reject) {
+		        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+		        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+		        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+		        step((generator = generator.apply(thisArg, _arguments || [])).next());
+		    });
+		};
+		Object.defineProperty(exports, "__esModule", { value: true });
+		exports.createClient = exports.Secrets = exports.DEFAULT_INTEGRATION_VERSION = exports.DEFAULT_INTEGRATION_NAME = void 0;
+		const core_js_1 = requireCore();
+		const client_builder_js_1 = requireClient_builder();
+		exports.DEFAULT_INTEGRATION_NAME = "Unknown";
+		exports.DEFAULT_INTEGRATION_VERSION = "Unknown";
+		// auto-generated static exports
+		var secrets_js_1 = requireSecrets$1();
+		Object.defineProperty(exports, "Secrets", { enumerable: true, get: function () { return secrets_js_1.Secrets; } });
+		__exportStar(requireClient(), exports);
+		__exportStar(requireTypes(), exports);
+		/**
+		 * Creates a default 1Password SDK client.
+		 * @returns The authenticated 1Password SDK client.
+		 */
+		const createClient = (config) => __awaiter(void 0, void 0, void 0, function* () { return (0, client_builder_js_1.createClientWithCore)(config, new core_js_1.SharedCore()); });
+		exports.createClient = createClient; 
+	} (sdk));
+	return sdk;
+}
+
+var hasRequiredSecrets;
+
+function requireSecrets () {
+	if (hasRequiredSecrets) return secrets$1;
+	hasRequiredSecrets = 1;
+	Object.defineProperty(secrets$1, "__esModule", { value: true });
+	secrets$1.CloudSecret = void 0;
+	const sdk_1 = requireSdk();
+	class CloudSecret {
+	    token;
+	    constructor(token) {
+	        this.token = token;
+	    }
+	    async getField(name, field) {
+	        const client = await (0, sdk_1.createClient)({
+	            auth: this.token,
+	            integrationName: "Update Upstream Integration",
+	            integrationVersion: "0.1.0",
+	        });
+	        return client.secrets.resolve(`op://cloud/${name}/${field}`);
+	    }
+	    async getCredential(name) {
+	        return this.getField(name, "credential");
+	    }
+	}
+	secrets$1.CloudSecret = CloudSecret;
+	
+	return secrets$1;
+}
+
+var hasRequiredDist;
+
+function requireDist () {
+	if (hasRequiredDist) return dist;
+	hasRequiredDist = 1;
+	(function (exports) {
+		var __createBinding = (dist && dist.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+		    if (k2 === undefined) k2 = k;
+		    var desc = Object.getOwnPropertyDescriptor(m, k);
+		    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+		      desc = { enumerable: true, get: function() { return m[k]; } };
+		    }
+		    Object.defineProperty(o, k2, desc);
+		}) : (function(o, m, k, k2) {
+		    if (k2 === undefined) k2 = k;
+		    o[k2] = m[k];
+		}));
+		var __exportStar = (dist && dist.__exportStar) || function(m, exports) {
+		    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+		};
+		Object.defineProperty(exports, "__esModule", { value: true });
+		__exportStar(requireSecrets(), exports);
+		
+	} (dist));
+	return dist;
+}
+
+var distExports = requireDist();
 
 var github = {};
 
@@ -31229,7 +32781,6 @@ function requireGithub () {
 
 var githubExports = requireGithub();
 
-//import { CloudSecret } from '@markemer/toolkit'
 async function updateRepos(fileName, options) {
     if (existsSync(fileName)) {
         const fileData = readFileSync(fileName, { encoding: 'utf8' });
@@ -31244,9 +32795,8 @@ async function updateRepos(fileName, options) {
 }
 async function update(repo, options) {
     coreExports.debug(`Updating ${repo}:${options.branch} from upstream fork`);
-    // const secrets = new CloudSecret(options.token)
-    // const token = await secrets.getCredential('macports_update_token')
-    const token = 'addtokenhere';
+    const secrets = new distExports.CloudSecret(options.token);
+    const token = await secrets.getCredential('macports_update_token');
     const username = githubExports.context.repo.owner;
     const octokit = githubExports.getOctokit(token);
     try {

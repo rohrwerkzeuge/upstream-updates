@@ -1,4 +1,4 @@
-//import { CloudSecret } from '@markemer/toolkit'
+import { CloudSecret } from '@rohrwerkzeuge/actions-toolkit'
 import * as core from '@actions/core'
 import * as github from '@actions/github'
 import { RequestError } from '@octokit/request-error'
@@ -34,11 +34,9 @@ export async function update(
 ): Promise<void> {
   core.debug(`Updating ${repo}:${options.branch} from upstream fork`)
 
-  // const secrets = new CloudSecret(options.token)
+  const secrets = new CloudSecret(options.token)
 
-  // const token = await secrets.getCredential('macports_update_token')
-
-  const token = 'addtokenhere'
+  const token = await secrets.getCredential('macports_update_token')
 
   const username = github.context.repo.owner
 
