@@ -57,7 +57,9 @@ jobs:
         id: test-action
         uses: ./
         with:
-          milliseconds: 2000
+          repo: 'macports-ports'
+          op-token: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          branch: 'master'
 
       - name: Print Output
         id: output
