@@ -108,7 +108,7 @@ function requireUtils$3 () {
 	    };
 	}
 	utils$3.toCommandProperties = toCommandProperties;
-	
+
 	return utils$3;
 }
 
@@ -211,7 +211,7 @@ function requireCommand () {
 	        .replace(/:/g, '%3A')
 	        .replace(/,/g, '%2C');
 	}
-	
+
 	return command;
 }
 
@@ -282,7 +282,7 @@ function requireFileCommand () {
 	    return `${key}<<${delimiter}${os.EOL}${convertedValue}${os.EOL}${delimiter}`;
 	}
 	fileCommand.prepareKeyValueMessage = prepareKeyValueMessage;
-	
+
 	return fileCommand;
 }
 
@@ -390,7 +390,7 @@ function requireProxy () {
 	        return this._decodedPassword;
 	    }
 	}
-	
+
 	return proxy;
 }
 
@@ -8239,7 +8239,7 @@ function requireUtils$2 () {
 	    return res;
 	}
 	utils$2.enumToMap = enumToMap;
-	
+
 	return utils$2;
 }
 
@@ -8519,7 +8519,7 @@ function requireConstants$2 () {
 		    'transfer-encoding': HEADER_STATE.TRANSFER_ENCODING,
 		    'upgrade': HEADER_STATE.UPGRADE,
 		};
-		
+
 	} (constants$2));
 	return constants$2;
 }
@@ -25031,7 +25031,7 @@ function requireLib () {
 	}
 	lib.HttpClient = HttpClient;
 	const lowercaseKeys = (obj) => Object.keys(obj).reduce((c, k) => ((c[k.toLowerCase()] = obj[k]), c), {});
-	
+
 	return lib;
 }
 
@@ -25121,7 +25121,7 @@ function requireAuth () {
 	    }
 	}
 	auth$1.PersonalAccessTokenCredentialHandler = PersonalAccessTokenCredentialHandler;
-	
+
 	return auth$1;
 }
 
@@ -25173,8 +25173,8 @@ function requireOidcUtils () {
 	            const res = yield httpclient
 	                .getJson(id_token_url)
 	                .catch(error => {
-	                throw new Error(`Failed to get ID Token. \n 
-        Error Code : ${error.statusCode}\n 
+	                throw new Error(`Failed to get ID Token. \n
+        Error Code : ${error.statusCode}\n
         Error Message: ${error.message}`);
 	            });
 	            const id_token = (_a = res.result) === null || _a === void 0 ? void 0 : _a.value;
@@ -25205,7 +25205,7 @@ function requireOidcUtils () {
 	    }
 	}
 	oidcUtils.OidcClient = OidcClient;
-	
+
 	return oidcUtils;
 }
 
@@ -25498,7 +25498,7 @@ function requireSummary () {
 		 */
 		exports.markdownSummary = _summary;
 		exports.summary = _summary;
-		
+
 	} (summary));
 	return summary;
 }
@@ -25570,7 +25570,7 @@ function requirePathUtils () {
 	    return pth.replace(/[/\\]/g, path.sep);
 	}
 	pathUtils.toPlatformPath = toPlatformPath;
-	
+
 	return pathUtils;
 }
 
@@ -25771,7 +25771,7 @@ function requireIoUtil () {
 		    return (_a = process.env['COMSPEC']) !== null && _a !== void 0 ? _a : `cmd.exe`;
 		}
 		exports.getCmdPath = getCmdPath;
-		
+
 	} (ioUtil));
 	return ioUtil;
 }
@@ -26078,7 +26078,7 @@ function requireIo () {
 	        }
 	    });
 	}
-	
+
 	return io;
 }
 
@@ -26703,7 +26703,7 @@ function requireToolrunner () {
 	        state._setResult();
 	    }
 	}
-	
+
 	return toolrunner;
 }
 
@@ -26813,7 +26813,7 @@ function requireExec () {
 	    });
 	}
 	exec.getExecOutput = getExecOutput;
-	
+
 	return exec;
 }
 
@@ -26915,7 +26915,7 @@ function requirePlatform () {
 		    });
 		}
 		exports.getDetails = getDetails;
-		
+
 	} (platform));
 	return platform;
 }
@@ -27268,7 +27268,7 @@ function requireCore$2 () {
 		 * Platform utilities exports
 		 */
 		exports.platform = __importStar(requirePlatform());
-		
+
 	} (core$2));
 	return core$2;
 }
@@ -28073,7 +28073,7 @@ function requireCore$1 () {
 		    throw new Error(getStringFromWasm0(arg0, arg1));
 		};
 
-		const path = require$$1$5.join(__dirname, 'core_bg.wasm');
+		const path = require$$1$5.join(import.meta.dirname, 'core_bg.wasm');
 		const bytes = require$$1.readFileSync(path);
 
 		const wasmModule = new WebAssembly.Module(bytes);
@@ -28081,7 +28081,7 @@ function requireCore$1 () {
 		wasm = wasmInstance.exports;
 		module.exports.__wasm = wasm;
 
-		wasm.__wbindgen_start(); 
+		wasm.__wbindgen_start();
 	} (core));
 	return core.exports;
 }
@@ -28445,7 +28445,7 @@ function requireConfiguration () {
 		    }
 		    return os_name;
 		};
-		exports.getOsName = getOsName; 
+		exports.getOsName = getOsName;
 	} (configuration));
 	return configuration;
 }
@@ -29172,7 +29172,7 @@ function requireSdk () {
 		 * @returns The authenticated 1Password SDK client.
 		 */
 		const createClient = (config) => __awaiter(void 0, void 0, void 0, function* () { return (0, client_builder_js_1.createClientWithCore)(config, new core_js_1.SharedCore()); });
-		exports.createClient = createClient; 
+		exports.createClient = createClient;
 	} (sdk));
 	return sdk;
 }
@@ -29259,7 +29259,7 @@ function requireContext () {
 	    }
 	}
 	context.Context = Context;
-	
+
 	return context;
 }
 
@@ -29340,7 +29340,7 @@ function requireUtils$1 () {
 	    return process.env['GITHUB_API_URL'] || 'https://api.github.com';
 	}
 	utils.getApiBaseUrl = getApiBaseUrl;
-	
+
 	return utils;
 }
 
@@ -33096,7 +33096,7 @@ function requireUtils () {
 		    return opts;
 		}
 		exports.getOctokitOptions = getOctokitOptions;
-		
+
 	} (utils$1));
 	return utils$1;
 }
@@ -33145,7 +33145,7 @@ function requireGithub () {
 	    return new GitHubWithPlugins((0, utils_1.getOctokitOptions)(token, options));
 	}
 	github.getOctokit = getOctokit;
-	
+
 	return github;
 }
 
