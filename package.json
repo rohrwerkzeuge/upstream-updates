@@ -1,8 +1,8 @@
 {
   "name": "upstream-updates",
-  "description": "GitHub Actions TypeScript template",
+  "description": "Update repos with upstream",
   "version": "0.2.0",
-  "author": "",
+  "author": "Mark Anderson",
   "type": "module",
   "private": true,
   "homepage": "https://github.com/rohrwerkzeuge/upstream-updates",
