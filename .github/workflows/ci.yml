@@ -60,7 +60,3 @@ jobs:
           repo: 'macports-ports'
           op-token: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
           branch: 'master'
-
-      - name: Print Output
-        id: output
-        run: echo "${{ steps.test-action.outputs.time }}"
