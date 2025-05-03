@@ -28,6 +28,14 @@ import require$$0$9 from 'diagnostics_channel';
 import require$$2$3 from 'child_process';
 import require$$6$1 from 'timers';
 
+
+// -- Shims --
+import cjsUrl from 'node:url';
+import cjsPath from 'node:path';
+import cjsModule from 'node:module';
+const __filename = cjsUrl.fileURLToPath(import.meta.url);
+const __dirname = cjsPath.dirname(__filename);
+const require = cjsModule.createRequire(import.meta.url);
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
 function getDefaultExportFromCjs (x) {
@@ -108,7 +116,7 @@ function requireUtils$3 () {
 	    };
 	}
 	utils$3.toCommandProperties = toCommandProperties;
-
+	
 	return utils$3;
 }
 
@@ -211,7 +219,7 @@ function requireCommand () {
 	        .replace(/:/g, '%3A')
 	        .replace(/,/g, '%2C');
 	}
-
+	
 	return command;
 }
 
@@ -282,7 +290,7 @@ function requireFileCommand () {
 	    return `${key}<<${delimiter}${os.EOL}${convertedValue}${os.EOL}${delimiter}`;
 	}
 	fileCommand.prepareKeyValueMessage = prepareKeyValueMessage;
-
+	
 	return fileCommand;
 }
 
@@ -390,7 +398,7 @@ function requireProxy () {
 	        return this._decodedPassword;
 	    }
 	}
-
+	
 	return proxy;
 }
 
@@ -8239,7 +8247,7 @@ function requireUtils$2 () {
 	    return res;
 	}
 	utils$2.enumToMap = enumToMap;
-
+	
 	return utils$2;
 }
 
@@ -8519,7 +8527,7 @@ function requireConstants$2 () {
 		    'transfer-encoding': HEADER_STATE.TRANSFER_ENCODING,
 		    'upgrade': HEADER_STATE.UPGRADE,
 		};
-
+		
 	} (constants$2));
 	return constants$2;
 }
@@ -25031,7 +25039,7 @@ function requireLib () {
 	}
 	lib.HttpClient = HttpClient;
 	const lowercaseKeys = (obj) => Object.keys(obj).reduce((c, k) => ((c[k.toLowerCase()] = obj[k]), c), {});
-
+	
 	return lib;
 }
 
@@ -25121,7 +25129,7 @@ function requireAuth () {
 	    }
 	}
 	auth$1.PersonalAccessTokenCredentialHandler = PersonalAccessTokenCredentialHandler;
-
+	
 	return auth$1;
 }
 
@@ -25173,8 +25181,8 @@ function requireOidcUtils () {
 	            const res = yield httpclient
 	                .getJson(id_token_url)
 	                .catch(error => {
-	                throw new Error(`Failed to get ID Token. \n
-        Error Code : ${error.statusCode}\n
+	                throw new Error(`Failed to get ID Token. \n 
+        Error Code : ${error.statusCode}\n 
         Error Message: ${error.message}`);
 	            });
 	            const id_token = (_a = res.result) === null || _a === void 0 ? void 0 : _a.value;
@@ -25205,7 +25213,7 @@ function requireOidcUtils () {
 	    }
 	}
 	oidcUtils.OidcClient = OidcClient;
-
+	
 	return oidcUtils;
 }
 
@@ -25498,7 +25506,7 @@ function requireSummary () {
 		 */
 		exports.markdownSummary = _summary;
 		exports.summary = _summary;
-
+		
 	} (summary));
 	return summary;
 }
@@ -25570,7 +25578,7 @@ function requirePathUtils () {
 	    return pth.replace(/[/\\]/g, path.sep);
 	}
 	pathUtils.toPlatformPath = toPlatformPath;
-
+	
 	return pathUtils;
 }
 
@@ -25771,7 +25779,7 @@ function requireIoUtil () {
 		    return (_a = process.env['COMSPEC']) !== null && _a !== void 0 ? _a : `cmd.exe`;
 		}
 		exports.getCmdPath = getCmdPath;
-
+		
 	} (ioUtil));
 	return ioUtil;
 }
@@ -26078,7 +26086,7 @@ function requireIo () {
 	        }
 	    });
 	}
-
+	
 	return io;
 }
 
@@ -26703,7 +26711,7 @@ function requireToolrunner () {
 	        state._setResult();
 	    }
 	}
-
+	
 	return toolrunner;
 }
 
@@ -26813,7 +26821,7 @@ function requireExec () {
 	    });
 	}
 	exec.getExecOutput = getExecOutput;
-
+	
 	return exec;
 }
 
@@ -26915,7 +26923,7 @@ function requirePlatform () {
 		    });
 		}
 		exports.getDetails = getDetails;
-
+		
 	} (platform));
 	return platform;
 }
@@ -27268,7 +27276,7 @@ function requireCore$2 () {
 		 * Platform utilities exports
 		 */
 		exports.platform = __importStar(requirePlatform());
-
+		
 	} (core$2));
 	return core$2;
 }
@@ -27564,15 +27572,15 @@ function requireCore$1 () {
 		};
 
 		function __wbg_adapter_30(arg0, arg1) {
-		    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hca0c228c64b54103(arg0, arg1);
+		    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h7ea385b69e78e96d(arg0, arg1);
 		}
 
 		function __wbg_adapter_33(arg0, arg1, arg2) {
-		    wasm.closure2135_externref_shim(arg0, arg1, arg2);
+		    wasm.closure2119_externref_shim(arg0, arg1, arg2);
 		}
 
 		function __wbg_adapter_154(arg0, arg1, arg2, arg3) {
-		    wasm.closure2219_externref_shim(arg0, arg1, arg2, arg3);
+		    wasm.closure2203_externref_shim(arg0, arg1, arg2, arg3);
 		}
 
 		const __wbindgen_enum_RequestCredentials = ["omit", "same-origin", "include"];
@@ -27611,7 +27619,7 @@ function requireCore$1 () {
 		    return ret;
 		}, arguments) };
 
-		module.exports.__wbg_clearTimeout_4397cdf06dd2e6ef = function(arg0) {
+		module.exports.__wbg_clearTimeout_86721db0036bea98 = function(arg0) {
 		    const ret = clearTimeout(arg0);
 		    return ret;
 		};
@@ -27631,7 +27639,7 @@ function requireCore$1 () {
 		    return ret;
 		};
 
-		module.exports.__wbg_fetch_991491c8dac859a5 = function(arg0) {
+		module.exports.__wbg_fetch_d36a73832f0a45e8 = function(arg0) {
 		    const ret = fetch(arg0);
 		    return ret;
 		};
@@ -27865,7 +27873,7 @@ function requireCore$1 () {
 		    return ret;
 		}, arguments) };
 
-		module.exports.__wbg_setTimeout_d69c3ce010c0e055 = function(arg0, arg1) {
+		module.exports.__wbg_setTimeout_2e707715f8cc9497 = function(arg0, arg1) {
 		    const ret = setTimeout(arg0, arg1);
 		    return ret;
 		};
@@ -27996,13 +28004,13 @@ function requireCore$1 () {
 		    return ret;
 		};
 
-		module.exports.__wbindgen_closure_wrapper7938 = function(arg0, arg1, arg2) {
-		    const ret = makeMutClosure(arg0, arg1, 2118, __wbg_adapter_30);
+		module.exports.__wbindgen_closure_wrapper7966 = function(arg0, arg1, arg2) {
+		    const ret = makeMutClosure(arg0, arg1, 2102, __wbg_adapter_30);
 		    return ret;
 		};
 
-		module.exports.__wbindgen_closure_wrapper7997 = function(arg0, arg1, arg2) {
-		    const ret = makeMutClosure(arg0, arg1, 2136, __wbg_adapter_33);
+		module.exports.__wbindgen_closure_wrapper8025 = function(arg0, arg1, arg2) {
+		    const ret = makeMutClosure(arg0, arg1, 2120, __wbg_adapter_33);
 		    return ret;
 		};
 
@@ -28073,7 +28081,7 @@ function requireCore$1 () {
 		    throw new Error(getStringFromWasm0(arg0, arg1));
 		};
 
-		const path = require$$1$5.join(import.meta.dirname, 'core_bg.wasm');
+		const path = require$$1$5.join(__dirname, 'core_bg.wasm');
 		const bytes = require$$1.readFileSync(path);
 
 		const wasmModule = new WebAssembly.Module(bytes);
@@ -28081,7 +28089,7 @@ function requireCore$1 () {
 		wasm = wasmInstance.exports;
 		module.exports.__wasm = wasm;
 
-		wasm.__wbindgen_start();
+		wasm.__wbindgen_start(); 
 	} (core));
 	return core.exports;
 }
@@ -28097,7 +28105,7 @@ function requireTypes () {
 	 Generated by typeshare 1.13.2
 	*/
 	Object.defineProperty(types, "__esModule", { value: true });
-	types.ReplacerFunc = types.ReviverFunc = types.WordListType = types.SeparatorType = types.AllowedRecipientType = types.AllowedType = types.ItemShareDuration = types.AutofillBehavior = types.ItemFieldType = types.ItemCategory = void 0;
+	types.ReplacerFunc = types.ReviverFunc = types.WordListType = types.SeparatorType = types.AllowedRecipientType = types.AllowedType = types.ItemShareDuration = types.ItemState = types.AutofillBehavior = types.ItemFieldType = types.ItemCategory = void 0;
 	var ItemCategory;
 	(function (ItemCategory) {
 	    ItemCategory["Login"] = "Login";
@@ -28158,6 +28166,14 @@ function requireTypes () {
 	    /** Never auto-fill on this website */
 	    AutofillBehavior["Never"] = "Never";
 	})(AutofillBehavior || (types.AutofillBehavior = AutofillBehavior = {}));
+	/** Represents the state of an item in the SDK. */
+	var ItemState;
+	(function (ItemState) {
+	    /** The item is active */
+	    ItemState["Active"] = "active";
+	    /** The item is archived meaning it's hidden from regular view and stored in the archive. */
+	    ItemState["Archived"] = "archived";
+	})(ItemState || (types.ItemState = ItemState = {}));
 	/** The valid duration options for sharing an item */
 	var ItemShareDuration;
 	(function (ItemShareDuration) {
@@ -28396,8 +28412,8 @@ function requireVersion () {
 	hasRequiredVersion = 1;
 	Object.defineProperty(version, "__esModule", { value: true });
 	version.SDK_BUILD_NUMBER = version.SDK_VERSION = void 0;
-	version.SDK_VERSION = "0.2.1";
-	version.SDK_BUILD_NUMBER = "0020101";
+	version.SDK_VERSION = "0.3.0";
+	version.SDK_BUILD_NUMBER = "0030001";
 	return version;
 }
 
@@ -28421,10 +28437,11 @@ function requireConfiguration () {
 		 * @returns The client configuration to instantiate the client with.
 		 */
 		const clientAuthConfig = (userConfig) => {
+		    var _a;
 		    // TODO: Add logic for computing the correct sanitized version value for each platform
 		    const defaultOsVersion = "0.0.0";
 		    return {
-		        serviceAccountToken: userConfig.auth,
+		        serviceAccountToken: (_a = userConfig.auth) !== null && _a !== void 0 ? _a : "",
 		        programmingLanguage: exports.LANGUAGE,
 		        sdkVersion: exports.VERSION,
 		        integrationName: userConfig.integrationName,
@@ -28445,7 +28462,7 @@ function requireConfiguration () {
 		    }
 		    return os_name;
 		};
-		exports.getOsName = getOsName;
+		exports.getOsName = getOsName; 
 	} (configuration));
 	return configuration;
 }
@@ -28566,48 +28583,6 @@ function requireSecrets () {
 }
 
 var items = {};
-
-var iterator$1 = {};
-
-var hasRequiredIterator;
-
-function requireIterator () {
-	if (hasRequiredIterator) return iterator$1;
-	hasRequiredIterator = 1;
-	// Code generated by op-codegen - DO NOT EDIT MANUALLY
-	var __await = (iterator$1 && iterator$1.__await) || function (v) { return this instanceof __await ? (this.v = v, this) : new __await(v); };
-	var __asyncGenerator = (iterator$1 && iterator$1.__asyncGenerator) || function (thisArg, _arguments, generator) {
-	    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-	    var g = generator.apply(thisArg, _arguments || []), i, q = [];
-	    return i = Object.create((typeof AsyncIterator === "function" ? AsyncIterator : Object).prototype), verb("next"), verb("throw"), verb("return", awaitReturn), i[Symbol.asyncIterator] = function () { return this; }, i;
-	    function awaitReturn(f) { return function (v) { return Promise.resolve(v).then(f, reject); }; }
-	    function verb(n, f) { if (g[n]) { i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; if (f) i[n] = f(i[n]); } }
-	    function resume(n, v) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
-	    function step(r) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
-	    function fulfill(value) { resume("next", value); }
-	    function reject(value) { resume("throw", value); }
-	    function settle(f, v) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
-	};
-	Object.defineProperty(iterator$1, "__esModule", { value: true });
-	iterator$1.SdkIterable = void 0;
-	class SdkIterable {
-	    constructor(elements) {
-	        this.elements = elements;
-	    }
-	    [Symbol.asyncIterator]() {
-	        return this.asyncIterator();
-	    }
-	    asyncIterator() {
-	        return __asyncGenerator(this, arguments, function* asyncIterator_1() {
-	            for (const element of this.elements) {
-	                yield yield __await(yield __await(Promise.resolve(element)));
-	            }
-	        });
-	    }
-	}
-	iterator$1.SdkIterable = SdkIterable;
-	return iterator$1;
-}
 
 var items_shares = {};
 
@@ -28867,7 +28842,6 @@ function requireItems () {
 	var _Items_inner;
 	Object.defineProperty(items, "__esModule", { value: true });
 	items.Items = void 0;
-	const iterator_js_1 = requireIterator();
 	const types_js_1 = requireTypes();
 	const items_shares_js_1 = requireItems_shares();
 	const items_files_js_1 = requireItems_files();
@@ -28977,22 +28951,23 @@ function requireItems () {
 	        });
 	    }
 	    /**
-	     * List all items
+	     * List items based on filters.
 	     */
-	    listAll(vaultId) {
+	    list(vaultId, ...filters) {
 	        return __awaiter(this, void 0, void 0, function* () {
 	            const invocationConfig = {
 	                invocation: {
 	                    clientId: __classPrivateFieldGet(this, _Items_inner, "f").id,
 	                    parameters: {
-	                        name: "ItemsListAll",
+	                        name: "ItemsList",
 	                        parameters: {
 	                            vault_id: vaultId,
+	                            filters,
 	                        },
 	                    },
 	                },
 	            };
-	            return new iterator_js_1.SdkIterable(JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc));
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	}
@@ -29032,7 +29007,6 @@ function requireVaults () {
 	var _Vaults_inner;
 	Object.defineProperty(vaults, "__esModule", { value: true });
 	vaults.Vaults = void 0;
-	const iterator_js_1 = requireIterator();
 	const types_js_1 = requireTypes();
 	class Vaults {
 	    constructor(inner) {
@@ -29042,18 +29016,18 @@ function requireVaults () {
 	    /**
 	     * List all vaults
 	     */
-	    listAll() {
+	    list() {
 	        return __awaiter(this, void 0, void 0, function* () {
 	            const invocationConfig = {
 	                invocation: {
 	                    clientId: __classPrivateFieldGet(this, _Vaults_inner, "f").id,
 	                    parameters: {
-	                        name: "VaultsListAll",
+	                        name: "VaultsList",
 	                        parameters: {},
 	                    },
 	                },
 	            };
-	            return new iterator_js_1.SdkIterable(JSON.parse(yield __classPrivateFieldGet(this, _Vaults_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc));
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Vaults_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	}
@@ -29172,7 +29146,7 @@ function requireSdk () {
 		 * @returns The authenticated 1Password SDK client.
 		 */
 		const createClient = (config) => __awaiter(void 0, void 0, void 0, function* () { return (0, client_builder_js_1.createClientWithCore)(config, new core_js_1.SharedCore()); });
-		exports.createClient = createClient;
+		exports.createClient = createClient; 
 	} (sdk));
 	return sdk;
 }
@@ -29259,7 +29233,7 @@ function requireContext () {
 	    }
 	}
 	context.Context = Context;
-
+	
 	return context;
 }
 
@@ -29340,7 +29314,7 @@ function requireUtils$1 () {
 	    return process.env['GITHUB_API_URL'] || 'https://api.github.com';
 	}
 	utils.getApiBaseUrl = getApiBaseUrl;
-
+	
 	return utils;
 }
 
@@ -33096,7 +33070,7 @@ function requireUtils () {
 		    return opts;
 		}
 		exports.getOctokitOptions = getOctokitOptions;
-
+		
 	} (utils$1));
 	return utils$1;
 }
@@ -33145,7 +33119,7 @@ function requireGithub () {
 	    return new GitHubWithPlugins((0, utils_1.getOctokitOptions)(token, options));
 	}
 	github.getOctokit = getOctokit;
-
+	
 	return github;
 }
 

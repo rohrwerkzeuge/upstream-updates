@@ -46,6 +46,7 @@
     "@github/local-action": "3.2.1",
     "@jest/globals": "^29.7.0",
     "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-esm-shim": "^0.1.8",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-typescript": "^12.1.2",
     "@types/jest": "^29.5.14",
