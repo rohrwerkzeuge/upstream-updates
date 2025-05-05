@@ -33141,7 +33141,13 @@ async function update(repo, options) {
     coreExports.debug(`Updating ${repo}:${options.branch} from upstream fork`);
     const secrets = new CloudSecret(options.token);
     const token = await secrets.getCredential('macports_update_token');
-    const username = githubExports.context.repo.owner;
+    let username;
+    if (options.owner == '') {
+        username = githubExports.context.repo.owner;
+    }
+    else {
+        username = options.owner;
+    }
     const octokit = githubExports.getOctokit(token);
     try {
         const updated_repo = await octokit.rest.repos.mergeUpstream({
@@ -33186,11 +33192,20 @@ async function run() {
         const file_name = coreExports.getInput('repo-file');
         const op_token = coreExports.getInput('op-token');
         const branch = coreExports.getInput('branch');
+        const owner = coreExports.getInput('owner');
         if (repo_name != '') {
-            await update(repo_name, { token: op_token, branch: branch });
+            await update(repo_name, {
+                owner: owner,
+                token: op_token,
+                branch: branch
+            });
         }
         else if (file_name != '') {
-            await updateRepos(file_name, { token: op_token, branch: branch });
+            await updateRepos(file_name, {
+                owner: owner,
+                token: op_token,
+                branch: branch
+            });
         }
         else {
             coreExports.setFailed('Either repo or repo-file is required');
