@@ -1,3 +1,3 @@
 # Update Upstream Action
 
-updates repo with upstream
+Updates repository with upstream
