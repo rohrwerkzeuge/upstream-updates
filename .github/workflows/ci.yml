@@ -57,6 +57,7 @@ jobs:
         id: test-action
         uses: ./
         with:
-          repo: 'markemer/macports-ports'
+          owner: 'markemer'
+          repo: 'macports-ports'
           op-token: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
           branch: 'master'

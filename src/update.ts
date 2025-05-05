@@ -5,6 +5,7 @@ import { RequestError } from '@octokit/request-error'
 import { existsSync, readFileSync } from 'fs'
 
 export interface UpdateOptions {
+  owner: string
   token: string
   branch: string
 }
@@ -38,7 +39,12 @@ export async function update(
 
   const token = await secrets.getCredential('macports_update_token')
 
-  const username = github.context.repo.owner
+  let username: string
+  if (options.owner == '') {
+    username = github.context.repo.owner
+  } else {
+    username = options.owner
+  }
 
   const octokit = github.getOctokit(token)
 

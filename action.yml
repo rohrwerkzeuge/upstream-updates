@@ -9,6 +9,9 @@ branding:
 
 # Define your inputs here.
 inputs:
+  owner:
+    description: 'Repository Owner'
+    required: false
   repo:
     description: 'Repository Name'
     required: false

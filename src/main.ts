@@ -13,11 +13,20 @@ export async function run(): Promise<void> {
     const file_name: string = core.getInput('repo-file')
     const op_token: string = core.getInput('op-token')
     const branch: string = core.getInput('branch')
+    const owner: string = core.getInput('owner')
 
     if (repo_name != '') {
-      await update(repo_name, { token: op_token, branch: branch })
+      await update(repo_name, {
+        owner: owner,
+        token: op_token,
+        branch: branch
+      })
     } else if (file_name != '') {
-      await updateRepos(file_name, { token: op_token, branch: branch })
+      await updateRepos(file_name, {
+        owner: owner,
+        token: op_token,
+        branch: branch
+      })
     } else {
       core.setFailed('Either repo or repo-file is required')
     }
