@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Temp hack while I figure out how to do this with rollup or whatever
+cp node_modules/@1password/sdk-core/nodejs/core_bg.wasm dist/core_bg.wasm
