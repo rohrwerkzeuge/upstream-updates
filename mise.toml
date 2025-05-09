@@ -1,0 +1,8 @@
+[env]
+_.path = ['{{config_root}}/node_modules/.bin']
+
+[tools]
+node = "20"
+"npm:typescript" = "latest"
+"npm:eslint" = "latest"
+"npm:jest" = "latest"
