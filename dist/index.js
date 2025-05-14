@@ -29207,6 +29207,7 @@ function requireContext () {
 	        this.action = process.env.GITHUB_ACTION;
 	        this.actor = process.env.GITHUB_ACTOR;
 	        this.job = process.env.GITHUB_JOB;
+	        this.runAttempt = parseInt(process.env.GITHUB_RUN_ATTEMPT, 10);
 	        this.runNumber = parseInt(process.env.GITHUB_RUN_NUMBER, 10);
 	        this.runId = parseInt(process.env.GITHUB_RUN_ID, 10);
 	        this.apiUrl = (_a = process.env.GITHUB_API_URL) !== null && _a !== void 0 ? _a : `https://api.github.com`;
@@ -33140,7 +33141,7 @@ async function updateRepos(fileName, options) {
 async function update(repo, options) {
     coreExports.debug(`Updating ${repo}:${options.branch} from upstream fork`);
     const secrets = new CloudSecret(options.token);
-    const token = await secrets.getCredential('macports_update_token');
+    const token = await secrets.getCredential('macports-update-token');
     let username;
     if (options.owner == '') {
         username = githubExports.context.repo.owner;
