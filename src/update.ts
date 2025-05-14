@@ -37,7 +37,7 @@ export async function update(
 
   const secrets = new CloudSecret(options.token)
 
-  const token = await secrets.getCredential('macports_update_token')
+  const token = await secrets.getCredential('macports-update-token')
 
   let username: string
   if (options.owner == '') {
