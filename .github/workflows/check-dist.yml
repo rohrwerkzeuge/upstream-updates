@@ -30,12 +30,9 @@ jobs:
         id: checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        id: setup-node
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: .node-version
-          cache: npm
+      - name: Mise-en-place
+        id: mise-en-place
+        uses: jdx/mise-action@v2
 
       - name: Install Dependencies
         id: install
