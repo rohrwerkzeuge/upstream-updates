@@ -23,7 +23,7 @@ jobs:
 
       - name: Mise-en-place
         id: mise-en-place
-        uses: jdx/mise-action@v2
+        uses: jdx/mise-action@v3
 
       - name: Install Dependencies
         id: npm-ci
