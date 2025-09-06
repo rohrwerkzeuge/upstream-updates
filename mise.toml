@@ -2,7 +2,7 @@
 _.path = ['{{config_root}}/node_modules/.bin']
 
 [tools]
-node = "20"
+node = "22"
 "npm:typescript" = "latest"
 "npm:eslint" = "latest"
 "npm:jest" = "latest"
