@@ -25,14 +25,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      # - name: Mise-en-place
-      #   id: mise-en-place
-      #   uses: jdx/mise-action@5ac50f778e26fac95da98d50503682459e86d566 # v3.2.0
-
-      - name: Install Dependencies
-        id: install
-        run: npm ci
-
       - name: Lint Codebase
         id: super-linter
         uses: super-linter/super-linter/slim@ffde3b2b33b745cb612d787f669ef9442b1339a6 # v8.1.0
