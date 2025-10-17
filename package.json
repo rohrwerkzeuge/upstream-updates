@@ -1,7 +1,7 @@
 {
   "name": "upstream-updates",
   "description": "Update repos with upstream",
-  "version": "0.2.0",
+  "version": "1.2.0",
   "author": "Mark Anderson",
   "type": "module",
   "private": true,
