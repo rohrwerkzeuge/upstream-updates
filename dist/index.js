@@ -164,10 +164,6 @@ function escapeProperty(s) {
 
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
-function getDefaultExportFromCjs (x) {
-	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
-}
-
 var tunnel$1 = {};
 
 var hasRequiredTunnel$1;
@@ -31879,7 +31875,7 @@ const JSONParse = (text, reviver) => {
   );
 };
 
-let RequestError$1 = class RequestError extends Error {
+class RequestError extends Error {
   name;
   /**
    * http status code
@@ -31916,7 +31912,7 @@ let RequestError$1 = class RequestError extends Error {
     requestCopy.url = requestCopy.url.replace(/\bclient_secret=\w+/g, "client_secret=[REDACTED]").replace(/\baccess_token=\w+/g, "access_token=[REDACTED]");
     this.request = requestCopy;
   }
-};
+}
 
 // pkg/dist-src/index.js
 
@@ -31984,7 +31980,7 @@ async function fetchWrapper(requestOptions) {
         }
       }
     }
-    const requestError = new RequestError$1(message, 500, {
+    const requestError = new RequestError(message, 500, {
       request: requestOptions
     });
     requestError.cause = error;
@@ -32016,21 +32012,21 @@ async function fetchWrapper(requestOptions) {
     if (status < 400) {
       return octokitResponse;
     }
-    throw new RequestError$1(fetchResponse.statusText, status, {
+    throw new RequestError(fetchResponse.statusText, status, {
       response: octokitResponse,
       request: requestOptions
     });
   }
   if (status === 304) {
     octokitResponse.data = await getResponseData(fetchResponse);
-    throw new RequestError$1("Not modified", status, {
+    throw new RequestError("Not modified", status, {
       response: octokitResponse,
       request: requestOptions
     });
   }
   if (status >= 400) {
     octokitResponse.data = await getResponseData(fetchResponse);
-    throw new RequestError$1(toErrorMessage(octokitResponse.data), status, {
+    throw new RequestError(toErrorMessage(octokitResponse.data), status, {
       response: octokitResponse,
       request: requestOptions
     });
@@ -35004,170 +35000,6 @@ const context = new Context();
 function getOctokit(token, options, ...additionalPlugins) {
     const GitHubWithPlugins = GitHub.plugin(...additionalPlugins);
     return new GitHubWithPlugins(getOctokitOptions(token));
-}
-
-class Deprecation extends Error {
-  constructor(message) {
-    super(message); // Maintains proper stack trace (only available on V8)
-
-    /* istanbul ignore next */
-
-    if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, this.constructor);
-    }
-
-    this.name = 'Deprecation';
-  }
-
-}
-
-var once$1 = {exports: {}};
-
-var wrappy_1;
-var hasRequiredWrappy;
-
-function requireWrappy () {
-	if (hasRequiredWrappy) return wrappy_1;
-	hasRequiredWrappy = 1;
-	// Returns a wrapper function that returns a wrapped callback
-	// The wrapper function should do some stuff, and return a
-	// presumably different callback function.
-	// This makes sure that own properties are retained, so that
-	// decorations and such are not lost along the way.
-	wrappy_1 = wrappy;
-	function wrappy (fn, cb) {
-	  if (fn && cb) return wrappy(fn)(cb)
-
-	  if (typeof fn !== 'function')
-	    throw new TypeError('need wrapper function')
-
-	  Object.keys(fn).forEach(function (k) {
-	    wrapper[k] = fn[k];
-	  });
-
-	  return wrapper
-
-	  function wrapper() {
-	    var args = new Array(arguments.length);
-	    for (var i = 0; i < args.length; i++) {
-	      args[i] = arguments[i];
-	    }
-	    var ret = fn.apply(this, args);
-	    var cb = args[args.length-1];
-	    if (typeof ret === 'function' && ret !== cb) {
-	      Object.keys(cb).forEach(function (k) {
-	        ret[k] = cb[k];
-	      });
-	    }
-	    return ret
-	  }
-	}
-	return wrappy_1;
-}
-
-var hasRequiredOnce;
-
-function requireOnce () {
-	if (hasRequiredOnce) return once$1.exports;
-	hasRequiredOnce = 1;
-	var wrappy = requireWrappy();
-	once$1.exports = wrappy(once);
-	once$1.exports.strict = wrappy(onceStrict);
-
-	once.proto = once(function () {
-	  Object.defineProperty(Function.prototype, 'once', {
-	    value: function () {
-	      return once(this)
-	    },
-	    configurable: true
-	  });
-
-	  Object.defineProperty(Function.prototype, 'onceStrict', {
-	    value: function () {
-	      return onceStrict(this)
-	    },
-	    configurable: true
-	  });
-	});
-
-	function once (fn) {
-	  var f = function () {
-	    if (f.called) return f.value
-	    f.called = true;
-	    return f.value = fn.apply(this, arguments)
-	  };
-	  f.called = false;
-	  return f
-	}
-
-	function onceStrict (fn) {
-	  var f = function () {
-	    if (f.called)
-	      throw new Error(f.onceError)
-	    f.called = true;
-	    return f.value = fn.apply(this, arguments)
-	  };
-	  var name = fn.name || 'Function wrapped with `once`';
-	  f.onceError = name + " shouldn't be called more than once";
-	  f.called = false;
-	  return f
-	}
-	return once$1.exports;
-}
-
-var onceExports = requireOnce();
-var once = /*@__PURE__*/getDefaultExportFromCjs(onceExports);
-
-const logOnceCode = once((deprecation) => console.warn(deprecation));
-const logOnceHeaders = once((deprecation) => console.warn(deprecation));
-class RequestError extends Error {
-  constructor(message, statusCode, options) {
-    super(message);
-    if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, this.constructor);
-    }
-    this.name = "HttpError";
-    this.status = statusCode;
-    let headers;
-    if ("headers" in options && typeof options.headers !== "undefined") {
-      headers = options.headers;
-    }
-    if ("response" in options) {
-      this.response = options.response;
-      headers = options.response.headers;
-    }
-    const requestCopy = Object.assign({}, options.request);
-    if (options.request.headers.authorization) {
-      requestCopy.headers = Object.assign({}, options.request.headers, {
-        authorization: options.request.headers.authorization.replace(
-          /(?<! ) .*$/,
-          " [REDACTED]"
-        )
-      });
-    }
-    requestCopy.url = requestCopy.url.replace(/\bclient_secret=\w+/g, "client_secret=[REDACTED]").replace(/\baccess_token=\w+/g, "access_token=[REDACTED]");
-    this.request = requestCopy;
-    Object.defineProperty(this, "code", {
-      get() {
-        logOnceCode(
-          new Deprecation(
-            "[@octokit/request-error] `error.code` is deprecated, use `error.status`."
-          )
-        );
-        return statusCode;
-      }
-    });
-    Object.defineProperty(this, "headers", {
-      get() {
-        logOnceHeaders(
-          new Deprecation(
-            "[@octokit/request-error] `error.headers` is deprecated, use `error.response.headers`."
-          )
-        );
-        return headers || {};
-      }
-    });
-  }
 }
 
 async function updateRepos(fileName, options) {
