@@ -3586,9 +3586,9 @@ var hasRequiredConstants$3;
 function requireConstants$3 () {
 	if (hasRequiredConstants$3) return constants$3;
 	hasRequiredConstants$3 = 1;
-	(function (exports$1) {
-		Object.defineProperty(exports$1, "__esModule", { value: true });
-		exports$1.SPECIAL_HEADERS = exports$1.HEADER_STATE = exports$1.MINOR = exports$1.MAJOR = exports$1.CONNECTION_TOKEN_CHARS = exports$1.HEADER_CHARS = exports$1.TOKEN = exports$1.STRICT_TOKEN = exports$1.HEX = exports$1.URL_CHAR = exports$1.STRICT_URL_CHAR = exports$1.USERINFO_CHARS = exports$1.MARK = exports$1.ALPHANUM = exports$1.NUM = exports$1.HEX_MAP = exports$1.NUM_MAP = exports$1.ALPHA = exports$1.FINISH = exports$1.H_METHOD_MAP = exports$1.METHOD_MAP = exports$1.METHODS_RTSP = exports$1.METHODS_ICE = exports$1.METHODS_HTTP = exports$1.METHODS = exports$1.LENIENT_FLAGS = exports$1.FLAGS = exports$1.TYPE = exports$1.ERROR = void 0;
+	(function (exports) {
+		Object.defineProperty(exports, "__esModule", { value: true });
+		exports.SPECIAL_HEADERS = exports.HEADER_STATE = exports.MINOR = exports.MAJOR = exports.CONNECTION_TOKEN_CHARS = exports.HEADER_CHARS = exports.TOKEN = exports.STRICT_TOKEN = exports.HEX = exports.URL_CHAR = exports.STRICT_URL_CHAR = exports.USERINFO_CHARS = exports.MARK = exports.ALPHANUM = exports.NUM = exports.HEX_MAP = exports.NUM_MAP = exports.ALPHA = exports.FINISH = exports.H_METHOD_MAP = exports.METHOD_MAP = exports.METHODS_RTSP = exports.METHODS_ICE = exports.METHODS_HTTP = exports.METHODS = exports.LENIENT_FLAGS = exports.FLAGS = exports.TYPE = exports.ERROR = void 0;
 		const utils_1 = requireUtils();
 		(function (ERROR) {
 		    ERROR[ERROR["OK"] = 0] = "OK";
@@ -3616,12 +3616,12 @@ function requireConstants$3 () {
 		    ERROR[ERROR["PAUSED_UPGRADE"] = 22] = "PAUSED_UPGRADE";
 		    ERROR[ERROR["PAUSED_H2_UPGRADE"] = 23] = "PAUSED_H2_UPGRADE";
 		    ERROR[ERROR["USER"] = 24] = "USER";
-		})(exports$1.ERROR || (exports$1.ERROR = {}));
+		})(exports.ERROR || (exports.ERROR = {}));
 		(function (TYPE) {
 		    TYPE[TYPE["BOTH"] = 0] = "BOTH";
 		    TYPE[TYPE["REQUEST"] = 1] = "REQUEST";
 		    TYPE[TYPE["RESPONSE"] = 2] = "RESPONSE";
-		})(exports$1.TYPE || (exports$1.TYPE = {}));
+		})(exports.TYPE || (exports.TYPE = {}));
 		(function (FLAGS) {
 		    FLAGS[FLAGS["CONNECTION_KEEP_ALIVE"] = 1] = "CONNECTION_KEEP_ALIVE";
 		    FLAGS[FLAGS["CONNECTION_CLOSE"] = 2] = "CONNECTION_CLOSE";
@@ -3633,12 +3633,12 @@ function requireConstants$3 () {
 		    FLAGS[FLAGS["TRAILING"] = 128] = "TRAILING";
 		    // 1 << 8 is unused
 		    FLAGS[FLAGS["TRANSFER_ENCODING"] = 512] = "TRANSFER_ENCODING";
-		})(exports$1.FLAGS || (exports$1.FLAGS = {}));
+		})(exports.FLAGS || (exports.FLAGS = {}));
 		(function (LENIENT_FLAGS) {
 		    LENIENT_FLAGS[LENIENT_FLAGS["HEADERS"] = 1] = "HEADERS";
 		    LENIENT_FLAGS[LENIENT_FLAGS["CHUNKED_LENGTH"] = 2] = "CHUNKED_LENGTH";
 		    LENIENT_FLAGS[LENIENT_FLAGS["KEEP_ALIVE"] = 4] = "KEEP_ALIVE";
-		})(exports$1.LENIENT_FLAGS || (exports$1.LENIENT_FLAGS = {}));
+		})(exports.LENIENT_FLAGS || (exports.LENIENT_FLAGS = {}));
 		var METHODS;
 		(function (METHODS) {
 		    METHODS[METHODS["DELETE"] = 0] = "DELETE";
@@ -3698,8 +3698,8 @@ function requireConstants$3 () {
 		    METHODS[METHODS["RECORD"] = 44] = "RECORD";
 		    /* RAOP */
 		    METHODS[METHODS["FLUSH"] = 45] = "FLUSH";
-		})(METHODS = exports$1.METHODS || (exports$1.METHODS = {}));
-		exports$1.METHODS_HTTP = [
+		})(METHODS = exports.METHODS || (exports.METHODS = {}));
+		exports.METHODS_HTTP = [
 		    METHODS.DELETE,
 		    METHODS.GET,
 		    METHODS.HEAD,
@@ -3737,10 +3737,10 @@ function requireConstants$3 () {
 		    // TODO(indutny): should we allow it with HTTP?
 		    METHODS.SOURCE,
 		];
-		exports$1.METHODS_ICE = [
+		exports.METHODS_ICE = [
 		    METHODS.SOURCE,
 		];
-		exports$1.METHODS_RTSP = [
+		exports.METHODS_RTSP = [
 		    METHODS.OPTIONS,
 		    METHODS.DESCRIBE,
 		    METHODS.ANNOUNCE,
@@ -3757,59 +3757,59 @@ function requireConstants$3 () {
 		    METHODS.GET,
 		    METHODS.POST,
 		];
-		exports$1.METHOD_MAP = utils_1.enumToMap(METHODS);
-		exports$1.H_METHOD_MAP = {};
-		Object.keys(exports$1.METHOD_MAP).forEach((key) => {
+		exports.METHOD_MAP = utils_1.enumToMap(METHODS);
+		exports.H_METHOD_MAP = {};
+		Object.keys(exports.METHOD_MAP).forEach((key) => {
 		    if (/^H/.test(key)) {
-		        exports$1.H_METHOD_MAP[key] = exports$1.METHOD_MAP[key];
+		        exports.H_METHOD_MAP[key] = exports.METHOD_MAP[key];
 		    }
 		});
 		(function (FINISH) {
 		    FINISH[FINISH["SAFE"] = 0] = "SAFE";
 		    FINISH[FINISH["SAFE_WITH_CB"] = 1] = "SAFE_WITH_CB";
 		    FINISH[FINISH["UNSAFE"] = 2] = "UNSAFE";
-		})(exports$1.FINISH || (exports$1.FINISH = {}));
-		exports$1.ALPHA = [];
+		})(exports.FINISH || (exports.FINISH = {}));
+		exports.ALPHA = [];
 		for (let i = 'A'.charCodeAt(0); i <= 'Z'.charCodeAt(0); i++) {
 		    // Upper case
-		    exports$1.ALPHA.push(String.fromCharCode(i));
+		    exports.ALPHA.push(String.fromCharCode(i));
 		    // Lower case
-		    exports$1.ALPHA.push(String.fromCharCode(i + 0x20));
+		    exports.ALPHA.push(String.fromCharCode(i + 0x20));
 		}
-		exports$1.NUM_MAP = {
+		exports.NUM_MAP = {
 		    0: 0, 1: 1, 2: 2, 3: 3, 4: 4,
 		    5: 5, 6: 6, 7: 7, 8: 8, 9: 9,
 		};
-		exports$1.HEX_MAP = {
+		exports.HEX_MAP = {
 		    0: 0, 1: 1, 2: 2, 3: 3, 4: 4,
 		    5: 5, 6: 6, 7: 7, 8: 8, 9: 9,
 		    A: 0XA, B: 0XB, C: 0XC, D: 0XD, E: 0XE, F: 0XF,
 		    a: 0xa, b: 0xb, c: 0xc, d: 0xd, e: 0xe, f: 0xf,
 		};
-		exports$1.NUM = [
+		exports.NUM = [
 		    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
 		];
-		exports$1.ALPHANUM = exports$1.ALPHA.concat(exports$1.NUM);
-		exports$1.MARK = ['-', '_', '.', '!', '~', '*', '\'', '(', ')'];
-		exports$1.USERINFO_CHARS = exports$1.ALPHANUM
-		    .concat(exports$1.MARK)
+		exports.ALPHANUM = exports.ALPHA.concat(exports.NUM);
+		exports.MARK = ['-', '_', '.', '!', '~', '*', '\'', '(', ')'];
+		exports.USERINFO_CHARS = exports.ALPHANUM
+		    .concat(exports.MARK)
 		    .concat(['%', ';', ':', '&', '=', '+', '$', ',']);
 		// TODO(indutny): use RFC
-		exports$1.STRICT_URL_CHAR = [
+		exports.STRICT_URL_CHAR = [
 		    '!', '"', '$', '%', '&', '\'',
 		    '(', ')', '*', '+', ',', '-', '.', '/',
 		    ':', ';', '<', '=', '>',
 		    '@', '[', '\\', ']', '^', '_',
 		    '`',
 		    '{', '|', '}', '~',
-		].concat(exports$1.ALPHANUM);
-		exports$1.URL_CHAR = exports$1.STRICT_URL_CHAR
+		].concat(exports.ALPHANUM);
+		exports.URL_CHAR = exports.STRICT_URL_CHAR
 		    .concat(['\t', '\f']);
 		// All characters with 0x80 bit set to 1
 		for (let i = 0x80; i <= 0xff; i++) {
-		    exports$1.URL_CHAR.push(i);
+		    exports.URL_CHAR.push(i);
 		}
-		exports$1.HEX = exports$1.NUM.concat(['a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E', 'F']);
+		exports.HEX = exports.NUM.concat(['a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E', 'F']);
 		/* Tokens as defined by rfc 2616. Also lowercases them.
 		 *        token       = 1*<any CHAR except CTLs or separators>
 		 *     separators     = "(" | ")" | "<" | ">" | "@"
@@ -3817,27 +3817,27 @@ function requireConstants$3 () {
 		 *                    | "/" | "[" | "]" | "?" | "="
 		 *                    | "{" | "}" | SP | HT
 		 */
-		exports$1.STRICT_TOKEN = [
+		exports.STRICT_TOKEN = [
 		    '!', '#', '$', '%', '&', '\'',
 		    '*', '+', '-', '.',
 		    '^', '_', '`',
 		    '|', '~',
-		].concat(exports$1.ALPHANUM);
-		exports$1.TOKEN = exports$1.STRICT_TOKEN.concat([' ']);
+		].concat(exports.ALPHANUM);
+		exports.TOKEN = exports.STRICT_TOKEN.concat([' ']);
 		/*
 		 * Verify that a char is a valid visible (printable) US-ASCII
 		 * character or %x80-FF
 		 */
-		exports$1.HEADER_CHARS = ['\t'];
+		exports.HEADER_CHARS = ['\t'];
 		for (let i = 32; i <= 255; i++) {
 		    if (i !== 127) {
-		        exports$1.HEADER_CHARS.push(i);
+		        exports.HEADER_CHARS.push(i);
 		    }
 		}
 		// ',' = \x44
-		exports$1.CONNECTION_TOKEN_CHARS = exports$1.HEADER_CHARS.filter((c) => c !== 44);
-		exports$1.MAJOR = exports$1.NUM_MAP;
-		exports$1.MINOR = exports$1.MAJOR;
+		exports.CONNECTION_TOKEN_CHARS = exports.HEADER_CHARS.filter((c) => c !== 44);
+		exports.MAJOR = exports.NUM_MAP;
+		exports.MINOR = exports.MAJOR;
 		var HEADER_STATE;
 		(function (HEADER_STATE) {
 		    HEADER_STATE[HEADER_STATE["GENERAL"] = 0] = "GENERAL";
@@ -3849,8 +3849,8 @@ function requireConstants$3 () {
 		    HEADER_STATE[HEADER_STATE["CONNECTION_CLOSE"] = 6] = "CONNECTION_CLOSE";
 		    HEADER_STATE[HEADER_STATE["CONNECTION_UPGRADE"] = 7] = "CONNECTION_UPGRADE";
 		    HEADER_STATE[HEADER_STATE["TRANSFER_ENCODING_CHUNKED"] = 8] = "TRANSFER_ENCODING_CHUNKED";
-		})(HEADER_STATE = exports$1.HEADER_STATE || (exports$1.HEADER_STATE = {}));
-		exports$1.SPECIAL_HEADERS = {
+		})(HEADER_STATE = exports.HEADER_STATE || (exports.HEADER_STATE = {}));
+		exports.SPECIAL_HEADERS = {
 		    'connection': HEADER_STATE.CONNECTION,
 		    'content-length': HEADER_STATE.CONTENT_LENGTH,
 		    'proxy-connection': HEADER_STATE.CONNECTION,
@@ -8741,10 +8741,10 @@ function requireClientH1 () {
 	const TIMEOUT_KEEP_ALIVE = 8 | USE_NATIVE_TIMER;
 
 	class Parser {
-	  constructor (client, socket, { exports: exports$1 }) {
+	  constructor (client, socket, { exports }) {
 	    assert(Number.isFinite(client[kMaxHeadersSize]) && client[kMaxHeadersSize] > 0);
 
-	    this.llhttp = exports$1;
+	    this.llhttp = exports;
 	    this.ptr = this.llhttp.llhttp_alloc(constants.TYPE.RESPONSE);
 	    this.client = client;
 	    this.socket = socket;
@@ -29307,16 +29307,16 @@ var hasRequiredConfiguration;
 function requireConfiguration () {
 	if (hasRequiredConfiguration) return configuration;
 	hasRequiredConfiguration = 1;
-	(function (exports$1) {
+	(function (exports) {
 		var __importDefault = (configuration && configuration.__importDefault) || function (mod) {
 		    return (mod && mod.__esModule) ? mod : { "default": mod };
 		};
-		Object.defineProperty(exports$1, "__esModule", { value: true });
-		exports$1.getOsName = exports$1.clientAuthConfig = exports$1.VERSION = exports$1.LANGUAGE = void 0;
+		Object.defineProperty(exports, "__esModule", { value: true });
+		exports.getOsName = exports.clientAuthConfig = exports.VERSION = exports.LANGUAGE = void 0;
 		const os_1 = __importDefault(os__default);
 		const version_js_1 = requireVersion();
-		exports$1.LANGUAGE = "JS";
-		exports$1.VERSION = version_js_1.SDK_BUILD_NUMBER;
+		exports.LANGUAGE = "JS";
+		exports.VERSION = version_js_1.SDK_BUILD_NUMBER;
 		/**
 		 * Creates a default client configuration.
 		 * @returns The client configuration to instantiate the client with.
@@ -29327,18 +29327,18 @@ function requireConfiguration () {
 		    const defaultOsVersion = "0.0.0";
 		    return {
 		        serviceAccountToken: (_a = userConfig.auth) !== null && _a !== void 0 ? _a : "",
-		        programmingLanguage: exports$1.LANGUAGE,
-		        sdkVersion: exports$1.VERSION,
+		        programmingLanguage: exports.LANGUAGE,
+		        sdkVersion: exports.VERSION,
 		        integrationName: userConfig.integrationName,
 		        integrationVersion: userConfig.integrationVersion,
 		        requestLibraryName: "Fetch API",
 		        requestLibraryVersion: "Fetch API",
-		        os: (0, exports$1.getOsName)(),
+		        os: (0, exports.getOsName)(),
 		        osVersion: defaultOsVersion,
 		        architecture: os_1.default.arch(),
 		    };
 		};
-		exports$1.clientAuthConfig = clientAuthConfig;
+		exports.clientAuthConfig = clientAuthConfig;
 		const getOsName = () => {
 		    // Only supported on Node.js
 		    const os_name = os_1.default.type().toLowerCase();
@@ -29347,7 +29347,7 @@ function requireConfiguration () {
 		    }
 		    return os_name;
 		};
-		exports$1.getOsName = getOsName; 
+		exports.getOsName = getOsName; 
 	} (configuration));
 	return configuration;
 }
@@ -29989,7 +29989,7 @@ var hasRequiredSdk;
 function requireSdk () {
 	if (hasRequiredSdk) return sdk;
 	hasRequiredSdk = 1;
-	(function (exports$1) {
+	(function (exports) {
 		// Code generated by op-codegen - DO NOT EDIT MANUALLY
 		var __createBinding = (sdk && sdk.__createBinding) || (Object.create ? (function(o, m, k, k2) {
 		    if (k2 === undefined) k2 = k;
@@ -30002,8 +30002,8 @@ function requireSdk () {
 		    if (k2 === undefined) k2 = k;
 		    o[k2] = m[k];
 		}));
-		var __exportStar = (sdk && sdk.__exportStar) || function(m, exports$1) {
-		    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports$1, p)) __createBinding(exports$1, m, p);
+		var __exportStar = (sdk && sdk.__exportStar) || function(m, exports) {
+		    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 		};
 		var __awaiter = (sdk && sdk.__awaiter) || function (thisArg, _arguments, P, generator) {
 		    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -30014,24 +30014,24 @@ function requireSdk () {
 		        step((generator = generator.apply(thisArg, _arguments || [])).next());
 		    });
 		};
-		Object.defineProperty(exports$1, "__esModule", { value: true });
-		exports$1.createClient = exports$1.Secrets = exports$1.DEFAULT_INTEGRATION_VERSION = exports$1.DEFAULT_INTEGRATION_NAME = void 0;
+		Object.defineProperty(exports, "__esModule", { value: true });
+		exports.createClient = exports.Secrets = exports.DEFAULT_INTEGRATION_VERSION = exports.DEFAULT_INTEGRATION_NAME = void 0;
 		const core_js_1 = requireCore();
 		const client_builder_js_1 = requireClient_builder();
-		exports$1.DEFAULT_INTEGRATION_NAME = "Unknown";
-		exports$1.DEFAULT_INTEGRATION_VERSION = "Unknown";
+		exports.DEFAULT_INTEGRATION_NAME = "Unknown";
+		exports.DEFAULT_INTEGRATION_VERSION = "Unknown";
 		// auto-generated static exports
 		var secrets_js_1 = requireSecrets();
-		Object.defineProperty(exports$1, "Secrets", { enumerable: true, get: function () { return secrets_js_1.Secrets; } });
-		__exportStar(requireClient(), exports$1);
-		__exportStar(requireErrors(), exports$1);
-		__exportStar(requireTypes(), exports$1);
+		Object.defineProperty(exports, "Secrets", { enumerable: true, get: function () { return secrets_js_1.Secrets; } });
+		__exportStar(requireClient(), exports);
+		__exportStar(requireErrors(), exports);
+		__exportStar(requireTypes(), exports);
 		/**
 		 * Creates a default 1Password SDK client.
 		 * @returns The authenticated 1Password SDK client.
 		 */
 		const createClient = (config) => __awaiter(void 0, void 0, void 0, function* () { return (0, client_builder_js_1.createClientWithCore)(config, new core_js_1.SharedCore()); });
-		exports$1.createClient = createClient; 
+		exports.createClient = createClient; 
 	} (sdk));
 	return sdk;
 }
@@ -31492,185 +31492,186 @@ function withDefaults$2(oldDefaults, newDefaults) {
 // pkg/dist-src/index.js
 var endpoint = withDefaults$2(null, DEFAULTS);
 
-var fastContentTypeParse = {};
+var dist = {};
 
-var hasRequiredFastContentTypeParse;
+var hasRequiredDist;
 
-function requireFastContentTypeParse () {
-	if (hasRequiredFastContentTypeParse) return fastContentTypeParse;
-	hasRequiredFastContentTypeParse = 1;
-
-	const NullObject = function NullObject () { };
-	NullObject.prototype = Object.create(null);
-
-	/**
-	 * RegExp to match *( ";" parameter ) in RFC 7231 sec 3.1.1.1
-	 *
-	 * parameter     = token "=" ( token / quoted-string )
-	 * token         = 1*tchar
-	 * tchar         = "!" / "#" / "$" / "%" / "&" / "'" / "*"
-	 *               / "+" / "-" / "." / "^" / "_" / "`" / "|" / "~"
-	 *               / DIGIT / ALPHA
-	 *               ; any VCHAR, except delimiters
-	 * quoted-string = DQUOTE *( qdtext / quoted-pair ) DQUOTE
-	 * qdtext        = HTAB / SP / %x21 / %x23-5B / %x5D-7E / obs-text
-	 * obs-text      = %x80-FF
-	 * quoted-pair   = "\" ( HTAB / SP / VCHAR / obs-text )
+function requireDist () {
+	if (hasRequiredDist) return dist;
+	hasRequiredDist = 1;
+	/*!
+	 * content-type
+	 * Copyright(c) 2015 Douglas Christopher Wilson
+	 * MIT Licensed
 	 */
-	const paramRE = /; *([!#$%&'*+.^\w`|~-]+)=("(?:[\v\u0020\u0021\u0023-\u005b\u005d-\u007e\u0080-\u00ff]|\\[\v\u0020-\u00ff])*"|[!#$%&'*+.^\w`|~-]+) */gu;
-
+	Object.defineProperty(dist, "__esModule", { value: true });
+	dist.format = format;
+	dist.parse = parse;
+	const TEXT_REGEXP = /^[\u0009\u0020-\u007e\u0080-\u00ff]*$/;
+	const TOKEN_REGEXP = /^[!#$%&'*+.^_`|~0-9A-Za-z-]+$/;
 	/**
-	 * RegExp to match quoted-pair in RFC 7230 sec 3.2.6
-	 *
-	 * quoted-pair = "\" ( HTAB / SP / VCHAR / obs-text )
-	 * obs-text    = %x80-FF
+	 * RegExp to match chars that must be quoted-pair in RFC 9110 sec 5.6.4
 	 */
-	const quotedPairRE = /\\([\v\u0020-\u00ff])/gu;
-
+	const QUOTE_REGEXP = /[\\"]/g;
 	/**
-	 * RegExp to match type in RFC 7231 sec 3.1.1.1
+	 * RegExp to match type in RFC 9110 sec 8.3.1
 	 *
 	 * media-type = type "/" subtype
 	 * type       = token
 	 * subtype    = token
 	 */
-	const mediaTypeRE = /^[!#$%&'*+.^\w|~-]+\/[!#$%&'*+.^\w|~-]+$/u;
-
-	// default ContentType to prevent repeated object creation
-	const defaultContentType = { type: '', parameters: new NullObject() };
-	Object.freeze(defaultContentType.parameters);
-	Object.freeze(defaultContentType);
-
+	const TYPE_REGEXP = /^[!#$%&'*+.^_`|~0-9A-Za-z-]+\/[!#$%&'*+.^_`|~0-9A-Za-z-]+$/;
 	/**
-	 * Parse media type to object.
-	 *
-	 * @param {string|object} header
-	 * @return {Object}
-	 * @public
+	 * Null object perf optimization. Faster than `Object.create(null)` and `{ __proto__: null }`.
 	 */
-
-	function parse (header) {
-	  if (typeof header !== 'string') {
-	    throw new TypeError('argument header is required and must be a string')
-	  }
-
-	  let index = header.indexOf(';');
-	  const type = index !== -1
-	    ? header.slice(0, index).trim()
-	    : header.trim();
-
-	  if (mediaTypeRE.test(type) === false) {
-	    throw new TypeError('invalid media type')
-	  }
-
-	  const result = {
-	    type: type.toLowerCase(),
-	    parameters: new NullObject()
-	  };
-
-	  // parse parameters
-	  if (index === -1) {
-	    return result
-	  }
-
-	  let key;
-	  let match;
-	  let value;
-
-	  paramRE.lastIndex = index;
-
-	  while ((match = paramRE.exec(header))) {
-	    if (match.index !== index) {
-	      throw new TypeError('invalid parameter format')
+	const NullObject = /* @__PURE__ */ (() => {
+	    const C = function () { };
+	    C.prototype = Object.create(null);
+	    return C;
+	})();
+	/**
+	 * Format an object into a `Content-Type` header.
+	 */
+	function format(obj) {
+	    const { type, parameters } = obj;
+	    if (!type || !TYPE_REGEXP.test(type)) {
+	        throw new TypeError(`Invalid type: ${type}`);
 	    }
-
-	    index += match[0].length;
-	    key = match[1].toLowerCase();
-	    value = match[2];
-
-	    if (value[0] === '"') {
-	      // remove quotes and escapes
-	      value = value
-	        .slice(1, value.length - 1);
-
-	      quotedPairRE.test(value) && (value = value.replace(quotedPairRE, '$1'));
+	    let result = type;
+	    if (parameters) {
+	        for (const param of Object.keys(parameters)) {
+	            if (!TOKEN_REGEXP.test(param)) {
+	                throw new TypeError(`Invalid parameter name: ${param}`);
+	            }
+	            result += `; ${param}=${qstring(parameters[param])}`;
+	        }
 	    }
-
-	    result.parameters[key] = value;
-	  }
-
-	  if (index !== header.length) {
-	    throw new TypeError('invalid parameter format')
-	  }
-
-	  return result
+	    return result;
 	}
-
-	function safeParse (header) {
-	  if (typeof header !== 'string') {
-	    return defaultContentType
-	  }
-
-	  let index = header.indexOf(';');
-	  const type = index !== -1
-	    ? header.slice(0, index).trim()
-	    : header.trim();
-
-	  if (mediaTypeRE.test(type) === false) {
-	    return defaultContentType
-	  }
-
-	  const result = {
-	    type: type.toLowerCase(),
-	    parameters: new NullObject()
-	  };
-
-	  // parse parameters
-	  if (index === -1) {
-	    return result
-	  }
-
-	  let key;
-	  let match;
-	  let value;
-
-	  paramRE.lastIndex = index;
-
-	  while ((match = paramRE.exec(header))) {
-	    if (match.index !== index) {
-	      return defaultContentType
-	    }
-
-	    index += match[0].length;
-	    key = match[1].toLowerCase();
-	    value = match[2];
-
-	    if (value[0] === '"') {
-	      // remove quotes and escapes
-	      value = value
-	        .slice(1, value.length - 1);
-
-	      quotedPairRE.test(value) && (value = value.replace(quotedPairRE, '$1'));
-	    }
-
-	    result.parameters[key] = value;
-	  }
-
-	  if (index !== header.length) {
-	    return defaultContentType
-	  }
-
-	  return result
+	/**
+	 * Parse a `Content-Type` header.
+	 */
+	function parse(header, options) {
+	    const len = header.length;
+	    let index = skipOWS(header, 0, len);
+	    const valueStart = index;
+	    index = skipValue(header, index, len);
+	    const valueEnd = trailingOWS(header, valueStart, index);
+	    const type = header.slice(valueStart, valueEnd).toLowerCase();
+	    const parameters = options?.parameters === false
+	        ? new NullObject()
+	        : parseParameters(header, index, len);
+	    return { type, parameters };
 	}
-
-	fastContentTypeParse.default = { parse, safeParse };
-	fastContentTypeParse.parse = parse;
-	fastContentTypeParse.safeParse = safeParse;
-	fastContentTypeParse.defaultContentType = defaultContentType;
-	return fastContentTypeParse;
+	const SP = 32; // " "
+	const HTAB = 9; // "\t"
+	const SEMI = 59; // ";"
+	const EQ = 61; // "="
+	const DQUOTE = 34; // '"'
+	const BSLASH = 92; // "\\"
+	/**
+	 * Parses the parameters of a `Content-Type` header starting at the given index.
+	 */
+	function parseParameters(header, index, len) {
+	    const parameters = new NullObject();
+	    parameter: while (index < len) {
+	        index = skipOWS(header, index + 1 /* Skip over ; */, len);
+	        const keyStart = index;
+	        while (index < len) {
+	            const code = header.charCodeAt(index);
+	            if (code === SEMI)
+	                continue parameter;
+	            if (code === EQ) {
+	                const keyEnd = trailingOWS(header, keyStart, index);
+	                const key = header.slice(keyStart, keyEnd).toLowerCase();
+	                index = skipOWS(header, index + 1, len);
+	                if (index < len && header.charCodeAt(index) === DQUOTE) {
+	                    index++;
+	                    let value = "";
+	                    while (index < len) {
+	                        const code = header.charCodeAt(index++);
+	                        if (code === DQUOTE) {
+	                            index = skipValue(header, index, len);
+	                            if (parameters[key] === undefined)
+	                                parameters[key] = value;
+	                            break;
+	                        }
+	                        if (code === BSLASH && index < len) {
+	                            value += header[index++];
+	                            continue;
+	                        }
+	                        value += String.fromCharCode(code);
+	                    }
+	                    continue parameter;
+	                }
+	                const valueStart = index;
+	                index = skipValue(header, index, len);
+	                if (parameters[key] === undefined) {
+	                    const valueEnd = trailingOWS(header, valueStart, index);
+	                    parameters[key] = header.slice(valueStart, valueEnd);
+	                }
+	                continue parameter;
+	            }
+	            index++;
+	        }
+	    }
+	    return parameters;
+	}
+	/**
+	 * Skip over characters until a semicolon.
+	 */
+	function skipValue(str, index, len) {
+	    while (index < len) {
+	        const char = str.charCodeAt(index);
+	        if (char === SEMI)
+	            break;
+	        index++;
+	    }
+	    return index;
+	}
+	/**
+	 * Skip optional whitespace (OWS) in an HTTP header value.
+	 *
+	 * OWS is defined in RFC 9110 sec 5.6.3 as SP (" ") or HTAB ("\t").
+	 */
+	function skipOWS(header, index, len) {
+	    while (index < len) {
+	        const char = header.charCodeAt(index);
+	        if (char !== SP && char !== HTAB)
+	            break;
+	        index++;
+	    }
+	    return index;
+	}
+	/**
+	 * Trim optional whitespace (OWS) from the end of a substring.
+	 *
+	 * OWS is defined in RFC 9110 sec 5.6.3 as SP (" ") or HTAB ("\t").
+	 */
+	function trailingOWS(header, start, end) {
+	    while (end > start) {
+	        const char = header.charCodeAt(end - 1);
+	        if (char !== SP && char !== HTAB)
+	            break;
+	        end--;
+	    }
+	    return end;
+	}
+	/**
+	 * Serialize a parameter value.
+	 */
+	function qstring(str) {
+	    if (TOKEN_REGEXP.test(str))
+	        return str;
+	    if (TEXT_REGEXP.test(str))
+	        return `"${str.replace(QUOTE_REGEXP, "\\$&")}"`;
+	    throw new TypeError(`Invalid parameter value: ${str}`);
+	}
+	
+	return dist;
 }
 
-var fastContentTypeParseExports = requireFastContentTypeParse();
+var distExports = requireDist();
 
 const intRegex = /^-?\d+$/;
 const noiseValue = /^-?\d+n+$/; // Noise - strings that match the custom format before being converted to it
@@ -31920,7 +31921,7 @@ let RequestError$1 = class RequestError extends Error {
 // pkg/dist-src/index.js
 
 // pkg/dist-src/version.js
-var VERSION$4 = "10.0.8";
+var VERSION$4 = "10.0.11";
 
 // pkg/dist-src/defaults.js
 var defaults_default = {
@@ -32042,7 +32043,7 @@ async function getResponseData(response) {
   if (!contentType) {
     return response.text().catch(noop$1);
   }
-  const mimetype = fastContentTypeParseExports.safeParse(contentType);
+  const mimetype = distExports.parse(contentType);
   if (isJSONResponse(mimetype)) {
     let text = "";
     try {
@@ -32070,9 +32071,10 @@ function toErrorMessage(data) {
   if (data instanceof ArrayBuffer) {
     return "Unknown error";
   }
-  if ("message" in data) {
-    const suffix = "documentation_url" in data ? ` - ${data.documentation_url}` : "";
-    return Array.isArray(data.errors) ? `${data.message}: ${data.errors.map((v) => JSON.stringify(v)).join(", ")}${suffix}` : `${data.message}${suffix}`;
+  if (typeof data === "object" && data !== null && "message" in data) {
+    const objectData = data;
+    const suffix = "documentation_url" in objectData ? ` - ${objectData.documentation_url}` : "";
+    return Array.isArray(objectData.errors) ? `${objectData.message}: ${objectData.errors.map((v) => JSON.stringify(v)).join(", ")}${suffix}` : `${objectData.message}${suffix}`;
   }
   return `Unknown error: ${JSON.stringify(data)}`;
 }
