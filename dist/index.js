@@ -28480,6 +28480,11 @@ function requireCore$1 () {
 		    }
 		}
 
+		function getArrayU8FromWasm0(ptr, len) {
+		    ptr = ptr >>> 0;
+		    return getUint8ArrayMemory0().subarray(ptr / 1, ptr / 1 + len);
+		}
+
 		function isLikeNone(x) {
 		    return x === undefined || x === null;
 		}
@@ -28656,18 +28661,6 @@ function requireCore$1 () {
 		    return ret;
 		};
 
-		/**
-		 * Handles all asynchronous invocations to the SDK core received from the SDK.
-		 * @param {string} parameters
-		 * @returns {Promise<string>}
-		 */
-		module.exports.invoke = function(parameters) {
-		    const ptr0 = passStringToWasm0(parameters, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-		    const len0 = WASM_VECTOR_LEN;
-		    const ret = wasm.invoke(ptr0, len0);
-		    return ret;
-		};
-
 		function takeFromExternrefTable0(idx) {
 		    const value = wasm.__wbindgen_export_2.get(idx);
 		    wasm.__externref_table_dealloc(idx);
@@ -28700,6 +28693,20 @@ function requireCore$1 () {
 		};
 
 		/**
+		 * Initializes an SDK client with an OIDC token fetcher.
+		 * The `fetcher` parameter is a JS function `(string) => Promise<string>`.
+		 * @param {string} config
+		 * @param {Function} fetcher
+		 * @returns {Promise<string>}
+		 */
+		module.exports.init_client_oidc = function(config, fetcher) {
+		    const ptr0 = passStringToWasm0(config, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+		    const len0 = WASM_VECTOR_LEN;
+		    const ret = wasm.init_client_oidc(ptr0, len0, fetcher);
+		    return ret;
+		};
+
+		/**
 		 * Drops a client, releasing the memory allocated for it.
 		 * @param {string} client_id
 		 */
@@ -28712,16 +28719,28 @@ function requireCore$1 () {
 		    }
 		};
 
+		/**
+		 * Handles all asynchronous invocations to the SDK core received from the SDK.
+		 * @param {string} parameters
+		 * @returns {Promise<string>}
+		 */
+		module.exports.invoke = function(parameters) {
+		    const ptr0 = passStringToWasm0(parameters, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+		    const len0 = WASM_VECTOR_LEN;
+		    const ret = wasm.invoke(ptr0, len0);
+		    return ret;
+		};
+
 		function __wbg_adapter_30(arg0, arg1) {
-		    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h4fa304e9a7297dba(arg0, arg1);
+		    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__ha87580c8ddcf1766(arg0, arg1);
 		}
 
 		function __wbg_adapter_33(arg0, arg1, arg2) {
-		    wasm.closure2484_externref_shim(arg0, arg1, arg2);
+		    wasm.closure3862_externref_shim(arg0, arg1, arg2);
 		}
 
-		function __wbg_adapter_156(arg0, arg1, arg2, arg3) {
-		    wasm.closure2632_externref_shim(arg0, arg1, arg2, arg3);
+		function __wbg_adapter_147(arg0, arg1, arg2, arg3) {
+		    wasm.closure3973_externref_shim(arg0, arg1, arg2, arg3);
 		}
 
 		const __wbindgen_enum_RequestCache = ["default", "no-store", "reload", "no-cache", "force-cache", "only-if-cached"];
@@ -28791,6 +28810,10 @@ function requireCore$1 () {
 		    const ret = arg0.getFullYear();
 		    return ret;
 		};
+
+		module.exports.__wbg_getRandomValues_1c61fac11405ffdc = function() { return handleError(function (arg0, arg1) {
+		    globalThis.crypto.getRandomValues(getArrayU8FromWasm0(arg0, arg1));
+		}, arguments) };
 
 		module.exports.__wbg_getRandomValues_b3f15fcbfabb0f8b = function() { return handleError(function (arg0, arg1) {
 		    arg0.getRandomValues(arg1);
@@ -28901,7 +28924,7 @@ function requireCore$1 () {
 		            const a = state0.a;
 		            state0.a = 0;
 		            try {
-		                return __wbg_adapter_156(a, state0.b, arg0, arg1);
+		                return __wbg_adapter_147(a, state0.b, arg0, arg1);
 		            } finally {
 		                state0.a = a;
 		            }
@@ -29151,13 +29174,13 @@ function requireCore$1 () {
 		    return ret;
 		};
 
-		module.exports.__wbindgen_closure_wrapper9169 = function(arg0, arg1, arg2) {
-		    const ret = makeMutClosure(arg0, arg1, 2463, __wbg_adapter_30);
+		module.exports.__wbindgen_closure_wrapper13816 = function(arg0, arg1, arg2) {
+		    const ret = makeMutClosure(arg0, arg1, 3841, __wbg_adapter_30);
 		    return ret;
 		};
 
-		module.exports.__wbindgen_closure_wrapper9209 = function(arg0, arg1, arg2) {
-		    const ret = makeMutClosure(arg0, arg1, 2485, __wbg_adapter_33);
+		module.exports.__wbindgen_closure_wrapper13863 = function(arg0, arg1, arg2) {
+		    const ret = makeMutClosure(arg0, arg1, 3863, __wbg_adapter_33);
 		    return ret;
 		};
 
@@ -29306,6 +29329,7 @@ function requireTypes () {
 	(function (VaultAccessorType) {
 	    VaultAccessorType["User"] = "user";
 	    VaultAccessorType["Group"] = "group";
+	    VaultAccessorType["Broker"] = "broker";
 	})(VaultAccessorType || (types.VaultAccessorType = VaultAccessorType = {}));
 	var ItemCategory;
 	(function (ItemCategory) {
@@ -29519,7 +29543,7 @@ function requireErrors () {
 	hasRequiredErrors = 1;
 	// Code generated by op-codegen - DO NOT EDIT MANUALLY
 	Object.defineProperty(errors, "__esModule", { value: true });
-	errors.throwError = errors.RateLimitExceededError = errors.DesktopSessionExpiredError = void 0;
+	errors.throwError = errors.AuthExpiredError = errors.RateLimitExceededError = errors.DesktopSessionExpiredError = void 0;
 	class DesktopSessionExpiredError extends Error {
 	    constructor(message) {
 	        super();
@@ -29534,6 +29558,13 @@ function requireErrors () {
 	    }
 	}
 	errors.RateLimitExceededError = RateLimitExceededError;
+	class AuthExpiredError extends Error {
+	    constructor(message) {
+	        super();
+	        this.message = message;
+	    }
+	}
+	errors.AuthExpiredError = AuthExpiredError;
 	const throwError = (errString) => {
 	    let err;
 	    try {
@@ -29547,6 +29578,8 @@ function requireErrors () {
 	            throw new DesktopSessionExpiredError(err.message);
 	        case "RateLimitExceeded":
 	            throw new RateLimitExceededError(err.message);
+	        case "AuthExpired":
+	            throw new AuthExpiredError(err.message);
 	        default:
 	            throw new Error(err.message);
 	    }
@@ -29589,6 +29622,16 @@ function requireCore () {
 	            }
 	        });
 	    }
+	    initClientOidc(config, fetcher) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            try {
+	                return yield (0, sdk_core_1.init_client_oidc)(config, fetcher);
+	            }
+	            catch (e) {
+	                (0, errors_1.throwError)(e);
+	            }
+	        });
+	    }
 	    invoke(config) {
 	        return __awaiter(this, void 0, void 0, function* () {
 	            try {
@@ -29623,6 +29666,12 @@ function requireCore () {
 	        return __awaiter(this, void 0, void 0, function* () {
 	            const serializedConfig = JSON.stringify(config);
 	            return this.inner.initClient(serializedConfig);
+	        });
+	    }
+	    initClientOidc(config, fetcher) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const serializedConfig = JSON.stringify(config);
+	            return this.inner.initClientOidc(serializedConfig, fetcher);
 	        });
 	    }
 	    invoke(config) {
@@ -29694,8 +29743,8 @@ function requireVersion () {
 	hasRequiredVersion = 1;
 	Object.defineProperty(version, "__esModule", { value: true });
 	version.SDK_BUILD_NUMBER = version.SDK_VERSION = void 0;
-	version.SDK_VERSION = "0.4.0";
-	version.SDK_BUILD_NUMBER = "0040003";
+	version.SDK_VERSION = "0.5.0";
+	version.SDK_BUILD_NUMBER = "0050002";
 	return version;
 }
 
@@ -29750,6 +29799,7 @@ function requireConfiguration () {
 		        os: (0, exports.getOsName)(),
 		        osVersion: defaultOsVersion,
 		        architecture: os_1.default.arch(),
+		        workloadDetails: userConfig.workloadDetails,
 		    };
 		};
 		exports.clientAuthConfig = clientAuthConfig;
@@ -30556,6 +30606,68 @@ function requireVaults () {
 	return vaults;
 }
 
+var environments = {};
+
+var hasRequiredEnvironments;
+
+function requireEnvironments () {
+	if (hasRequiredEnvironments) return environments;
+	hasRequiredEnvironments = 1;
+	// Code generated by op-codegen - DO NOT EDIT MANUALLY
+	var __awaiter = (environments && environments.__awaiter) || function (thisArg, _arguments, P, generator) {
+	    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+	    return new (P || (P = Promise))(function (resolve, reject) {
+	        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+	        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+	        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+	        step((generator = generator.apply(thisArg, _arguments || [])).next());
+	    });
+	};
+	var __classPrivateFieldSet = (environments && environments.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+	    if (kind === "m") throw new TypeError("Private method is not writable");
+	    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+	    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+	    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+	};
+	var __classPrivateFieldGet = (environments && environments.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+	    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+	    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+	    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+	};
+	var _Environments_inner;
+	Object.defineProperty(environments, "__esModule", { value: true });
+	environments.Environments = void 0;
+	const types_js_1 = requireTypes();
+	class Environments {
+	    constructor(inner) {
+	        _Environments_inner.set(this, void 0);
+	        __classPrivateFieldSet(this, _Environments_inner, inner, "f");
+	    }
+	    /**
+	     * Get environment variables belonging to an Environment.
+	     */
+	    getVariables(environmentId) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Environments_inner, "f").id,
+	                    parameters: {
+	                        name: "EnvironmentsGetVariables",
+	                        parameters: {
+	                            environment_id: environmentId,
+	                        },
+	                    },
+	                },
+	            };
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Environments_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
+	        });
+	    }
+	}
+	environments.Environments = Environments;
+	_Environments_inner = new WeakMap();
+	return environments;
+}
+
 var groups = {};
 
 var hasRequiredGroups;
@@ -30630,12 +30742,14 @@ function requireClient () {
 	const secrets_js_1 = requireSecrets();
 	const items_js_1 = requireItems();
 	const vaults_js_1 = requireVaults();
+	const environments_js_1 = requireEnvironments();
 	const groups_js_1 = requireGroups();
 	class Client {
 	    constructor(innerClient) {
 	        this.secrets = new secrets_js_1.Secrets(innerClient);
 	        this.items = new items_js_1.Items(innerClient);
 	        this.vaults = new vaults_js_1.Vaults(innerClient);
+	        this.environments = new environments_js_1.Environments(innerClient);
 	        this.groups = new groups_js_1.Groups(innerClient);
 	    }
 	}
@@ -30814,6 +30928,12 @@ function requireShared_lib_core () {
 	            return this.callSharedLibrary(config, "init_client");
 	        });
 	    }
+	    // eslint-disable-next-line @typescript-eslint/require-await
+	    initClientOidc(config, _fetcher) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            throw new Error("OIDC authentication is not supported with desktop auth");
+	        });
+	    }
 	    invoke(invokeConfigBytes) {
 	        return __awaiter(this, void 0, void 0, function* () {
 	            return this.callSharedLibrary(invokeConfigBytes, "invoke");
@@ -30857,11 +30977,19 @@ function requireClient_builder () {
 	 * @returns The authenticated 1Password SDK client.
 	 */
 	const createClientWithCore = (config, core) => __awaiter(void 0, void 0, void 0, function* () {
+	    if (!config.auth && !config.oidcFetcher) {
+	        throw new Error("createClient requires either `auth` (service account token) or `oidcFetcher` (workload identity).");
+	    }
+	    if (config.oidcFetcher && !config.workloadDetails) {
+	        throw new Error("`oidcFetcher` (workload identity) requires `workloadDetails` to be set.");
+	    }
 	    const authConfig = (0, configuration_js_1.clientAuthConfig)(config);
 	    if (authConfig.accountName) {
 	        core.setInner(new shared_lib_core_js_1.SharedLibCore(authConfig.accountName));
 	    }
-	    const clientId = yield core.initClient(authConfig);
+	    const clientId = config.oidcFetcher
+	        ? yield core.initClientOidc(authConfig, config.oidcFetcher)
+	        : yield core.initClient(authConfig);
 	    const inner = new core_js_1.InnerClient(parseInt(clientId, 10), core, authConfig);
 	    const client = new client_js_1.Client(inner);
 	    // Cleans up associated memory from core when client instance goes out of scope.

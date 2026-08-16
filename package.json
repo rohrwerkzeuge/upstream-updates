@@ -33,6 +33,7 @@
     "package": "npx rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "package:watch": "npm run package -- --watch",
     "test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 npx jest",
+    "typecheck": "node node_modules/@typescript/native/bin/tsc --noEmit -p tsconfig.json",
     "all": "npm run format:write && npm run lint && npm run test && npm run package"
   },
   "license": "MIT",
@@ -53,6 +54,7 @@
     "@types/node": "^24.12.2",
     "@typescript-eslint/eslint-plugin": "8.67.0",
     "@typescript-eslint/parser": "8.67.0",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "eslint": "9.39.5",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",
@@ -66,7 +68,7 @@
     "rollup": "4.62.4",
     "ts-jest": "^29.4.1",
     "ts-jest-resolver": "^2.0.1",
-    "typescript": "^6.0.0"
+    "typescript": "npm:@typescript/typescript6@^6.0.2"
   },
   "optionalDependencies": {
     "@rollup/rollup-linux-x64-gnu": "*"
