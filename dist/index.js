@@ -28713,16 +28713,18 @@ function requireCore$1 () {
 		};
 
 		function __wbg_adapter_30(arg0, arg1) {
-		    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h7ea385b69e78e96d(arg0, arg1);
+		    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h4fa304e9a7297dba(arg0, arg1);
 		}
 
 		function __wbg_adapter_33(arg0, arg1, arg2) {
-		    wasm.closure2119_externref_shim(arg0, arg1, arg2);
+		    wasm.closure2484_externref_shim(arg0, arg1, arg2);
 		}
 
-		function __wbg_adapter_154(arg0, arg1, arg2, arg3) {
-		    wasm.closure2203_externref_shim(arg0, arg1, arg2, arg3);
+		function __wbg_adapter_156(arg0, arg1, arg2, arg3) {
+		    wasm.closure2632_externref_shim(arg0, arg1, arg2, arg3);
 		}
+
+		const __wbindgen_enum_RequestCache = ["default", "no-store", "reload", "no-cache", "force-cache", "only-if-cached"];
 
 		const __wbindgen_enum_RequestCredentials = ["omit", "same-origin", "include"];
 
@@ -28760,12 +28762,12 @@ function requireCore$1 () {
 		    return ret;
 		}, arguments) };
 
-		module.exports.__wbg_clearTimeout_86721db0036bea98 = function(arg0) {
+		module.exports.__wbg_clearTimeout_42d9ccd50822fd3a = function(arg0) {
 		    const ret = clearTimeout(arg0);
 		    return ret;
 		};
 
-		module.exports.__wbg_crypto_ed58b8e10a292839 = function(arg0) {
+		module.exports.__wbg_crypto_86f2631e91b51511 = function(arg0) {
 		    const ret = arg0.crypto;
 		    return ret;
 		};
@@ -28780,7 +28782,7 @@ function requireCore$1 () {
 		    return ret;
 		};
 
-		module.exports.__wbg_fetch_d36a73832f0a45e8 = function(arg0) {
+		module.exports.__wbg_fetch_6bbc32f991730587 = function(arg0) {
 		    const ret = fetch(arg0);
 		    return ret;
 		};
@@ -28790,7 +28792,7 @@ function requireCore$1 () {
 		    return ret;
 		};
 
-		module.exports.__wbg_getRandomValues_bcb4912f16000dc4 = function() { return handleError(function (arg0, arg1) {
+		module.exports.__wbg_getRandomValues_b3f15fcbfabb0f8b = function() { return handleError(function (arg0, arg1) {
 		    arg0.getRandomValues(arg1);
 		}, arguments) };
 
@@ -28867,7 +28869,7 @@ function requireCore$1 () {
 		    return ret;
 		};
 
-		module.exports.__wbg_msCrypto_0a36e2ec3a343d26 = function(arg0) {
+		module.exports.__wbg_msCrypto_d562bbe83e0d4b91 = function(arg0) {
 		    const ret = arg0.msCrypto;
 		    return ret;
 		};
@@ -28899,7 +28901,7 @@ function requireCore$1 () {
 		            const a = state0.a;
 		            state0.a = 0;
 		            try {
-		                return __wbg_adapter_154(a, state0.b, arg0, arg1);
+		                return __wbg_adapter_156(a, state0.b, arg0, arg1);
 		            } finally {
 		                state0.a = a;
 		            }
@@ -28961,7 +28963,7 @@ function requireCore$1 () {
 		    return ret;
 		}, arguments) };
 
-		module.exports.__wbg_node_02999533c4ea02e3 = function(arg0) {
+		module.exports.__wbg_node_e1f24f89a7336c2e = function(arg0) {
 		    const ret = arg0.node;
 		    return ret;
 		};
@@ -28981,7 +28983,7 @@ function requireCore$1 () {
 		    return ret;
 		}, arguments) };
 
-		module.exports.__wbg_process_5c1d670bc53614b8 = function(arg0) {
+		module.exports.__wbg_process_3975fd6c72f520aa = function(arg0) {
 		    const ret = arg0.process;
 		    return ret;
 		};
@@ -28995,11 +28997,11 @@ function requireCore$1 () {
 		    return ret;
 		};
 
-		module.exports.__wbg_randomFillSync_ab2cfe79ebbf2740 = function() { return handleError(function (arg0, arg1) {
+		module.exports.__wbg_randomFillSync_f8c153b79f285817 = function() { return handleError(function (arg0, arg1) {
 		    arg0.randomFillSync(arg1);
 		}, arguments) };
 
-		module.exports.__wbg_require_79b1e9274cde3c87 = function() { return handleError(function () {
+		module.exports.__wbg_require_b74f47fc2d022fd6 = function() { return handleError(function () {
 		    const ret = commonjsRequire;
 		    return ret;
 		}, arguments) };
@@ -29014,7 +29016,7 @@ function requireCore$1 () {
 		    return ret;
 		}, arguments) };
 
-		module.exports.__wbg_setTimeout_2e707715f8cc9497 = function(arg0, arg1) {
+		module.exports.__wbg_setTimeout_4ec014681668a581 = function(arg0, arg1) {
 		    const ret = setTimeout(arg0, arg1);
 		    return ret;
 		};
@@ -29025,6 +29027,10 @@ function requireCore$1 () {
 
 		module.exports.__wbg_setbody_5923b78a95eedf29 = function(arg0, arg1) {
 		    arg0.body = arg1;
+		};
+
+		module.exports.__wbg_setcache_12f17c3a980650e4 = function(arg0, arg1) {
+		    arg0.cache = __wbindgen_enum_RequestCache[arg1];
 		};
 
 		module.exports.__wbg_setcredentials_c3a22f1cd105a2c6 = function(arg0, arg1) {
@@ -29125,7 +29131,7 @@ function requireCore$1 () {
 		    return ret;
 		};
 
-		module.exports.__wbg_versions_c71aa1626a93e0a1 = function(arg0) {
+		module.exports.__wbg_versions_4e31226f5e8dc909 = function(arg0) {
 		    const ret = arg0.versions;
 		    return ret;
 		};
@@ -29145,13 +29151,13 @@ function requireCore$1 () {
 		    return ret;
 		};
 
-		module.exports.__wbindgen_closure_wrapper7966 = function(arg0, arg1, arg2) {
-		    const ret = makeMutClosure(arg0, arg1, 2102, __wbg_adapter_30);
+		module.exports.__wbindgen_closure_wrapper9169 = function(arg0, arg1, arg2) {
+		    const ret = makeMutClosure(arg0, arg1, 2463, __wbg_adapter_30);
 		    return ret;
 		};
 
-		module.exports.__wbindgen_closure_wrapper8025 = function(arg0, arg1, arg2) {
-		    const ret = makeMutClosure(arg0, arg1, 2120, __wbg_adapter_33);
+		module.exports.__wbindgen_closure_wrapper9209 = function(arg0, arg1, arg2) {
+		    const ret = makeMutClosure(arg0, arg1, 2485, __wbg_adapter_33);
 		    return ret;
 		};
 
@@ -29246,7 +29252,61 @@ function requireTypes () {
 	 Generated by typeshare 1.13.2
 	*/
 	Object.defineProperty(types, "__esModule", { value: true });
-	types.ReplacerFunc = types.ReviverFunc = types.WordListType = types.SeparatorType = types.AllowedRecipientType = types.AllowedType = types.ItemShareDuration = types.ItemState = types.AutofillBehavior = types.ItemFieldType = types.ItemCategory = void 0;
+	types.ReplacerFunc = types.ReviverFunc = types.UPDATE_ITEM_HISTORY = types.UPDATE_ITEMS = types.SEND_ITEMS = types.REVEAL_ITEM_PASSWORD = types.RECOVER_VAULT = types.READ_ITEMS = types.PRINT_ITEMS = types.NO_ACCESS = types.MANAGE_VAULT = types.IMPORT_ITEMS = types.EXPORT_ITEMS = types.DELETE_ITEMS = types.CREATE_ITEMS = types.ARCHIVE_ITEMS = types.WordListType = types.SeparatorType = types.VaultType = types.AllowedRecipientType = types.AllowedType = types.ItemShareDuration = types.ItemState = types.AutofillBehavior = types.ItemFieldType = types.ItemCategory = types.VaultAccessorType = types.GroupState = types.GroupType = void 0;
+	var GroupType;
+	(function (GroupType) {
+	    /**
+	     * The owners group, which gives the following permissions:
+	     * - Do everything the Admin group can do
+	     * - See every vault other than the personal vaults
+	     * - Change people's names
+	     * - See billing
+	     * - Change billing
+	     * - Make other people owners
+	     * - Delete a person
+	     */
+	    GroupType["Owners"] = "owners";
+	    /**
+	     * The administrators group, which gives the following permissions:
+	     * - Perform recovery
+	     * - Create new vaults
+	     * - Invite new members
+	     * - See vault metadata, including the vault name and who has access.
+	     * - Make other people admins
+	     */
+	    GroupType["Administrators"] = "administrators";
+	    /**
+	     * The recovery group. It contains recovery keysets, and is added to every vault to allow for recovery.
+	     *
+	     * No one is added to this.
+	     */
+	    GroupType["Recovery"] = "recovery";
+	    /**
+	     * The external account managers group or EAM is a mandatory group for managed accounts that has
+	     * same permissions as the owners.
+	     */
+	    GroupType["ExternalAccountManagers"] = "externalAccountManagers";
+	    /** Members of a team that a user is on. */
+	    GroupType["TeamMembers"] = "teamMembers";
+	    /** A custom, user defined group. */
+	    GroupType["UserDefined"] = "userDefined";
+	    /** Support for new or renamed group types */
+	    GroupType["Unsupported"] = "unsupported";
+	})(GroupType || (types.GroupType = GroupType = {}));
+	var GroupState;
+	(function (GroupState) {
+	    /** This group is active */
+	    GroupState["Active"] = "active";
+	    /** This group has been deleted */
+	    GroupState["Deleted"] = "deleted";
+	    /** This group is in an unknown state */
+	    GroupState["Unsupported"] = "unsupported";
+	})(GroupState || (types.GroupState = GroupState = {}));
+	var VaultAccessorType;
+	(function (VaultAccessorType) {
+	    VaultAccessorType["User"] = "user";
+	    VaultAccessorType["Group"] = "group";
+	})(VaultAccessorType || (types.VaultAccessorType = VaultAccessorType = {}));
 	var ItemCategory;
 	(function (ItemCategory) {
 	    ItemCategory["Login"] = "Login";
@@ -29296,7 +29356,7 @@ function requireTypes () {
 	 * Controls the auto-fill behavior of a website.
 	 *
 	 *
-	 * For more information, visit https://support.1password.com/autofill-behavior/
+	 * For more information, visit <https://support.1password.com/autofill-behavior/>
 	 */
 	var AutofillBehavior;
 	(function (AutofillBehavior) {
@@ -29345,6 +29405,15 @@ function requireTypes () {
 	    /** Recipients can be specified by domain */
 	    AllowedRecipientType["Domain"] = "Domain";
 	})(AllowedRecipientType || (types.AllowedRecipientType = AllowedRecipientType = {}));
+	/** Represents the vault type. */
+	var VaultType;
+	(function (VaultType) {
+	    VaultType["Personal"] = "personal";
+	    VaultType["Everyone"] = "everyone";
+	    VaultType["Transfer"] = "transfer";
+	    VaultType["UserCreated"] = "userCreated";
+	    VaultType["Unsupported"] = "unsupported";
+	})(VaultType || (types.VaultType = VaultType = {}));
 	var SeparatorType;
 	(function (SeparatorType) {
 	    /**
@@ -29394,6 +29463,20 @@ function requireTypes () {
 	    /** Three (random) letter "words" */
 	    WordListType["ThreeLetters"] = "threeLetters";
 	})(WordListType || (types.WordListType = WordListType = {}));
+	types.ARCHIVE_ITEMS = 256;
+	types.CREATE_ITEMS = 128;
+	types.DELETE_ITEMS = 512;
+	types.EXPORT_ITEMS = 4194304;
+	types.IMPORT_ITEMS = 2097152;
+	types.MANAGE_VAULT = 2;
+	types.NO_ACCESS = 0;
+	types.PRINT_ITEMS = 8388608;
+	types.READ_ITEMS = 32;
+	types.RECOVER_VAULT = 1;
+	types.REVEAL_ITEM_PASSWORD = 16;
+	types.SEND_ITEMS = 1048576;
+	types.UPDATE_ITEMS = 64;
+	types.UPDATE_ITEM_HISTORY = 1024;
 	/**
 	 * Custom JSON reviver and replacer functions for dynamic data transformation
 	 * ReviverFunc is used during JSON parsing to detect and transform specific data structures
@@ -29436,7 +29519,14 @@ function requireErrors () {
 	hasRequiredErrors = 1;
 	// Code generated by op-codegen - DO NOT EDIT MANUALLY
 	Object.defineProperty(errors, "__esModule", { value: true });
-	errors.throwError = errors.RateLimitExceededError = void 0;
+	errors.throwError = errors.RateLimitExceededError = errors.DesktopSessionExpiredError = void 0;
+	class DesktopSessionExpiredError extends Error {
+	    constructor(message) {
+	        super();
+	        this.message = message;
+	    }
+	}
+	errors.DesktopSessionExpiredError = DesktopSessionExpiredError;
 	class RateLimitExceededError extends Error {
 	    constructor(message) {
 	        super();
@@ -29453,6 +29543,8 @@ function requireErrors () {
 	        throw new Error(errString);
 	    }
 	    switch (err.name) {
+	        case "DesktopSessionExpired":
+	            throw new DesktopSessionExpiredError(err.message);
 	        case "RateLimitExceeded":
 	            throw new RateLimitExceededError(err.message);
 	        default:
@@ -29478,7 +29570,7 @@ function requireCore () {
 	    });
 	};
 	Object.defineProperty(core$1, "__esModule", { value: true });
-	core$1.SharedCore = void 0;
+	core$1.InnerClient = core$1.SharedCore = core$1.WasmCore = void 0;
 	const sdk_core_1 = requireCore$1();
 	const types_1 = requireTypes();
 	const errors_1 = requireErrors();
@@ -29486,19 +29578,51 @@ function requireCore () {
 	// is ~64MB. Past this limit, the wasm-bingen FFI will throw an error and the program will crash.
 	// We set the limit to 50MB to be safe, to be reconsidered upon further testing.
 	const messageLimit = 50 * 1024 * 1024;
-	/**
-	 *  An implementation of the `Core` interface that shares resources across all clients.
-	 */
-	class SharedCore {
+	class WasmCore {
 	    initClient(config) {
 	        return __awaiter(this, void 0, void 0, function* () {
-	            const serializedConfig = JSON.stringify(config);
 	            try {
-	                return yield (0, sdk_core_1.init_client)(serializedConfig);
+	                return yield (0, sdk_core_1.init_client)(config);
 	            }
 	            catch (e) {
 	                (0, errors_1.throwError)(e);
 	            }
+	        });
+	    }
+	    invoke(config) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            try {
+	                return yield (0, sdk_core_1.invoke)(config);
+	            }
+	            catch (e) {
+	                (0, errors_1.throwError)(e);
+	            }
+	        });
+	    }
+	    releaseClient(clientId) {
+	        try {
+	            (0, sdk_core_1.release_client)(clientId);
+	        }
+	        catch (e) {
+	            console.warn("failed to release client:", e);
+	        }
+	    }
+	}
+	core$1.WasmCore = WasmCore;
+	/**
+	 *  An implementation of the `Core` interface that shares resources across all clients.
+	 */
+	class SharedCore {
+	    constructor() {
+	        this.inner = new WasmCore();
+	    }
+	    setInner(core) {
+	        this.inner = core;
+	    }
+	    initClient(config) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const serializedConfig = JSON.stringify(config);
+	            return this.inner.initClient(serializedConfig);
 	        });
 	    }
 	    invoke(config) {
@@ -29509,12 +29633,7 @@ function requireCore () {
 	            if (new TextEncoder().encode(serializedConfig).length > messageLimit) {
 	                (0, errors_1.throwError)(`message size exceeds the limit of ${messageLimit} bytes, please contact 1Password at support@1password.com or https://developer.1password.com/joinslack if you need help."`);
 	            }
-	            try {
-	                return yield (0, sdk_core_1.invoke)(serializedConfig);
-	            }
-	            catch (e) {
-	                (0, errors_1.throwError)(e);
-	            }
+	            return this.inner.invoke(serializedConfig);
 	        });
 	    }
 	    invoke_sync(config) {
@@ -29524,19 +29643,41 @@ function requireCore () {
 	        if (new TextEncoder().encode(serializedConfig).length > messageLimit) {
 	            (0, errors_1.throwError)(`message size exceeds the limit of ${messageLimit} bytes, please contact 1Password at support@1password.com or https://developer.1password.com/joinslack if you need help.`);
 	        }
-	        try {
-	            return (0, sdk_core_1.invoke_sync)(serializedConfig);
-	        }
-	        catch (e) {
-	            (0, errors_1.throwError)(e);
-	        }
+	        return (0, sdk_core_1.invoke_sync)(serializedConfig);
 	    }
 	    releaseClient(clientId) {
 	        const serializedId = JSON.stringify(clientId);
-	        (0, sdk_core_1.release_client)(serializedId);
+	        this.inner.releaseClient(serializedId);
 	    }
 	}
 	core$1.SharedCore = SharedCore;
+	/**
+	 *  Represents the client instance on which a call is made.
+	 */
+	class InnerClient {
+	    constructor(id, core, config) {
+	        this.id = id;
+	        this.core = core;
+	        this.config = config;
+	    }
+	    invoke(config) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            try {
+	                return yield this.core.invoke(config);
+	            }
+	            catch (err) {
+	                if (err instanceof errors_1.DesktopSessionExpiredError) {
+	                    const newId = yield this.core.initClient(this.config);
+	                    this.id = parseInt(newId, 10);
+	                    config.invocation.clientId = this.id;
+	                    return yield this.core.invoke(config);
+	                }
+	                throw err;
+	            }
+	        });
+	    }
+	}
+	core$1.InnerClient = InnerClient;
 	return core$1;
 }
 
@@ -29553,8 +29694,8 @@ function requireVersion () {
 	hasRequiredVersion = 1;
 	Object.defineProperty(version, "__esModule", { value: true });
 	version.SDK_BUILD_NUMBER = version.SDK_VERSION = void 0;
-	version.SDK_VERSION = "0.3.0";
-	version.SDK_BUILD_NUMBER = "0030001";
+	version.SDK_VERSION = "0.4.0";
+	version.SDK_BUILD_NUMBER = "0040003";
 	return version;
 }
 
@@ -29568,21 +29709,38 @@ function requireConfiguration () {
 		    return (mod && mod.__esModule) ? mod : { "default": mod };
 		};
 		Object.defineProperty(exports, "__esModule", { value: true });
-		exports.getOsName = exports.clientAuthConfig = exports.VERSION = exports.LANGUAGE = void 0;
+		exports.getOsName = exports.clientAuthConfig = exports.DesktopAuth = exports.VERSION = exports.LANGUAGE = void 0;
 		const os_1 = __importDefault(os__default);
 		const version_js_1 = requireVersion();
 		exports.LANGUAGE = "JS";
 		exports.VERSION = version_js_1.SDK_BUILD_NUMBER;
 		/**
+		 * Setting that specifies a client should use the desktop app to authenticate. Set accountName to your 1Password account name as shown at the top left sidebar of the app, or your account UUID.
+		 */
+		class DesktopAuth {
+		    constructor(accountName) {
+		        this.accountName = accountName;
+		    }
+		}
+		exports.DesktopAuth = DesktopAuth;
+		/**
 		 * Creates a default client configuration.
 		 * @returns The client configuration to instantiate the client with.
 		 */
 		const clientAuthConfig = (userConfig) => {
-		    var _a;
 		    // TODO: Add logic for computing the correct sanitized version value for each platform
 		    const defaultOsVersion = "0.0.0";
+		    let serviceAccountToken;
+		    let accountName;
+		    if (typeof userConfig.auth === "string") {
+		        serviceAccountToken = userConfig.auth;
+		    }
+		    else if (userConfig.auth instanceof DesktopAuth) {
+		        accountName = userConfig.auth.accountName;
+		    }
 		    return {
-		        serviceAccountToken: (_a = userConfig.auth) !== null && _a !== void 0 ? _a : "",
+		        serviceAccountToken: serviceAccountToken !== null && serviceAccountToken !== void 0 ? serviceAccountToken : "",
+		        accountName,
 		        programmingLanguage: exports.LANGUAGE,
 		        sdkVersion: exports.VERSION,
 		        integrationName: userConfig.integrationName,
@@ -29664,7 +29822,7 @@ function requireSecrets () {
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _Secrets_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Secrets_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	    /**
@@ -29683,7 +29841,7 @@ function requireSecrets () {
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _Secrets_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Secrets_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	    /**
@@ -29703,6 +29861,9 @@ function requireSecrets () {
 	        };
 	        sharedCore.invoke_sync(invocationConfig);
 	    }
+	    /**
+	     * Generate a password using the provided recipe.
+	     */
 	    static generatePassword(recipe) {
 	        const sharedCore = new core_js_1.SharedCore();
 	        const invocationConfig = {
@@ -29779,7 +29940,7 @@ function requireItems_shares () {
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsShares_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsShares_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	    /**
@@ -29799,7 +29960,7 @@ function requireItems_shares () {
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsShares_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsShares_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	    /**
@@ -29820,7 +29981,7 @@ function requireItems_shares () {
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsShares_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsShares_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	}
@@ -29867,7 +30028,7 @@ function requireItems_files () {
 	        __classPrivateFieldSet(this, _ItemsFiles_inner, inner, "f");
 	    }
 	    /**
-	     * Attach files to Items
+	     * Attach files to Items.
 	     */
 	    attach(item, fileParams) {
 	        return __awaiter(this, void 0, void 0, function* () {
@@ -29883,11 +30044,11 @@ function requireItems_files () {
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsFiles_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsFiles_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	    /**
-	     * Read file content from the Item
+	     * Read file content from the Item.
 	     */
 	    read(vaultId, itemId, attr) {
 	        return __awaiter(this, void 0, void 0, function* () {
@@ -29904,11 +30065,11 @@ function requireItems_files () {
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsFiles_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsFiles_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	    /**
-	     * Delete a field file from Item using the section and field IDs
+	     * Delete a field file from Item using the section and field IDs.
 	     */
 	    delete(item, sectionId, fieldId) {
 	        return __awaiter(this, void 0, void 0, function* () {
@@ -29925,11 +30086,11 @@ function requireItems_files () {
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsFiles_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsFiles_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	    /**
-	     * Replace the document file within a document item
+	     * Replace the document file within a document item.
 	     */
 	    replaceDocument(item, docParams) {
 	        return __awaiter(this, void 0, void 0, function* () {
@@ -29945,7 +30106,7 @@ function requireItems_files () {
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsFiles_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _ItemsFiles_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	}
@@ -30009,11 +30170,31 @@ function requireItems () {
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	    /**
-	     * Get an item by vault and item ID
+	     * Create items in batch, within a single vault.
+	     */
+	    createAll(vaultId, params) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Items_inner, "f").id,
+	                    parameters: {
+	                        name: "ItemsCreateAll",
+	                        parameters: {
+	                            vault_id: vaultId,
+	                            params,
+	                        },
+	                    },
+	                },
+	            };
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
+	        });
+	    }
+	    /**
+	     * Get an item by vault and item ID.
 	     */
 	    get(vaultId, itemId) {
 	        return __awaiter(this, void 0, void 0, function* () {
@@ -30029,7 +30210,27 @@ function requireItems () {
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
+	        });
+	    }
+	    /**
+	     * Get items by vault and their item IDs.
+	     */
+	    getAll(vaultId, itemIds) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Items_inner, "f").id,
+	                    parameters: {
+	                        name: "ItemsGetAll",
+	                        parameters: {
+	                            vault_id: vaultId,
+	                            item_ids: itemIds,
+	                        },
+	                    },
+	                },
+	            };
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	    /**
@@ -30048,7 +30249,7 @@ function requireItems () {
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	    /**
@@ -30068,7 +30269,27 @@ function requireItems () {
 	                    },
 	                },
 	            };
-	            yield __classPrivateFieldGet(this, _Items_inner, "f").core.invoke(invocationConfig);
+	            yield __classPrivateFieldGet(this, _Items_inner, "f").invoke(invocationConfig);
+	        });
+	    }
+	    /**
+	     * Delete items in batch, within a single vault.
+	     */
+	    deleteAll(vaultId, itemIds) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Items_inner, "f").id,
+	                    parameters: {
+	                        name: "ItemsDeleteAll",
+	                        parameters: {
+	                            vault_id: vaultId,
+	                            item_ids: itemIds,
+	                        },
+	                    },
+	                },
+	            };
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	    /**
@@ -30088,7 +30309,7 @@ function requireItems () {
 	                    },
 	                },
 	            };
-	            yield __classPrivateFieldGet(this, _Items_inner, "f").core.invoke(invocationConfig);
+	            yield __classPrivateFieldGet(this, _Items_inner, "f").invoke(invocationConfig);
 	        });
 	    }
 	    /**
@@ -30108,7 +30329,7 @@ function requireItems () {
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Items_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
 	        });
 	    }
 	}
@@ -30155,26 +30376,247 @@ function requireVaults () {
 	        __classPrivateFieldSet(this, _Vaults_inner, inner, "f");
 	    }
 	    /**
-	     * List all vaults
+	     * Create a new user vault.
 	     */
-	    list() {
+	    create(params) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Vaults_inner, "f").id,
+	                    parameters: {
+	                        name: "VaultsCreate",
+	                        parameters: {
+	                            params,
+	                        },
+	                    },
+	                },
+	            };
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Vaults_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
+	        });
+	    }
+	    /**
+	     * List information about vaults that's configurable based on some input parameters.
+	     */
+	    list(params) {
 	        return __awaiter(this, void 0, void 0, function* () {
 	            const invocationConfig = {
 	                invocation: {
 	                    clientId: __classPrivateFieldGet(this, _Vaults_inner, "f").id,
 	                    parameters: {
 	                        name: "VaultsList",
-	                        parameters: {},
+	                        parameters: {
+	                            params,
+	                        },
 	                    },
 	                },
 	            };
-	            return JSON.parse(yield __classPrivateFieldGet(this, _Vaults_inner, "f").core.invoke(invocationConfig), types_js_1.ReviverFunc);
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Vaults_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
+	        });
+	    }
+	    /**
+	     * Get an overview of a vault by its ID.
+	     */
+	    getOverview(vaultId) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Vaults_inner, "f").id,
+	                    parameters: {
+	                        name: "VaultsGetOverview",
+	                        parameters: {
+	                            vault_id: vaultId,
+	                        },
+	                    },
+	                },
+	            };
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Vaults_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
+	        });
+	    }
+	    /**
+	     * Get detailed vault information by vault ID and parameters.
+	     */
+	    get(vaultId, vaultParams) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Vaults_inner, "f").id,
+	                    parameters: {
+	                        name: "VaultsGet",
+	                        parameters: {
+	                            vault_id: vaultId,
+	                            vault_params: vaultParams,
+	                        },
+	                    },
+	                },
+	            };
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Vaults_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
+	        });
+	    }
+	    /**
+	     * Update a vault
+	     */
+	    update(vaultId, params) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Vaults_inner, "f").id,
+	                    parameters: {
+	                        name: "VaultsUpdate",
+	                        parameters: {
+	                            vault_id: vaultId,
+	                            params,
+	                        },
+	                    },
+	                },
+	            };
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Vaults_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
+	        });
+	    }
+	    /**
+	     * Delete a vault by its ID.
+	     */
+	    delete(vaultId) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Vaults_inner, "f").id,
+	                    parameters: {
+	                        name: "VaultsDelete",
+	                        parameters: {
+	                            vault_id: vaultId,
+	                        },
+	                    },
+	                },
+	            };
+	            yield __classPrivateFieldGet(this, _Vaults_inner, "f").invoke(invocationConfig);
+	        });
+	    }
+	    /**
+	     * Grant group permissions to a vault.
+	     */
+	    grantGroupPermissions(vaultId, groupPermissionsList) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Vaults_inner, "f").id,
+	                    parameters: {
+	                        name: "VaultsGrantGroupPermissions",
+	                        parameters: {
+	                            vault_id: vaultId,
+	                            group_permissions_list: groupPermissionsList,
+	                        },
+	                    },
+	                },
+	            };
+	            yield __classPrivateFieldGet(this, _Vaults_inner, "f").invoke(invocationConfig);
+	        });
+	    }
+	    /**
+	     * Update group permissions for vaults.
+	     */
+	    updateGroupPermissions(groupPermissionsList) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Vaults_inner, "f").id,
+	                    parameters: {
+	                        name: "VaultsUpdateGroupPermissions",
+	                        parameters: {
+	                            group_permissions_list: groupPermissionsList,
+	                        },
+	                    },
+	                },
+	            };
+	            yield __classPrivateFieldGet(this, _Vaults_inner, "f").invoke(invocationConfig);
+	        });
+	    }
+	    /**
+	     * Revoke group permissions from a vault.
+	     */
+	    revokeGroupPermissions(vaultId, groupId) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Vaults_inner, "f").id,
+	                    parameters: {
+	                        name: "VaultsRevokeGroupPermissions",
+	                        parameters: {
+	                            vault_id: vaultId,
+	                            group_id: groupId,
+	                        },
+	                    },
+	                },
+	            };
+	            yield __classPrivateFieldGet(this, _Vaults_inner, "f").invoke(invocationConfig);
 	        });
 	    }
 	}
 	vaults.Vaults = Vaults;
 	_Vaults_inner = new WeakMap();
 	return vaults;
+}
+
+var groups = {};
+
+var hasRequiredGroups;
+
+function requireGroups () {
+	if (hasRequiredGroups) return groups;
+	hasRequiredGroups = 1;
+	// Code generated by op-codegen - DO NOT EDIT MANUALLY
+	var __awaiter = (groups && groups.__awaiter) || function (thisArg, _arguments, P, generator) {
+	    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+	    return new (P || (P = Promise))(function (resolve, reject) {
+	        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+	        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+	        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+	        step((generator = generator.apply(thisArg, _arguments || [])).next());
+	    });
+	};
+	var __classPrivateFieldSet = (groups && groups.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+	    if (kind === "m") throw new TypeError("Private method is not writable");
+	    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+	    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+	    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+	};
+	var __classPrivateFieldGet = (groups && groups.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+	    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+	    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+	    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+	};
+	var _Groups_inner;
+	Object.defineProperty(groups, "__esModule", { value: true });
+	groups.Groups = void 0;
+	const types_js_1 = requireTypes();
+	class Groups {
+	    constructor(inner) {
+	        _Groups_inner.set(this, void 0);
+	        __classPrivateFieldSet(this, _Groups_inner, inner, "f");
+	    }
+	    /**
+	     * Get a group by its ID and parameters.
+	     */
+	    get(groupId, groupParams) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            const invocationConfig = {
+	                invocation: {
+	                    clientId: __classPrivateFieldGet(this, _Groups_inner, "f").id,
+	                    parameters: {
+	                        name: "GroupsGet",
+	                        parameters: {
+	                            group_id: groupId,
+	                            group_params: groupParams,
+	                        },
+	                    },
+	                },
+	            };
+	            return JSON.parse(yield __classPrivateFieldGet(this, _Groups_inner, "f").invoke(invocationConfig), types_js_1.ReviverFunc);
+	        });
+	    }
+	}
+	groups.Groups = Groups;
+	_Groups_inner = new WeakMap();
+	return groups;
 }
 
 var hasRequiredClient;
@@ -30188,15 +30630,203 @@ function requireClient () {
 	const secrets_js_1 = requireSecrets();
 	const items_js_1 = requireItems();
 	const vaults_js_1 = requireVaults();
+	const groups_js_1 = requireGroups();
 	class Client {
 	    constructor(innerClient) {
 	        this.secrets = new secrets_js_1.Secrets(innerClient);
 	        this.items = new items_js_1.Items(innerClient);
 	        this.vaults = new vaults_js_1.Vaults(innerClient);
+	        this.groups = new groups_js_1.Groups(innerClient);
 	    }
 	}
 	client.Client = Client;
 	return client;
+}
+
+var shared_lib_core = {};
+
+var hasRequiredShared_lib_core;
+
+function requireShared_lib_core () {
+	if (hasRequiredShared_lib_core) return shared_lib_core;
+	hasRequiredShared_lib_core = 1;
+	var __createBinding = (shared_lib_core && shared_lib_core.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+	    if (k2 === undefined) k2 = k;
+	    var desc = Object.getOwnPropertyDescriptor(m, k);
+	    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+	      desc = { enumerable: true, get: function() { return m[k]; } };
+	    }
+	    Object.defineProperty(o, k2, desc);
+	}) : (function(o, m, k, k2) {
+	    if (k2 === undefined) k2 = k;
+	    o[k2] = m[k];
+	}));
+	var __setModuleDefault = (shared_lib_core && shared_lib_core.__setModuleDefault) || (Object.create ? (function(o, v) {
+	    Object.defineProperty(o, "default", { enumerable: true, value: v });
+	}) : function(o, v) {
+	    o["default"] = v;
+	});
+	var __importStar = (shared_lib_core && shared_lib_core.__importStar) || (function () {
+	    var ownKeys = function(o) {
+	        ownKeys = Object.getOwnPropertyNames || function (o) {
+	            var ar = [];
+	            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+	            return ar;
+	        };
+	        return ownKeys(o);
+	    };
+	    return function (mod) {
+	        if (mod && mod.__esModule) return mod;
+	        var result = {};
+	        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+	        __setModuleDefault(result, mod);
+	        return result;
+	    };
+	})();
+	var __awaiter = (shared_lib_core && shared_lib_core.__awaiter) || function (thisArg, _arguments, P, generator) {
+	    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+	    return new (P || (P = Promise))(function (resolve, reject) {
+	        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+	        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+	        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+	        step((generator = generator.apply(thisArg, _arguments || [])).next());
+	    });
+	};
+	Object.defineProperty(shared_lib_core, "__esModule", { value: true });
+	shared_lib_core.SharedLibCore = void 0;
+	const fs = __importStar(fs__default);
+	const os = __importStar(os__default);
+	const path$1 = __importStar(path);
+	const errors_1 = requireErrors();
+	/**
+	 * Find the 1Password shared lib path by asking an the wasm core synchronously.
+	 */
+	const find1PasswordLibPath = () => {
+	    const platform = os.platform();
+	    path$1.dirname(process.execPath);
+	    let searchPaths = [];
+	    // Define lists of possible locations for each platform.
+	    switch (platform) {
+	        case "darwin": // macOS
+	            searchPaths = [
+	                "/Applications/1Password.app/Contents/Frameworks/libop_sdk_ipc_client.dylib",
+	                path$1.join(os.homedir(), "/Applications/1Password.app/Contents/Frameworks/libop_sdk_ipc_client.dylib"),
+	            ];
+	            break;
+	        case "linux": // Linux
+	            searchPaths = [
+	                "/usr/bin/1password/libop_sdk_ipc_client.so",
+	                "/opt/1Password/libop_sdk_ipc_client.so",
+	                "/snap/bin/1password/libop_sdk_ipc_client.so",
+	            ];
+	            break;
+	        case "win32": // Windows
+	            searchPaths = [
+	                path$1.join(os.homedir(), "/AppData/Local/1Password/op_sdk_ipc_client.dll"),
+	                "C:/Program Files/1Password/app/8/op_sdk_ipc_client.dll",
+	                "C:/Program Files (x86)/1Password/app/8/op_sdk_ipc_client.dll",
+	                path$1.join(os.homedir(), "/AppData/Local/1Password/app/8/op_sdk_ipc_client.dll"),
+	            ];
+	            break;
+	        default:
+	            throw new Error(`Unsupported platform: ${platform}`);
+	    }
+	    // Iterate through the possible paths and return the first one that exists.
+	    for (const addonPath of searchPaths) {
+	        if (fs.existsSync(addonPath)) {
+	            return addonPath;
+	        }
+	    }
+	    // If the loop completes without finding the file, throw an error.
+	    throw new Error("1Password desktop application not found");
+	};
+	/**
+	 * SharedLibCore: wrapper around the dynamically loaded shared library
+	 */
+	class SharedLibCore {
+	    constructor(accountName) {
+	        this.lib = null;
+	        try {
+	            const libPath = find1PasswordLibPath();
+	            const moduleStub = { exports: {} };
+	            process.dlopen(moduleStub, libPath);
+	            // Safely check the structure of the loaded module before casting.
+	            if (typeof moduleStub === "object" &&
+	                moduleStub !== null &&
+	                typeof moduleStub.exports === "object" &&
+	                moduleStub.exports !== null &&
+	                "sendMessage" in moduleStub.exports &&
+	                typeof moduleStub.exports.sendMessage ===
+	                    "function") {
+	                this.lib = moduleStub.exports;
+	            }
+	            else {
+	                throw new Error("Failed to initialize native library: sendMessage function not found on module.");
+	            }
+	        }
+	        catch (e) {
+	            console.error("A critical error occurred while loading the native addon:", e);
+	            this.lib = null;
+	        }
+	        this.acccountName = accountName;
+	    }
+	    /**
+	     * callSharedLibrary - send string to native function, receive string back.
+	     */
+	    callSharedLibrary(input, operation_type) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            if (!this.lib) {
+	                throw new Error("Native library is not available.");
+	            }
+	            if (!input || input.length === 0) {
+	                throw new Error("internal: empty input");
+	            }
+	            const inputEncoded = Buffer.from(input, "utf8").toString("base64");
+	            const req = {
+	                account_name: this.acccountName,
+	                kind: operation_type,
+	                payload: inputEncoded,
+	            };
+	            const inputBuf = Buffer.from(JSON.stringify(req), "utf8");
+	            const nativeResponse = yield this.lib.sendMessage(inputBuf);
+	            if (!(nativeResponse instanceof Uint8Array)) {
+	                throw new Error(`Native function returned an unexpected type. Expected Uint8Array, got ${typeof nativeResponse}`);
+	            }
+	            const respString = new TextDecoder().decode(nativeResponse);
+	            const response = JSON.parse(respString);
+	            if (response.success) {
+	                const decodedPayload = Buffer.from(response.payload).toString("utf8");
+	                // On success, the payload is the actual result string
+	                return decodedPayload;
+	            }
+	            else {
+	                // On failure, convert the error payload to a readable string and throw
+	                const errorMessage = Array.isArray(response.payload)
+	                    ? String.fromCharCode(...response.payload)
+	                    : JSON.stringify(response.payload);
+	                (0, errors_1.throwError)(errorMessage);
+	            }
+	        });
+	    }
+	    // Core interface implementation
+	    initClient(config) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            return this.callSharedLibrary(config, "init_client");
+	        });
+	    }
+	    invoke(invokeConfigBytes) {
+	        return __awaiter(this, void 0, void 0, function* () {
+	            return this.callSharedLibrary(invokeConfigBytes, "invoke");
+	        });
+	    }
+	    releaseClient(clientId) {
+	        this.callSharedLibrary(clientId, "release_client").catch((err) => {
+	            console.warn("failed to release client:", err);
+	        });
+	    }
+	}
+	shared_lib_core.SharedLibCore = SharedLibCore;
+	return shared_lib_core;
 }
 
 var hasRequiredClient_builder;
@@ -30215,8 +30845,10 @@ function requireClient_builder () {
 	};
 	Object.defineProperty(client_builder, "__esModule", { value: true });
 	client_builder.createClientWithCore = void 0;
+	const core_js_1 = requireCore();
 	const configuration_js_1 = requireConfiguration();
 	const client_js_1 = requireClient();
+	const shared_lib_core_js_1 = requireShared_lib_core();
 	const finalizationRegistry = new FinalizationRegistry((heldClient) => {
 	    heldClient.core.releaseClient(heldClient.id);
 	});
@@ -30226,11 +30858,11 @@ function requireClient_builder () {
 	 */
 	const createClientWithCore = (config, core) => __awaiter(void 0, void 0, void 0, function* () {
 	    const authConfig = (0, configuration_js_1.clientAuthConfig)(config);
+	    if (authConfig.accountName) {
+	        core.setInner(new shared_lib_core_js_1.SharedLibCore(authConfig.accountName));
+	    }
 	    const clientId = yield core.initClient(authConfig);
-	    const inner = {
-	        id: parseInt(clientId, 10),
-	        core,
-	    };
+	    const inner = new core_js_1.InnerClient(parseInt(clientId, 10), core, authConfig);
 	    const client = new client_js_1.Client(inner);
 	    // Cleans up associated memory from core when client instance goes out of scope.
 	    finalizationRegistry.register(client, inner);
@@ -30271,7 +30903,7 @@ function requireSdk () {
 		    });
 		};
 		Object.defineProperty(exports, "__esModule", { value: true });
-		exports.createClient = exports.Secrets = exports.DEFAULT_INTEGRATION_VERSION = exports.DEFAULT_INTEGRATION_NAME = void 0;
+		exports.createClient = exports.DesktopAuth = exports.Secrets = exports.DEFAULT_INTEGRATION_VERSION = exports.DEFAULT_INTEGRATION_NAME = void 0;
 		const core_js_1 = requireCore();
 		const client_builder_js_1 = requireClient_builder();
 		exports.DEFAULT_INTEGRATION_NAME = "Unknown";
@@ -30279,6 +30911,8 @@ function requireSdk () {
 		// auto-generated static exports
 		var secrets_js_1 = requireSecrets();
 		Object.defineProperty(exports, "Secrets", { enumerable: true, get: function () { return secrets_js_1.Secrets; } });
+		var configuration_js_1 = requireConfiguration();
+		Object.defineProperty(exports, "DesktopAuth", { enumerable: true, get: function () { return configuration_js_1.DesktopAuth; } });
 		__exportStar(requireClient(), exports);
 		__exportStar(requireErrors(), exports);
 		__exportStar(requireTypes(), exports);
@@ -31808,16 +32442,17 @@ function requireDist () {
 	 * Parse a `Content-Type` header.
 	 */
 	function parse(header, options) {
+	    const stopChar = options?.comma === true ? COMMA : 65536; // Sentinel for "no stop char".
 	    const len = header.length;
-	    let index = skipOWS(header, 0, len);
+	    let index = skipOWS(header, options?.start ?? 0, len);
 	    const valueStart = index;
-	    index = skipValue(header, index, len);
+	    index = skipValue(header, index, len, stopChar);
 	    const valueEnd = trailingOWS(header, valueStart, index);
 	    const type = header.slice(valueStart, valueEnd).toLowerCase();
-	    const parameters = options?.parameters === false
-	        ? new NullObject()
-	        : parseParameters(header, index, len);
-	    return { type, parameters };
+	    if (options?.parameters === false) {
+	        return { type, index, parameters: new NullObject() };
+	    }
+	    return parseParameters(header, type, index, len, stopChar);
 	}
 	const SP = 32; // " "
 	const HTAB = 9; // "\t"
@@ -31825,16 +32460,21 @@ function requireDist () {
 	const EQ = 61; // "="
 	const DQUOTE = 34; // '"'
 	const BSLASH = 92; // "\\"
+	const COMMA = 44; // ","
 	/**
 	 * Parses the parameters of a `Content-Type` header starting at the given index.
 	 */
-	function parseParameters(header, index, len) {
+	function parseParameters(header, type, index, len, stopChar) {
 	    const parameters = new NullObject();
 	    parameter: while (index < len) {
+	        if (header.charCodeAt(index) === stopChar)
+	            break;
 	        index = skipOWS(header, index + 1 /* Skip over ; */, len);
 	        const keyStart = index;
 	        while (index < len) {
 	            const code = header.charCodeAt(index);
+	            if (code === stopChar)
+	                break parameter;
 	            if (code === SEMI)
 	                continue parameter;
 	            if (code === EQ) {
@@ -31847,7 +32487,7 @@ function requireDist () {
 	                    while (index < len) {
 	                        const code = header.charCodeAt(index++);
 	                        if (code === DQUOTE) {
-	                            index = skipValue(header, index, len);
+	                            index = skipValue(header, index, len, stopChar);
 	                            if (parameters[key] === undefined)
 	                                parameters[key] = value;
 	                            break;
@@ -31861,7 +32501,7 @@ function requireDist () {
 	                    continue parameter;
 	                }
 	                const valueStart = index;
-	                index = skipValue(header, index, len);
+	                index = skipValue(header, index, len, stopChar);
 	                if (parameters[key] === undefined) {
 	                    const valueEnd = trailingOWS(header, valueStart, index);
 	                    parameters[key] = header.slice(valueStart, valueEnd);
@@ -31871,15 +32511,15 @@ function requireDist () {
 	            index++;
 	        }
 	    }
-	    return parameters;
+	    return { type, index, parameters };
 	}
 	/**
-	 * Skip over characters until a semicolon.
+	 * Skip over characters until a semicolon or other exit character.
 	 */
-	function skipValue(str, index, len) {
+	function skipValue(str, index, len, stopChar) {
 	    while (index < len) {
-	        const char = str.charCodeAt(index);
-	        if (char === SEMI)
+	        const code = str.charCodeAt(index);
+	        if (code === SEMI || code === stopChar)
 	            break;
 	        index++;
 	    }
@@ -31935,14 +32575,250 @@ const originalStringify = JSON.stringify;
 const originalParse = JSON.parse;
 const customFormat = /^-?\d+n$/;
 
-const bigIntsStringify = /([\[:])?"(-?\d+)n"($|([\\n]|\s)*(\s|[\\n])*[,\}\]])/g;
-const noiseStringify =
-  /([\[:])?("-?\d+n+)n("$|"([\\n]|\s)*(\s|[\\n])*[,\}\]])/g;
+const bigIntsStringify = /([\[:])?"(-?\d+)n"($|\s*[,\}\]])/g;
+const noiseStringify = /([\[:])?("-?\d+n+)n("$|"\s*[,\}\]])/g;
 
 /**
  * @typedef {(this: any, key: string | number | undefined, value: any) => any} Replacer
  * @typedef {(key: string | number | undefined, value: any, context?: { source: string }) => any} Reviver
  */
+
+/**
+ * Checks if a value is unstringifiable according to native JSON.stringify rules.
+ *
+ * @param {any} val The value to check.
+ * @returns {boolean} True if the value is undefined, a function, or a symbol.
+ */
+const isUnstringifiable = (val) =>
+  val === undefined || typeof val === "function" || typeof val === "symbol";
+
+/**
+ * Checks if a value is a native JSON.rawJSON object (Node.js 22+).
+ *
+ * @param {any} val The value to check.
+ * @returns {boolean} True if the value is a RawJSON instance.
+ */
+const isRawJSON = (val) =>
+  val !== null &&
+  typeof val === "object" &&
+  val.constructor &&
+  val.constructor.name === "RawJSON";
+
+/**
+ * Iteratively converts a JS value to a JSON string.
+ * Used as a fallback when the native JSON.stringify hits the Maximum Call Stack size.
+ * Fully compliant with JSON formatting (space), replacers, and toJSON behaviors.
+ *
+ * @param {any} rootValue The value to stringify.
+ * @param {Replacer | Array<string | number> | null} [replacer] User's custom replacer function.
+ * @param {string | number} [spaceParam] Indentation for pretty-printing.
+ * @returns {string | undefined} The generated JSON string.
+ */
+const stringifyIteratively = (rootValue, replacer, spaceParam) => {
+  let space = "";
+  const propertyList = Array.isArray(replacer)
+    ? new Set(replacer.map(String))
+    : null;
+
+  /**
+   * Prepares a value for stringification by resolving toJSON, handling BigInts,
+   * applying custom replacers, and unwrapping primitive objects.
+   *
+   * @param {object|Array} parent The parent object or array holding the value.
+   * @param {string} key The key associated with the value.
+   * @param {any} val The raw value to process.
+   * @returns {any} The processed value ready for stringification.
+   */
+  const prepareVal = (parent, key, val) => {
+    const isObject = val !== null && typeof val === "object";
+    const hasToJSON = isObject && typeof val.toJSON === "function";
+
+    if (hasToJSON) {
+      val = val.toJSON(key);
+    }
+
+    const isNoise = typeof val === "string" && noiseValue.test(val);
+
+    if (isNoise) return val + "n";
+
+    const isBigInt = typeof val === "bigint";
+
+    if (isBigInt) {
+      const supportsRawJSON = "rawJSON" in JSON;
+
+      if (supportsRawJSON) return JSON.rawJSON(val.toString());
+
+      return val.toString() + "n";
+    }
+
+    const isPostReplacerObject = val !== null && typeof val === "object";
+
+    if (isPostReplacerObject) {
+      const isPrimitiveWrapper =
+        val instanceof Number ||
+        val instanceof String ||
+        val instanceof Boolean;
+
+      if (isPrimitiveWrapper) {
+        val = val.valueOf();
+      }
+    }
+
+    return val;
+  };
+
+  const rootProcessed = prepareVal({ }, "", rootValue);
+
+  if (isUnstringifiable(rootProcessed)) {
+    return undefined;
+  }
+
+  const isRootPrimitive =
+    rootProcessed === null || typeof rootProcessed !== "object";
+  const isRootNativeRawJSON = isRawJSON(rootProcessed);
+
+  if (isRootPrimitive || isRootNativeRawJSON) {
+    return originalStringify(rootProcessed);
+  }
+
+  const chunks = [];
+
+  const stack = [
+    {
+      parent: { "": rootProcessed },
+      key: "",
+      val: rootProcessed,
+      isArray: Array.isArray(rootProcessed),
+      keys: Array.isArray(rootProcessed) ? null : Object.keys(rootProcessed),
+      index: 0,
+      first: true,
+    },
+  ];
+
+  const visited = new WeakSet([rootProcessed]);
+
+  while (stack.length > 0) {
+    const node = stack[stack.length - 1];
+
+    if (node.index === 0) {
+      chunks.push(node.isArray ? "[" : "{");
+    }
+
+    let isDone = false;
+
+    if (node.isArray) {
+      if (node.index < node.val.length) {
+        if (!node.first) chunks.push(",");
+
+        const childRaw = node.val[node.index];
+        const childVal = prepareVal(node.val, String(node.index), childRaw);
+
+        if (isUnstringifiable(childVal)) {
+          chunks.push("null");
+          node.first = false;
+          node.index++;
+        } else {
+          const isComplexObject =
+            childVal !== null && typeof childVal === "object";
+          const isNativeRaw = isRawJSON(childVal);
+
+          if (isComplexObject && !isNativeRaw) {
+            if (visited.has(childVal)) {
+              throw new TypeError("Converting circular structure to JSON");
+            }
+
+            visited.add(childVal);
+
+            stack.push({
+              parent: node.val,
+              key: String(node.index),
+              val: childVal,
+              isArray: Array.isArray(childVal),
+              keys: Array.isArray(childVal) ? null : Object.keys(childVal),
+              index: 0,
+              first: true,
+            });
+
+            node.first = false;
+            node.index++;
+          } else {
+            chunks.push(originalStringify(childVal));
+            node.first = false;
+            node.index++;
+          }
+        }
+      } else {
+        isDone = true;
+      }
+    } else {
+      while (node.index < node.keys.length) {
+        const k = node.keys[node.index++];
+
+        const isFilteredOutByArray = propertyList && !propertyList.has(k);
+
+        if (isFilteredOutByArray) continue;
+
+        const childRaw = node.val[k];
+        const childVal = prepareVal(node.val, k, childRaw);
+
+        if (isUnstringifiable(childVal)) continue;
+
+        if (!node.first) chunks.push(",");
+
+        {
+          chunks.push(originalStringify(k) + ":");
+        }
+
+        const isComplexObject =
+          childVal !== null && typeof childVal === "object";
+        const isNativeRaw = isRawJSON(childVal);
+
+        if (isComplexObject && !isNativeRaw) {
+          if (visited.has(childVal)) {
+            throw new TypeError("Converting circular structure to JSON");
+          }
+
+          visited.add(childVal);
+
+          stack.push({
+            parent: node.val,
+            key: k,
+            val: childVal,
+            isArray: Array.isArray(childVal),
+            keys: Array.isArray(childVal) ? null : Object.keys(childVal),
+            index: 0,
+            first: true,
+          });
+
+          node.first = false;
+
+          break; // Stop current loop level to process the newly pushed stack node
+        } else {
+          chunks.push(originalStringify(childVal));
+          node.first = false;
+        }
+      }
+
+      const isNodeFullyProcessed =
+        node.index >= node.keys.length && stack[stack.length - 1] === node;
+
+      if (isNodeFullyProcessed) {
+        isDone = true;
+      }
+    }
+
+    if (isDone) {
+
+      if (!node.first && space) ;
+
+      chunks.push(node.isArray ? "]" : "}");
+      visited.delete(node.val);
+      stack.pop();
+    }
+  }
+
+  return chunks.join("");
+};
 
 /**
  * Converts a JavaScript value to a JSON string.
@@ -31955,51 +32831,87 @@ const noiseStringify =
  *
  * @param {*} value The value to convert to a JSON string.
  * @param {Replacer | Array<string | number> | null} [replacer]
- *   A function that alters the behavior of the stringification process,
- *   or an array of strings/numbers to indicate properties to exclude.
+ * A function that alters the behavior of the stringification process,
+ * or an array of strings/numbers to indicate properties to exclude.
  * @param {string | number} [space]
- *   A string or number to specify indentation or pretty-printing.
+ * A string or number to specify indentation or pretty-printing.
  * @returns {string} The JSON string representation.
  */
 const JSONStringify = (value, replacer, space) => {
-  if ("rawJSON" in JSON) {
-    return originalStringify(
+  try {
+    const supportsRawJSON = "rawJSON" in JSON;
+
+    if (supportsRawJSON) {
+      return originalStringify(
+        value,
+        (key, val) => {
+          if (typeof val === "bigint") return JSON.rawJSON(val.toString());
+
+          const hasFunctionReplacer = typeof replacer === "function";
+
+          if (hasFunctionReplacer) ;
+
+          const isKeyInArrayReplacer =
+            Array.isArray(replacer) && replacer.includes(key);
+
+          if (isKeyInArrayReplacer) return val;
+
+          return val;
+        },
+        space,
+      );
+    }
+
+    if (!value) return originalStringify(value, replacer, space);
+
+    const convertedToCustomJSON = originalStringify(
       value,
-      (key, value) => {
-        if (typeof value === "bigint") return JSON.rawJSON(value.toString());
+      (key, val) => {
+        const isNoise = typeof val === "string" && noiseValue.test(val);
 
-        if (Array.isArray(replacer) && replacer.includes(key)) return value;
+        if (isNoise) return val.toString() + "n"; // Mark noise values with additional "n" to offset the deletion of one "n" during the processing
 
-        return value;
+        if (typeof val === "bigint") return val.toString() + "n";
+
+        const hasFunctionReplacer = typeof replacer === "function";
+
+        if (hasFunctionReplacer) ;
+
+        const isKeyInArrayReplacer =
+          Array.isArray(replacer) && replacer.includes(key);
+
+        if (isKeyInArrayReplacer) return val;
+
+        return val;
       },
       space,
     );
+
+    const processedJSON = convertedToCustomJSON.replace(
+      bigIntsStringify,
+      "$1$2$3",
+    ); // Delete one "n" off the end of every BigInt value
+
+    const denoisedJSON = processedJSON.replace(noiseStringify, "$1$2$3"); // Remove one "n" off the end of every noisy string
+
+    return denoisedJSON;
+  } catch (error) {
+    if (error instanceof RangeError) {
+      const convertedJSON = stringifyIteratively(value, replacer);
+
+      if (convertedJSON === undefined) return undefined;
+
+      const supportsRawJSON = "rawJSON" in JSON;
+
+      if (supportsRawJSON) return convertedJSON;
+
+      const processedJSON = convertedJSON.replace(bigIntsStringify, "$1$2$3");
+
+      return processedJSON.replace(noiseStringify, "$1$2$3");
+    }
+
+    throw error;
   }
-
-  if (!value) return originalStringify(value, replacer, space);
-
-  const convertedToCustomJSON = originalStringify(
-    value,
-    (key, value) => {
-      const isNoise = typeof value === "string" && noiseValue.test(value);
-
-      if (isNoise) return value.toString() + "n"; // Mark noise values with additional "n" to offset the deletion of one "n" during the processing
-
-      if (typeof value === "bigint") return value.toString() + "n";
-
-      if (Array.isArray(replacer) && replacer.includes(key)) return value;
-
-      return value;
-    },
-    space,
-  );
-  const processedJSON = convertedToCustomJSON.replace(
-    bigIntsStringify,
-    "$1$2$3",
-  ); // Delete one "n" off the end of every BigInt value
-  const denoisedJSON = processedJSON.replace(noiseStringify, "$1$2$3"); // Remove one "n" off the end of every noisy string
-
-  return denoisedJSON;
 };
 
 const featureCache = new Map();
@@ -32047,6 +32959,7 @@ const isContextSourceSupported = () => {
 const convertMarkedBigIntsReviver = (key, value, context, userReviver) => {
   const isCustomFormatBigInt =
     typeof value === "string" && customFormat.test(value);
+
   if (isCustomFormatBigInt) return BigInt(value.slice(0, -1));
 
   const isNoiseValue = typeof value === "string" && noiseValue.test(value);
@@ -32068,9 +32981,10 @@ const convertMarkedBigIntsReviver = (key, value, context, userReviver) => {
  */
 const JSONParseV2 = (text, reviver) => {
   return JSON.parse(text, (key, value, context) => {
-    const isBigNumber =
-      typeof value === "number" &&
-      (value > Number.MAX_SAFE_INTEGER || value < Number.MIN_SAFE_INTEGER);
+    const isNumber = typeof value === "number";
+    const isOutOfBounds =
+      value > Number.MAX_SAFE_INTEGER || value < Number.MIN_SAFE_INTEGER;
+    const isBigNumber = isNumber && isOutOfBounds;
     const isInt = context && intRegex.test(context.source);
     const isBigInt = isBigNumber && isInt;
 
@@ -32087,6 +33001,99 @@ const stringsOrLargeNumbers =
 const noiseValueWithQuotes = /^"-?\d+n+"$/; // Noise - strings that match the custom format before being converted to it
 
 /**
+ * Iteratively traverses the parsed object bottom-up (post-order),
+ * emulating the native JSON.parse reviver behavior.
+ * This avoids Call Stack overflows (RangeError) on deeply nested structures.
+ *
+ * @param {any} parsed The natively parsed JSON object.
+ * @param {Reviver} [userReviver] User's custom reviver function.
+ * @returns {any} The fully processed object.
+ */
+const applyReviverIteratively = (parsed, userReviver) => {
+  const rootHolder = { "": parsed };
+  const stack = [{ parent: rootHolder, key: "", visited: false }];
+
+  while (stack.length > 0) {
+    const node = stack[stack.length - 1];
+
+    if (!node.visited) {
+      node.visited = true;
+
+      const value = node.parent[node.key];
+      const isComplexObject = value !== null && typeof value === "object";
+
+      if (isComplexObject) {
+        const keys = Object.keys(value);
+
+        for (let i = keys.length - 1; i >= 0; i--) {
+          stack.push({ parent: value, key: keys[i], visited: false });
+        }
+      }
+    } else {
+      const { parent, key } = node;
+      let value = parent[key];
+
+      if (typeof value === "string") {
+        const isCustomFormatBigInt = customFormat.test(value);
+
+        if (isCustomFormatBigInt) {
+          value = BigInt(value.slice(0, -1));
+        } else {
+          const isNoise = noiseValue.test(value);
+
+          if (isNoise) value = value.slice(0, -1);
+        }
+      }
+
+      const isDeleted = value === undefined;
+
+      if (isDeleted) {
+        delete parent[key];
+      } else {
+        parent[key] = value;
+      }
+
+      stack.pop();
+    }
+  }
+
+  return rootHolder[""];
+};
+
+/**
+ * Pre-processes the JSON string to mark large numbers with an 'n' suffix.
+ *
+ * @param {string} text The raw JSON string.
+ * @returns {string} The serialized string with marked BigInts.
+ */
+const serializeBigInts = (text) => {
+  return text.replace(
+    stringsOrLargeNumbers,
+    (match, digits, fractional, exponential) => {
+      const isString = match[0] === '"';
+      const isNoise = isString && noiseValueWithQuotes.test(match);
+
+      if (isNoise) return match.substring(0, match.length - 1) + 'n"'; // Mark noise values with additional "n" to offset the deletion of one "n" during the processing
+
+      const hasFractionalOrExponential = fractional || exponential;
+
+      // With a fixed number of digits, we can correctly use lexicographical comparison to do a numeric comparison
+      const isLessThanMaxSafeInt =
+        digits &&
+        (digits.length < MAX_DIGITS ||
+          (digits.length === MAX_DIGITS && digits <= MAX_INT));
+
+      const isStandardValue =
+        isString || hasFractionalOrExponential || isLessThanMaxSafeInt;
+
+      if (isStandardValue) return match;
+
+      return '"' + match + 'n"';
+    },
+  );
+};
+
+/**
  * Converts a JSON string into a JavaScript value.
  *
  * Supports parsing of large integers using two strategies:
@@ -32097,42 +33104,34 @@ const noiseValueWithQuotes = /^"-?\d+n+"$/; // Noise - strings that match the cu
  *
  * @param {string} text A valid JSON string.
  * @param {Reviver} [reviver]
- *   A function that transforms the results. This function is called for each member
- *   of the object. If a member contains nested objects, the nested objects are
- *   transformed before the parent object is.
+ * A function that transforms the results. This function is called for each member
+ * of the object. If a member contains nested objects, the nested objects are
+ * transformed before the parent object is.
  * @returns {any} The parsed JavaScript value.
  * @throws {SyntaxError} If text is not valid JSON.
  */
 const JSONParse = (text, reviver) => {
   if (!text) return originalParse(text, reviver);
 
-  if (isContextSourceSupported()) return JSONParseV2(text); // Shortcut to a faster (2x) and simpler version
+  try {
+    if (isContextSourceSupported()) return JSONParseV2(text, reviver); // Shortcut to a faster (2x) and simpler version
 
-  // Find and mark big numbers with "n"
-  const serializedData = text.replace(
-    stringsOrLargeNumbers,
-    (text, digits, fractional, exponential) => {
-      const isString = text[0] === '"';
-      const isNoise = isString && noiseValueWithQuotes.test(text);
+    // Find and mark big numbers with "n"
+    const serializedData = serializeBigInts(text);
 
-      if (isNoise) return text.substring(0, text.length - 1) + 'n"'; // Mark noise values with additional "n" to offset the deletion of one "n" during the processing
+    return originalParse(serializedData, (key, value, context) =>
+      convertMarkedBigIntsReviver(key, value, context, reviver),
+    );
+  } catch (error) {
+    if (error instanceof RangeError) {
+      const serializedData = serializeBigInts(text);
+      const parsed = originalParse(serializedData);
 
-      const isFractionalOrExponential = fractional || exponential;
-      const isLessThanMaxSafeInt =
-        digits &&
-        (digits.length < MAX_DIGITS ||
-          (digits.length === MAX_DIGITS && digits <= MAX_INT)); // With a fixed number of digits, we can correctly use lexicographical comparison to do a numeric comparison
+      return applyReviverIteratively(parsed);
+    }
 
-      if (isString || isFractionalOrExponential || isLessThanMaxSafeInt)
-        return text;
-
-      return '"' + text + 'n"';
-    },
-  );
-
-  return originalParse(serializedData, (key, value, context) =>
-    convertMarkedBigIntsReviver(key, value),
-  );
+    throw error;
+  }
 };
 
 class RequestError extends Error {
@@ -32177,7 +33176,7 @@ class RequestError extends Error {
 // pkg/dist-src/index.js
 
 // pkg/dist-src/version.js
-var VERSION$4 = "10.0.11";
+var VERSION$4 = "10.0.13";
 
 // pkg/dist-src/defaults.js
 var defaults_default = {
@@ -32308,7 +33307,10 @@ async function getResponseData(response) {
     } catch (err) {
       return text;
     }
-  } else if (mimetype.type.startsWith("text/") || mimetype.parameters.charset?.toLowerCase() === "utf-8") {
+  } else if (mimetype.type.startsWith("text/") || // `application/octet-stream` is the canonical "arbitrary binary" type
+  // (RFC 2046) and must never be decoded as text, even when the response
+  // carries a (misleading) `charset=utf-8` parameter — see #751.
+  mimetype.parameters.charset?.toLowerCase() === "utf-8" && mimetype.type !== "application/octet-stream") {
     return response.text().catch(noop$1);
   } else {
     return response.arrayBuffer().catch(
@@ -32387,6 +33389,9 @@ var GraphqlResponseError = class extends Error {
       Error.captureStackTrace(this, this.constructor);
     }
   }
+  request;
+  headers;
+  response;
   name = "GraphqlResponseError";
   errors;
   data;
@@ -32481,6 +33486,7 @@ function withCustomRequest(customRequest) {
     url: "/graphql"
   });
 }
+/* v8 ignore if -- @preserve */
 
 // pkg/dist-src/is-jwt.js
 var b64url = "(?:[a-zA-Z0-9_-]+)";
@@ -32535,7 +33541,7 @@ var createTokenAuth = function createTokenAuth2(token) {
   });
 };
 
-const VERSION$2 = "7.0.6";
+const VERSION$2 = "7.0.7";
 
 const noop = () => {
 };
